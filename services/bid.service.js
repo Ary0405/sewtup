@@ -35,16 +35,13 @@ export async function getBidsByOrder(orderId) {
     });
 }
 
-export async function acceptBid(id) {
+export async function acceptBid(bidId) {
     return db.bid.update({
         where: {
-            id,
+            id: bidId,
         },
         data: {
             status: 'ACCEPTED',
         },
     });
 }
-
-
-9937403630
