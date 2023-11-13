@@ -1,0 +1,17 @@
+.CustomerProjects {
+    position: fixed;
+    right: 30%;
+    top: 13%;
+    &__header {
+        background-color: white;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        padding-left: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: .7rem;
+        width: 155.55%;
+        border-top-right-radius: .5rem;
+        border-top-left-radius: .5rem;
+    }
+}
