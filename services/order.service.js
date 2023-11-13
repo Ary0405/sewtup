@@ -50,3 +50,14 @@ export async function getOrdersByUser(userId) {
 }
 
 
+export async function isOrderByUser(orderId, userId) {
+    return db.order.findFirst({
+        where: {
+            id: orderId,
+            userId,
+        },
+    });
+
+}
+
+

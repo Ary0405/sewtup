@@ -1,7 +1,12 @@
 import { createOrder } from "@/services/order.service";
+import { isExperienceLevel,isLocation } from "@/utils/validator";
 
 export default async function orderCreate(req, res) {
     const { title, description, location, attachments, skills, userId, experience, maxBudget, minBudget } = req.body;
+
+    if (!title || !description || !location || !attachments || !skills || !userId || !experience || !maxBudget || !minBudget || !isExperienceLevel(experience) || !isLocation(location)) {
+        return res.status(400).json({ message: 'Invalid request' });
+    }
 
     try {
         const order = await createOrder({
