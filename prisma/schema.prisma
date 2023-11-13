@@ -13,16 +13,20 @@ model User {
   password String
   name     String
   role     Role    @default(USER)
+  bid      Bid[]
   order    Order[]
 }
 
 model Bid {
-  id       Int    @id @default(autoincrement())
-  amount   Int    @default(0)
+  id       Int       @id @default(autoincrement())
+  amount   Int       @default(0)
   days     Int
   orderId  Int
-  proposal String @default("")
-  Order    Order  @relation(fields: [orderId], references: [id])
+  proposal String    @default("")
+  status   BidStatus @default(PENDING)
+  userId   Int
+  Order    Order     @relation(fields: [orderId], references: [id])
+  User     User      @relation(fields: [userId], references: [id])
 }
 
 model Order {
@@ -61,6 +65,12 @@ enum Status {
   COMPLETED
 }
 
+enum BidStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
 enum Location {
   ANDHRA_PRADESH
   ARUNACHAL_PRADESH
@@ -90,4 +100,6 @@ enum Location {
   UTTAR_PRADESH
   UTTARAKHAND
   WEST_BENGAL
+  REMOTE
+  OTHER
 }
