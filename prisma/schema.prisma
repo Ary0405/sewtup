@@ -1,0 +1,96 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  password String
+  name     String
+  role     Role    @default(USER)
+  order    Order[]
+}
+
+model Bid {
+  id       Int    @id @default(autoincrement())
+  amount   Int    @default(0)
+  days     Int
+  orderId  Int
+  proposal String @default("")
+  Order    Order  @relation(fields: [orderId], references: [id])
+}
+
+model Order {
+  id          Int        @id @default(autoincrement())
+  title       String
+  description String     @default("")
+  location    Location?
+  attachments String[]
+  skills      String[]
+  userId      Int
+  experience  Experience @default(ENTRY_LEVEL)
+  designerId  Int?
+  status      Status     @default(UNASSIGNED)
+  finalPrice  Int?
+  maxBudget   Int        @default(0)
+  minBudget   Int        @default(0)
+  bids        Bid[]
+  User        User       @relation(fields: [userId], references: [id])
+}
+
+enum Role {
+  DESIGNER
+  USER
+}
+
+enum Experience {
+  ENTRY_LEVEL
+  INTERMEDIATE
+  EXPERT
+}
+
+enum Status {
+  UNASSIGNED
+  STICHING
+  DESIGNING
+  COMPLETED
+}
+
+enum Location {
+  ANDHRA_PRADESH
+  ARUNACHAL_PRADESH
+  ASSAM
+  BIHAR
+  CHHATTISGARH
+  GOA
+  GUJARAT
+  HARYANA
+  HIMACHAL_PRADESH
+  JHARKHAND
+  KARNATAKA
+  KERALA
+  MADHYA_PRADESH
+  MAHARASHTRA
+  MANIPUR
+  MEGHALAYA
+  MIZORAM
+  NAGALAND
+  ODISHA
+  PUNJAB
+  RAJASTHAN
+  SIKKIM
+  TAMIL_NADU
+  TELANGANA
+  TRIPURA
+  UTTAR_PRADESH
+  UTTARAKHAND
+  WEST_BENGAL
+}
