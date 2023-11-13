@@ -1,3 +1,4 @@
+import CustomerNavbar from "@/components/CustomerNavbar/CustomerNavbar";
 import CustomerSidebar from "@/components/CustomerSidebar/CustomerSidebar";
 
 export async function getServerSideProps(context) {
@@ -21,6 +22,7 @@ export default function CustomerDashboard({user}) {
     return (
         <div className="CustomerDashboard">
             <CustomerSidebar user={user} />
+            <CustomerNavbar />
         </div>
     )
 }

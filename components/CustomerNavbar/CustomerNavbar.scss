@@ -1,0 +1,42 @@
+.CustomerNavbar {
+  background-color: white;
+  position: fixed;
+  right: 0;
+  width: 75vw;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
+  padding-top: 0.7rem;
+  padding-left: 2rem;
+  padding-bottom: 0.7rem;
+  align-items: center;
+  &__input {
+    font-family: "Inter", sans-serif;
+    background-color: rgba(244, 244, 244, 1);
+    width: 17rem;
+    border: none;
+    height: 2rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  &__right {
+    display: flex;
+    color: white;
+    background-color: rgba(0, 102, 255, 1);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &--icon {
+      margin-right: 0.3rem;
+    }
+    &--icon,
+    &--text {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+}
