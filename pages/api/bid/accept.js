@@ -1,5 +1,6 @@
 import { acceptBid } from "@/services/bid.service";
 import { isOrderByUser } from "@/services/order.service";
+import { isBidUnderOrder } from "@/services/bid.service";
 
 
 export default async function bidAccept(req, res) {
@@ -13,8 +14,8 @@ export default async function bidAccept(req, res) {
 
     try {
         const order = await isOrderByUser(orderId, userId);
-
-        if (!order) {
+        const bidOrder = await isBidUnderOrder(orderId, bidId);
+        if (!order || !bidOrder) {
             res.status(401).json({ error: 'Not authorized' });
             return;
         }

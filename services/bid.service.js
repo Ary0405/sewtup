@@ -45,3 +45,13 @@ export async function acceptBid(bidId) {
         },
     });
 }
+
+export async function isBidUnderOrder(orderId, bidId) {
+    return db.bid.findUnique({
+        where: {
+            id: bidId,
+            orderId,
+        },
+    });
+}
+
