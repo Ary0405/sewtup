@@ -1,0 +1,48 @@
+.CustomerSidebar {
+  width: 250px;
+  height: 90vh;
+  background-color: white;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__top {
+    &__row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      &--image {
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+      &--text {
+        font-family: "Inter", sans-serif;
+        color: rgba(52, 64, 84, 1);
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--column {
+        &__name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: rgba(52, 64, 84, 1);
+            margin-bottom: .3rem;
+        }
+        &__email {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: rgba(163, 169, 179, 1);
+        }
+    }
+  }
+}
