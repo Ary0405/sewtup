@@ -1,6 +1,6 @@
 import { createBid } from "@/services/bid.service";
 
-export default async function createBid(req, res) {
+export default async function bidCreate(req, res) {
     const { amount, days, proposal, orderId, userId } = req.body;
 
     try {

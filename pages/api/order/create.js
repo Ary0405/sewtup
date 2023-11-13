@@ -1,6 +1,6 @@
 import { createOrder } from "@/services/order.service";
 
-export default async function createOrder(req, res) {
+export default async function orderCreate(req, res) {
     const { title, description, location, attachments, skills, userId, experience, maxBudget, minBudget } = req.body;
 
     try {
