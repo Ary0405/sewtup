@@ -4,10 +4,10 @@ export default async function getAllOrder(req, res) {
 
     try {
         const orders = await getAllOrders();
-        res.status(200).json({ orders });
+        res.send({ status: 200, orders });
     }
     catch (error) {
-        res.status(400).json({ error });
+        res.send({ status: 400, error });
     }
 
 }

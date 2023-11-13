@@ -8,14 +8,14 @@ export default async function orderDelete(req, res) {
         const isOrder = await isOrderByUser(id, userId);
 
         if (!isOrder) {
-            return res.status(404).json({ message: 'Order not found' });
+            return res.send({ status: 401, error: 'Not authorized' });
         }
 
         const order = await deleteOrder(id);
-        res.status(200).json({ order });
+        res.send({ status: 200, order });
 
     } catch (e) {
-        res.status(500).json({ message: e.message });
+        res.send({ status: 400, error: e });
     }
 }
 

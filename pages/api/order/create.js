@@ -5,7 +5,7 @@ export default async function orderCreate(req, res) {
     const { title, description, location, attachments, skills, userId, experience, maxBudget, minBudget } = req.body;
 
     if (!title || !description || !location || !attachments || !skills || !userId || !experience || !maxBudget || !minBudget || !isExperienceLevel(experience) || !isLocation(location)) {
-        return res.status(400).json({ message: 'Invalid request' });
+        return res.send({ status: 400, error: 'Missing body parameter' });
     }
 
     try {
@@ -20,11 +20,11 @@ export default async function orderCreate(req, res) {
             maxBudget,
             minBudget
         });
-        return res.status(200).json(order);
+        return res.send({ status: 200, order });
     }
     catch (error) {
         console.log(error);
-        return res.status(500).json({ message: error.message });
+        return res.send({ status: 400, error })
     }
 
 }

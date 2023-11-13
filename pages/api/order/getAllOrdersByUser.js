@@ -5,16 +5,16 @@ export default async function getAllOrdersByUser(req, res) {
     const { userId } = req.body;
 
     if (!userId) {
-        res.status(400).json({ error: 'Missing body parameter' });
+        res.send({ status: 400, error: 'Missing body parameter' });
         return;
     }
 
     try {
         const orders = await getOrdersByUser(userId);
-        res.status(200).json({ orders });
+        res.send({ status: 200, orders });
     }
     catch (error) {
-        res.status(400).json({ error });
+        res.send({ status: 400, error });
     }
 
 }

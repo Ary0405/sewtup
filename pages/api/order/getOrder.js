@@ -5,16 +5,16 @@ export default async function getOrder(req, res) {
     const { id } = req.body;
 
     if (!id) {
-        res.status(400).json({ error: 'Missing body parameter' });
+        res.send({ status: 400, error: 'Missing body parameter' });
         return;
     }
 
     try {
         const order = await getOrderById(id);
-        res.status(200).json({ order });
+        res.send({ status: 200, order });
     }
     catch (error) {
-        res.status(400).json({ error });
+        res.send({ status: 400, error });
     }
 
 }
