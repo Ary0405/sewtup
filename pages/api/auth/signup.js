@@ -1,12 +1,13 @@
 import { hashSync } from "bcrypt";
 import { createUser, fetchUser } from "../../../services/user.service";
 import { withSessionRoute } from "../../../lib/ironOptions";
+
 export default withSessionRoute(SignUp);
 
 async function SignUp(req, res) {
     const body = await req.body;
-    if(body.name === '' || body.email === '' || body.password === '') {
-        res.send({status : 400, message : "Please fill in all the fields"});
+    if (body.name === '' || body.email === '' || body.password === '') {
+        res.send({ status: 400, message: "Please fill in all the fields" });
         return;
     }
     try {
@@ -22,7 +23,7 @@ async function SignUp(req, res) {
         res.send({ status: 200, message: JSON.stringify(response) });
     } catch (error) {
         console.log(error.message);
-        res.send({status : 400, message : "Internal Server Error"});
+        res.send({ status: 400, message: "Internal Server Error" });
     }
-    
+
 }

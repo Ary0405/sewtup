@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { login } from "@/operations/user.fetch"
 
 function Login() {
@@ -7,7 +7,7 @@ function Login() {
     const [password, setPassword] = useState('')
 
     const handleLogin = async () => {
-        if(email === '' || password === '') {
+        if (email === '' || password === '') {
             alert('Please fill all fields')
             return;
         }
@@ -19,11 +19,10 @@ function Login() {
 
         const response = await login(data)
 
-        if(response.status === 200){
+        if (response.status === 200) {
             alert('Login successful')
-            console.log(response.user)
             return;
-        }else{
+        } else {
             alert(response.message)
         }
 
@@ -39,7 +38,7 @@ function Login() {
                 <input type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                 <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                 <button onClick={handleLogin}>Login</button>
-            </div>  
+            </div>
         </>
     )
 }

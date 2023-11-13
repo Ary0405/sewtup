@@ -1,4 +1,5 @@
 import '../../../styles/routes/newOrder/ProjectTitle.scss'
+
 export default function ProjectTitle() {
     return (
         <div className="ProjectTitle">

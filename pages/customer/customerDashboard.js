@@ -18,7 +18,7 @@ export async function getServerSideProps(context) {
     }
 }
 
-export default function CustomerDashboard({user}) {
+export default function CustomerDashboard({ user }) {
     return (
         <div className="CustomerDashboard">
             <CustomerSidebar user={user} />

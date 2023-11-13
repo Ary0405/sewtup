@@ -1,23 +1,5 @@
 import db from '../lib/prisma'
 
-// model Order {
-//     id          Int        @id @default(autoincrement())
-//     title       String
-//     description String     @default("")
-//     location    Location?
-//     attachments String[]
-//     skills      String[]
-//     userId      Int
-//     experience  Experience @default(ENTRY_LEVEL)
-//     designerId  Int?
-//     status      Status     @default(UNASSIGNED)
-//     finalPrice  Int?
-//     maxBudget   Int        @default(0)
-//     minBudget   Int        @default(0)
-//     bids        Bid[]
-//     User        User       @relation(fields: [userId], references: [id])
-//   }
-
 export async function createOrder(data) {
     return db.order.create({
         data,

@@ -1,17 +1,5 @@
 import db from '../lib/prisma'
 
-// model Bid {
-//     id       Int       @id @default(autoincrement())
-//     amount   Int       @default(0)
-//     days     Int
-//     orderId  Int
-//     proposal String    @default("")
-//     status   BidStatus @default(PENDING)
-//     userId   Int
-//     Order    Order     @relation(fields: [orderId], references: [id])
-//     User     User      @relation(fields: [userId], references: [id])
-//   }
-
 export async function createBid(data) {
     return db.bid.create({
         data,

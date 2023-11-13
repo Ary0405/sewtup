@@ -1,6 +1,5 @@
-import { acceptBid } from "@/services/bid.service";
+import { acceptBid, isBidUnderOrder } from "@/services/bid.service";
 import { isOrderByUser } from "@/services/order.service";
-import { isBidUnderOrder } from "@/services/bid.service";
 
 
 export default async function bidAccept(req, res) {
