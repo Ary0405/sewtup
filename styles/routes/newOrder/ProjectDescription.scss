@@ -1,0 +1,178 @@
+.ProjectDescription {
+  &__top {
+    background: linear-gradient(94.2deg, #582f00 0%, #381705 100%);
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    &--box {
+      width: 50rem;
+      margin-bottom: 1rem;
+      &--text {
+        color: white;
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 2.2rem;
+        margin-bottom: 0.7rem;
+      }
+      &--desc {
+        color: white;
+        font-family: "Inter";
+        font-weight: 300;
+        font-size: 1rem;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.7rem;
+    &--box {
+      background-color: white;
+      width: 50rem;
+      border-radius: 0.5rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &__heading {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        color: rgba(88, 47, 0, 1);
+      }
+      &__desc {
+        margin-top: 1rem;
+        &--header {
+          font-family: "Inter", sans-serif;
+          font-weight: 600;
+          font-size: 17px;
+          color: #582f00;
+        }
+        &--text {
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 15px;
+          color: #582f00;
+          margin-top: 0.3rem;
+          margin-bottom: 1rem;
+        }
+        &--input {
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 17px;
+          color: rgba(88, 47, 0, 1);
+          width: 40rem;
+          height: 2rem;
+          margin-top: 0.8rem;
+          margin-bottom: 0.8rem;
+        }
+      }
+      &__attach {
+        border-style: dashed;
+        border-color: rgba(188, 197, 211, 1);
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        &--logo {
+          display: flex;
+          align-items: center;
+          background-color: rgba(226, 226, 226, 1);
+          width: 26%;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          margin-right: 1rem;
+          input {
+            background-color: transparent;
+          }
+          &__image {
+            margin-right: 0.3rem;
+          }
+        }
+        &--text {
+          font-family: "Inter", sans-serif;
+        }
+      }
+      &__skills {
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+        &--header {
+          font-family: "Inter", sans-serif;
+          font-weight: 600;
+          font-size: 17px;
+          color: rgba(88, 47, 0, 1);
+        }
+        input {
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 17px;
+          color: rgba(88, 47, 0, 1);
+          width: 40rem;
+          height: 2rem;
+          margin-top: 0.8rem;
+          margin-bottom: 0.8rem;
+        }
+      }
+
+      &__budget {
+        &--heading {
+          font-family: "Inter", sans-serif;
+          font-weight: 600;
+          font-size: 17px;
+          color: rgba(88, 47, 0, 1);
+        }
+        &--text {
+          display: flex;
+          font-family: "Inter", sans-serif;
+          &__max, &__min {
+            margin-right: .3rem;
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+            color: rgba(88, 47, 0, 1);
+            margin-top: .4rem;
+          }
+          input {
+            width: 10rem;
+            height: 2rem;
+            margin-top: 0.8rem;
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+          }
+        }
+      }
+
+      &__buttons {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        &--back {
+          border-color: rgba(88, 47, 0, 1);
+          border: 1px solid;
+          font-family: "Inter", sans-serif;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          border-radius: 0.3rem;
+          margin-right: 1rem;
+          cursor: pointer;
+        }
+        &--next {
+          background-color: #381705;
+          color: white;
+          font-family: "Inter", sans-serif;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          border-radius: 0.3rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
