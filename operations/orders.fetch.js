@@ -76,3 +76,21 @@ export async function getAllOrders(){
         console.log(err)
     });
 }
+
+
+export async function getOrderById(data) {
+    return await fetch(
+        "/api/order/getOrder", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data),
+        credentials: "include"
+    }).then((res) => {
+        return res.json()
+    }).catch((err) => {
+        console.log(err)
+    });
+}
+
