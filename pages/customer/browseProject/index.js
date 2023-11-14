@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import '@/styles/routes/browseProject/BrowseProject.scss';
+import Messages from '@/components/Chat/Messages';
 
 export default function BrowseProject({ project }) {
     // Placeholder data, replace it with actual project data
@@ -110,6 +111,7 @@ export default function BrowseProject({ project }) {
                     </div>
                 </div>
             </div>
+            <Messages />
         </div>
     );
 }

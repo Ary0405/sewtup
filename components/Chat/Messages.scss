@@ -1,33 +1,65 @@
 .Chat {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
+    bottom: 0px;
+    right: 0.5rem; 
+    background-color: #12151B;
+    color: white;
+    border-radius: 2px;
+    overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    transform: translateY(100%);
+    transform: translateY(0%);
+    height: 2.2rem;
+    width: 20%;
 
     &.open {
-        transform: translateY(0);
+        // transform: translateY(50%);
+        // bottom: 50%;
+        height: 20rem;
     }
 
     .toggleButton {
-        background-color: #582F00;
+        background-color: #12151B;
         color: white;
         border: none;
         padding: 10px;
-        border-radius: 5px;
+        width: 100%;
+        text-align: left;
+        border-radius: 8px;
         cursor: pointer;
-        margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translate(50%, -50%) rotate(-45deg);
+            width: 10px;
+            height: 10px;
+            border-style: solid;
+            border-width: 2px 2px 0 0;
+            border-color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &.rotateArrow:before {
+            transform: translate(50%, -50%) rotate(135deg);
+        }
     }
 
     .messagesContainer {
-        background-color: white;
+        background-color: #12151B;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 8px;
         overflow-y: auto;
         max-height: 200px;
-        /* Adjust as needed */
+        display: none;
+        /* Initially hide the expanded content */
+    }
+
+    &.open .messagesContainer {
+        display: block;
+        /* Display the expanded content when open */
     }
 }
