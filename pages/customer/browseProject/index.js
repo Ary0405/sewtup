@@ -10,7 +10,7 @@ export default function BrowseProject({ project }) {
     const projectData = {
         title: 'Custom Silk Outfit with Embroidery',
         bids: 34,
-        averageBid: '₹7430',
+        averageBid: '7430',
         description: `I'm looking for a talented fashion designer to create a custom silk outfit with exquisite embroidery. The outfit is intended for a special occasion and needs to be both elegant and unique. Here are the details:
         Pictures: I will attach pictures of the style and design I have in mind. These images should serve as a reference for the designer.
         Address Details: The delivery address is 123 Fashion Street, Cityville, State, ensuring that the outfit will reach me promptly.
@@ -37,7 +37,7 @@ export default function BrowseProject({ project }) {
                     <div className="BrowseProject__projectTop--right">
                         <div className="bidsCount">{projectData.bids} Bids</div>
                         <div className="dot">•</div>
-                        <div className="averageBid">Average Bid {projectData.averageBid}</div>
+                        <div className="averageBid">Average Bid ₹ {projectData.averageBid}</div>
                     </div>
                 </div>
                 <div className="BrowseProject__projectBottom">
