@@ -1,0 +1,33 @@
+.Chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+
+    &.open {
+        transform: translateY(0);
+    }
+
+    .toggleButton {
+        background-color: #582F00;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .messagesContainer {
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow-y: auto;
+        max-height: 200px;
+        /* Adjust as needed */
+    }
+}
