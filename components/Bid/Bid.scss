@@ -1,0 +1,182 @@
+// Bid.module.scss
+.bidContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 2rem;
+    border-radius: 13px;
+    background-color: #ffffff;
+    width: 100%;
+    gap: 15px;
+    text-align: left;
+    font-size: 1.44rem;
+    color: #000000;
+    font-family: 'Inter';
+}
+
+.bidHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.bidHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.bidHeaderImage {
+    border-radius: 5px;
+    width: 7rem;
+    height: 6.81rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.bidderInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.bidderName {
+    font-weight: 500;
+}
+
+.bidderStatsContainer,
+.bidderRatingContainer,
+.messageCount,
+.currencyCount {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bidderStatsContainer {
+    gap: 1rem;
+}
+
+.bidderRatingContainer,
+.messageCount,
+.currencyCount {
+    gap: 0.33rem;
+}
+
+.starRating {
+    display: flex;
+    gap: 0.33rem;
+}
+
+.starIcon,
+.ratingIcon {
+    width: 1.59rem;
+    height: 1.59rem;
+}
+
+.ratingIcon {
+    width: 1.33rem;
+    height: 1.27rem;
+}
+
+.ratingValue {
+    letter-spacing: -0.01em;
+    line-height: 0%;
+    font-weight: 500;
+}
+
+.bidInfoContainer {
+    text-align: right;
+}
+
+.bidTitle {
+    font-weight: 500;
+    text-align: right;
+    color: #6C6C6C;
+}
+
+.bidAmount {
+    font-size: 1.72rem;
+    color: #000000;
+}
+
+.bidDuration {
+    font-size: 1rem;
+    color: #475467;
+}
+
+.bidFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bidDescriptionContainer {
+    width: 100%;
+    display: flex;
+    // max-width: 59.44rem;
+    // flex-shrink: 0;
+}
+
+.bidDescriptionText {
+    // letter-spacing: -0.01em;
+    // line-height: 0%;
+    font-weight: 500;
+}
+
+.showMoreText {
+    color: #0000ff;
+}
+
+.replyInfoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15.56rem;
+    font-size: 1.31rem;
+}
+
+.replyInfoText {
+    letter-spacing: -0.01em;
+    line-height: 0%;
+    font-weight: 500;
+}
+
+.actionButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.63rem;
+}
+
+.chatButton,
+.acceptButton {
+    cursor: pointer;
+    border: 0;
+    padding: 10px 80px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.chatIcon,
+.acceptText {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Inter';
+    color: #ffffff;
+    text-align: left;
+}
+
+.acceptText {
+    color: #ffffff;
+}
