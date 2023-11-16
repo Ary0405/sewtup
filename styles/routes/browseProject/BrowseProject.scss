@@ -11,7 +11,7 @@ $border-color: rgba(0, 0, 0, 0.5);
 }
 
 .BrowseProject {
-    font-family: 'Inter';
+    font-family: 'Inter',sans-serif;
     font-style: normal;
     font-weight: 400;
 
@@ -172,12 +172,13 @@ $border-color: rgba(0, 0, 0, 0.5);
             flex-direction: column;
             margin-bottom: 1rem;
 
-            &--title,
-            &--deliveryTimeTitle,
-            &--proposalTitle {
-                font-size: 15px;
-                margin-bottom: 10px;
-            }
+        }
+        &--title,
+        &--deliveryTimeTitle,
+        &--proposalTitle,
+        &--bidAmountTitle {
+            font-size: 1rem;
+            margin-bottom: 10px;
         }
 
         &--bidAmountInput,
@@ -196,10 +197,11 @@ $border-color: rgba(0, 0, 0, 0.5);
             .currencyText,
             .daysText,
             input {
-                font-size: 1.3rem;
+                font-size: 1rem;
                 font-weight: 400;
                 line-height: 1.5rem;
                 color: $text-color;
+                font-family: 'Inter', sans-serif;
             }
 
             input {
@@ -223,6 +225,7 @@ $border-color: rgba(0, 0, 0, 0.5);
             color: $text-color;
             outline: none;
             overflow: hidden;
+            font-family: 'Inter', sans-serif;
         }
 
         &--bidButton {
@@ -232,6 +235,7 @@ $border-color: rgba(0, 0, 0, 0.5);
             width: 100%;
             border-radius: 6px;
             cursor: pointer;
+            border: none;
         }
     }
 }

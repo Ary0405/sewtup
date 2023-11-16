@@ -2,6 +2,7 @@ import '../styles/routes/Browse.scss';
 import ProjectItem from "@/components/ProjectItem/ProjectItem";
 import img from '../public/Images/img.png';
 import Image from 'next/image';
+import Bid from '@/components/Bid/Bid';
 
 export default function ProjectTitle() {
     return (

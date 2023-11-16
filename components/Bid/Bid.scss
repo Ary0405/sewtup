@@ -10,7 +10,7 @@
     width: 84%;
     gap: 6.256px;
     color: #000000;
-    font-family: 'Inter';
+    font-family: 'Inter',sans-serif;
     font-size: 78%;
 }
 
@@ -103,7 +103,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 0.34rem;
     width: 100%;
 }
