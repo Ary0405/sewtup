@@ -1,0 +1,225 @@
+
+.box {
+  background-color: white;
+  padding-left: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 55rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-accepted {
+        background-color: #e7f9ee;
+        width: fit-content;
+        padding: .4rem .8rem;
+        border-radius: 1rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: .7rem;
+        color: #2ad77d;
+        flex: 1;
+}
+
+.itemHeaderRow {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      width: 100%;
+      margin-top: .7rem;
+
+      &__image {
+        border-radius: 3px;
+        width: 5rem;
+        height: 5rem;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      &__header {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        flex: 1;
+      }
+
+      &--desc {
+        color: white;
+        font-family: 'Inter', serif;
+        font-weight: 300;
+        font-size: 1rem;
+        width: 35rem;
+        margin-left: 2rem;
+      }
+
+    }
+
+.itemHeaderContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.itemContentRowContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.itemHeaderText{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+
+    &__header {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1.25rem;
+      flex: 1;
+      margin-top: 1rem;
+    }
+
+  &--estimate {
+    color: black;
+    font-family: 'Inter', serif;
+    font-weight: 500;
+    font-size: 1rem;
+    width: 35rem;
+    margin-bottom: 1rem;
+  }
+
+  &__right-header {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    flex: 1;
+    margin-top: 1rem;
+    margin-left: -4.5rem;
+  }
+
+  &--right-estimate {
+    font-family: 'Inter', serif;
+    font-weight: 500;
+    font-size: 1rem;
+    width: 35rem;
+    margin-bottom: 1rem;
+    margin-left: -5.5rem;
+    color: red;
+  }
+
+}
+
+.itemContentRow {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 1rem;
+
+  &--desc {
+    color: #7A7A7A;
+    font-family: 'Inter', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    width: 90%;
+  }
+
+}
+
+.bid-edit-text {
+  color: black;
+  margin-left: 8.5rem;
+  width: fit-content;
+  font-family: 'Inter', serif;
+  font-weight: 500;
+  font-size: .8rem;
+}
+
+.bid-edit-box-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: .5rem;
+}
+
+.bid-edit-box-1{
+  width: 5rem;
+  height: 2rem;
+  background-color: #f4eee9;
+  text-align: center;
+  margin-left: 3rem;
+  border-radius: .3rem;
+}
+
+.bid-edit-box-2{
+  width: 5rem;
+  height: 2rem;
+  background-color: #f4eee9;
+  text-align: center;
+  margin-left: .5rem;
+  border-radius: .3rem;
+}
+
+.bid-edit-box-text{
+  color: #6e3f15;
+  margin-top: .3rem;
+}
+
+.bid-container{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.tags-row{
+  display: flex;
+  flex-direction: row;
+  margin-top: .5rem;
+}
+
+.tags-fashion {
+  background-color: #e8f5f9;
+  width: fit-content;
+  padding: .4rem .8rem;
+  border-radius: .3rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: .7rem;
+  margin-right: .5rem;
+  color: #00a0cd;
+}
+
+.tags-silk {
+  background-color: #e7f9ee;
+  width: fit-content;
+  padding: .4rem .8rem;
+  border-radius: .3rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: .7rem;
+  margin-right: .5rem;
+  color: #796a5b;
+
+}
+
+.tags-customize {
+  background-color: #f0ebfa;
+  width: fit-content;
+  padding: .4rem .8rem;
+  border-radius: .3rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: .7rem;
+  margin-right: .5rem;
+  color: #693cd0;
+}
+
+.posted-time {
+  font-family: 'Inter', serif;
+  font-weight: 500;
+  font-size: .7rem;
+  width: fit-content;
+  margin-left: 30rem;
+  color: #aeaeae;
+}
