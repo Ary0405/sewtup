@@ -1,9 +1,11 @@
 .CustomerProjects {
-    position: fixed;
-    width: 45%;
-    left: 49.5%;
-    transform: translate(-50%, 0);
-    top: 13%;
+    // position: fixed;
+    width: 95%;
+    // left: 49.5%;
+    // transform: translate(-50%, 0);
+    // top: 13%;
+    overflow-x: auto;
+    height: 90vh;
 
     &__header {
         background-color: white;
@@ -11,11 +13,21 @@
         font-weight: 600;
         font-size: 2rem;
         padding-left: 1rem;
-        padding-top: 1.5rem;
+        padding-top: 2rem;
         padding-bottom: .7rem;
-        width: 155.55%;
+        // width: 155.55%;
         border-top-right-radius: .5rem;
         border-top-left-radius: .5rem;
 
+    }
+
+    &__body{
+        background-color: white;
+        padding: 1rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
     }
 }
