@@ -1,5 +1,5 @@
 import '../styles/routes/Browse.scss';
-import ProjectItem from "@/components/ProjectItem/ProjectItem";
+import BrowseItem from "@/components/BrowseItem/BrowseItem";
 import Filter from "@/components/Filter/Filter"
 import img from '../public/Images/img.png';
 import Image from 'next/image';
@@ -31,7 +31,7 @@ export default function ProjectTitle() {
             </div>
             <div className='Browse__bottom'>
 
-                <ProjectItem />
+                <BrowseItem />
                 <Filter />
 
             </div>
