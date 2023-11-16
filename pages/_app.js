@@ -1,12 +1,15 @@
 import { AuthProvider, getUserFromSession } from "@/context/authContext"
 import App from "next/app";
 import '@/styles/root/globals.scss'
+import { OrderProvider } from "@/context/orderContext";
 
 export default function MyApp({ Component, pageProps, user }) {
   return (
-    <AuthProvider ssrUser={user}>
-      <Component {...pageProps} />
-    </AuthProvider>
+    <OrderProvider>
+      <AuthProvider ssrUser={user}>
+        <Component {...pageProps} />
+      </AuthProvider>
+    </OrderProvider>
   )
 }
 

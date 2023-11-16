@@ -1,6 +1,18 @@
+import { useState } from 'react'
 import '../../../styles/routes/newOrder/ProjectTitle.scss'
+import { useRouter } from 'next/router';
+import useOrder from '@/hooks/useOrder';
 
 export default function ProjectTitle() {
+
+    const [title, setTitle] = useState('');
+    const { setOrderTitle } = useOrder();
+    const router = useRouter();
+    const handleClick = () => {
+        localStorage.setItem('title', title);
+        setOrderTitle(title)
+        router.push('/customer/newOrder/projectTitle')
+    }
     return (
         <div className="ProjectTitle">
             <div className="ProjectTitle__top">
@@ -11,7 +23,7 @@ export default function ProjectTitle() {
             </div>
             <div className='ProjectTitle__bottom'>
                 <div className='ProjectTitle__bottom--box'>
-                    <input className='ProjectTitle__bottom--box--input' type='text' placeholder='What do you need done ?' />
+                    <input onChange={(e) => setTitle(e.target.value)} className='ProjectTitle__bottom--box--input' type='text' placeholder='What do you need done ?' />
                     <button className='ProjectTitle__bottom--box--button'>Next</button>
                 </div>
             </div>
