@@ -1,8 +1,10 @@
 .CustomerProjects {
     position: fixed;
-    // left: calc(280px + 3rem);
-    width: 46%;
-    // top: 13%;
+    width: 45%;
+    left: 49.5%;
+    transform: translate(-50%, 0);
+    top: 13%;
+
     &__header {
         background-color: white;
         font-family: 'Inter', sans-serif;
