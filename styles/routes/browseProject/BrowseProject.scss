@@ -1,0 +1,241 @@
+// styles/routes/browseProject/BrowseProject.scss
+
+// Variables
+$primary-color: #582F00;
+$text-color: #000000;
+$border-color: rgba(0, 0, 0, 0.5);
+
+.BrowseProjectContainer {
+    margin: 1rem 4.2rem;
+    height: 100%;
+}
+
+.BrowseProject {
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+    &__projectTop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+
+        &--left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: $primary-color;
+            position: relative;
+
+            .status {
+                font-weight: 700;
+                font-size: 0.8rem;
+                text-align: center;
+                color: #037142;
+                background: #E2FFC8;
+                border-radius: 12px;
+                padding: 0.5rem 0.5rem;
+            }
+        }
+
+        &--right {
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            gap: 0.6rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: $text-color;
+        }
+    }
+
+    &__projectBottom {
+        display: flex;
+        gap: 1rem;
+        flex-direction: row;
+    }
+
+    &__projectDetails {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 1.3rem;
+
+        .projectDetailsHeader {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .projectDetailsTitle {
+            font-size: 1.6rem;
+            line-height: 3.4rem;
+            font-weight: 500;
+        }
+
+        .projectStats {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            gap: 0.2rem;
+
+            div {
+                margin-left: 1rem;
+            }
+        }
+
+        .budget {
+            font-size: 1.1rem;
+            color: $text-color;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .timeline {
+            font-size: 0.85rem;
+            color: $text-color;
+            text-align: left;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .projectDetailsDescription {
+            font-size: 1rem;
+            color: #575757;
+            margin: 1rem 0rem;
+            font-weight: 500;
+        }
+
+        .line {
+            color: $text-color;
+            padding: 0rem;
+            width: 100%;
+        }
+
+        .attachmentsTitle {
+            font-size: 18px;
+            color: $text-color;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        &--attachments {
+            display: flex;
+            gap: 1rem;
+            margin-top: 10px;
+        }
+
+        .browseProjectDetailsAttachment {
+            position: relative;
+            height: 7rem;
+            width: 7rem;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .browseProjectDetailsAttachment>img {
+            object-fit: cover;
+        }
+    }
+
+    &__biddingArea {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 0.6rem 1.3rem;
+        min-width: 18rem;
+        padding: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        &--title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        &--note {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        &--bidAmount {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+
+        }
+        &--title,
+        &--deliveryTimeTitle,
+        &--proposalTitle,
+        &--bidAmountTitle {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        &--bidAmountInput,
+        &--deliveryTimeInput {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0.8rem;
+            gap: 1rem;
+            box-sizing: border-box;
+            width: 100%;
+            border: 1.2px solid $border-color;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+
+            .currencySymbol,
+            .currencyText,
+            .daysText,
+            input {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5rem;
+                color: $text-color;
+                font-family: 'Inter', sans-serif;
+            }
+
+            input {
+                font-size: 18px;
+                border: none;
+                width: 95%;
+                outline: none;
+                padding-left: 0.5rem;
+            }
+        }
+
+        &--proposalTextarea {
+            width: 90%;
+            flex: 1 1 auto;
+            max-width: 90%;
+            min-width: 1rem;
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            color: $text-color;
+            outline: none;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        &--bidButton {
+            background-color: $primary-color;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+        }
+    }
+}

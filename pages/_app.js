@@ -1,6 +1,6 @@
 import { AuthProvider, getUserFromSession } from "@/context/authContext"
 import App from "next/app";
-import '../styles/root/globals.scss'
+import '@/styles/root/globals.scss'
 
 export default function MyApp({ Component, pageProps, user }) {
   return (
