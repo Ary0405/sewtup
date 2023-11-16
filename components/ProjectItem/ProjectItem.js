@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ProjectItem.scss";
+import "./ProjectItem.scss"
 import DashHeader from "@/components/DashTable/DashHeader/DashHeader";
 import Image from "next/image";
 
