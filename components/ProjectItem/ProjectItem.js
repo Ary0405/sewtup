@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProjectItem.scss"
 import DashHeader from "@/components/DashTable/DashHeader/DashHeader";
 import Image from "next/image";

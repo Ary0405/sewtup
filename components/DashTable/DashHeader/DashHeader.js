@@ -1,4 +1,5 @@
 import './DashHeader.scss'
+
 export default function DashHeader({
     headerTitles = [],
     isGreen = false,

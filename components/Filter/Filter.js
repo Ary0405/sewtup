@@ -1,6 +1,4 @@
-// Filter.js
-import React from "react";
-import styles from "./Filter.scss";
+import "./Filter.scss";
 import DropDown from "@/components/LocationDropDown/LocationDropDown";
 import CheckBox from "@/components/CheckBox/CheckBox";
 import RadioInput from "@/components/RadioInput/RadioInput";

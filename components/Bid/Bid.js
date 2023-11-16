@@ -1,6 +1,4 @@
-// Bid.js
-import React from "react";
-import styles from "./Bid.scss";
+import './Bid.scss';
 
 const Bid = ({ bidData }) => {
     // Provide default values if bidData is not provided

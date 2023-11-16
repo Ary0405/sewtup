@@ -1,6 +1,7 @@
 .CustomerProjects {
     position: fixed;
-    right: 30%;
+    left: calc(280px + 3rem);
+    width: 45%;
     top: 13%;
     &__header {
         background-color: white;

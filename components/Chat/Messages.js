@@ -1,5 +1,5 @@
-import React,{ useState } from 'react';
-import styles from './Messages.scss';
+import { useState } from 'react';
+import "./Messages.scss"
 
 const Messages = () => {
     const [isOpen,setIsOpen] = useState(false);
