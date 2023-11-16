@@ -1,0 +1,67 @@
+
+.filter-box {
+  background-color: white;
+  padding-left: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 20rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-bottom: 10rem;
+}
+
+.filterHeader{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  flex: 1;
+  margin-top: 1rem;
+}
+
+.filterClearButton{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  flex: 1;
+  color: red;
+  margin-top: 1rem;
+  align-self: flex-end;
+  margin-left: 9rem;
+}
+
+.filterHeaderRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.locationsContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.locationsDropDown{
+  width: 10rem;
+}
+
+.experienceContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.salaryContainer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.radioInputContainer{
+  margin-top: 1rem;
+}
+
+.sliderContainer{
+  margin-top: 1rem;
+}

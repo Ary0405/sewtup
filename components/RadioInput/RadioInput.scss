@@ -1,0 +1,50 @@
+// RadioInput.scss
+.radio-input-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #808080;
+    margin-left: .5rem;
+    margin-bottom: .7rem;
+
+input {
+    display: none;
+
+&:checked + .radio-custom {
+     background-color: #796a5b; /* Change color for checked state */
+     border-color: #796a5b;
+ }
+}
+
+.radio-custom {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    margin-right: 10px;
+
+
+&::before {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 10px;
+     height: 10px;
+     background-color: #fff;
+     border-radius: 50%;
+     display: none;
+ }
+}
+
+&:hover {
+.radio-custom::before {
+    display: block;
+}
+}
+}

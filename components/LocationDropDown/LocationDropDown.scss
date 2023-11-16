@@ -1,0 +1,46 @@
+// Dropdown.scss
+.location-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.selected-option {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 17.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #909090;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #909090;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+
+  li {
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.location-dropdown:hover .options {
+  display: block;
+}
