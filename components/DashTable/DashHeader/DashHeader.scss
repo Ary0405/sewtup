@@ -4,10 +4,12 @@
   display: grid;
   padding: 20px 50px 20px 20px;
   background-color: white;
-  width: 155%;
+
+  // width: 155%;
   &__title {
     font-family: "Inter", sans-serif;
   }
+
   span {
     width: auto;
     height: fit-content;

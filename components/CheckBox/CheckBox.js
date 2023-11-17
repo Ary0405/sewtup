@@ -1,4 +1,3 @@
-import React from "react";
 import DropDown from "@/components/LocationDropDown/LocationDropDown";
 import "./CheckBox.scss"
 import DashHeader from "@/components/DashTable/DashHeader/DashHeader";

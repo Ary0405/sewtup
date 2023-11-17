@@ -1,4 +1,4 @@
-import '../../../styles/routes/newOrder/ProjectTitle.scss'
+import '@/styles/routes/newOrder/ProjectTitle.scss'
 
 export default function ProjectTitle() {
     return (

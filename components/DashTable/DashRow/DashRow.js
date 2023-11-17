@@ -8,12 +8,17 @@ export default function DashRow({
     className,
     isTitle = true,
 }) {
+
+    const compStyle = {
+        gridTemplateColumns: `repeat(${data.length}, 1fr)`,
+    };
+    
     return (
         <div
             className={`DashHeaderWrapper ${className} 
-      ${isGreen ? "DashHeaderWrapper--green" : ""}
-      ${isTitle ? "DashHeaderWrapper--title" : ""}
-      `}
+                ${isGreen ? "DashHeaderWrapper--green" : ""}
+                ${isTitle ? "DashHeaderWrapper--title" : ""}
+                `}
             style={{
                 ...compStyle,
                 ...style,

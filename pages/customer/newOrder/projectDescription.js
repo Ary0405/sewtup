@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import '../../../styles/routes/newOrder/ProjectDescription.scss'
+import '@/styles/routes/newOrder/ProjectDescription.scss'
 
 export default function ProjectDescription() {
     return (
