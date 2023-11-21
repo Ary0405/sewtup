@@ -1,10 +1,12 @@
 import { useState } from "react"
 import { login } from "@/operations/user.fetch"
+import { useRouter } from "next/router"
 
 function Login() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const router = useRouter()
 
     const handleLogin = async () => {
         if (email === '' || password === '') {
@@ -21,7 +23,7 @@ function Login() {
 
         if (response.status === 200) {
             alert('Login successful')
-            return;
+            router.push('/')
         } else {
             alert(response.message)
         }
