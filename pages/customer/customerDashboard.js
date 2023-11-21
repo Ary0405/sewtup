@@ -1,6 +1,7 @@
 import CustomerNavbar from "@/components/CustomerNavbar/CustomerNavbar";
 import CustomerProjects from "@/components/CustomerProjects/CustomerProjects";
 import CustomerSidebar from "@/components/CustomerSidebar/CustomerSidebar";
+import "@/styles/routes/customerDashboard.scss";
 
 export async function getServerSideProps(context) {
     if (context.req.session.user === undefined) {
@@ -21,10 +22,16 @@ export async function getServerSideProps(context) {
 
 export default function CustomerDashboard({ user }) {
     return (
-        <div className="CustomerDashboard">
-            <CustomerSidebar user={user} />
-            <CustomerNavbar />
-            <CustomerProjects />
+        <div className="parent">
+            <div className="div1">
+                <CustomerSidebar user={user} />
+            </div>
+            <div className="div2">
+                <CustomerNavbar />
+            </div>
+            <div className="div3">
+                <CustomerProjects />
+            </div>
         </div>
     )
 }

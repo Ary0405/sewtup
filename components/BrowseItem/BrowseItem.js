@@ -1,8 +1,9 @@
-import "./ProjectItem.scss"
+import React from "react";
+import "./BrowseItem.scss"
 import DashHeader from "@/components/DashTable/DashHeader/DashHeader";
 import Image from "next/image";
 
-const ProjectItem = ({ projectData }) => {
+const BrowseItem = ({ projectData }) => {
     // Provide default values if projectData is not provided
     projectData = projectData || {
         status: "Accepted",
@@ -29,11 +30,6 @@ const ProjectItem = ({ projectData }) => {
     return (
         <div className="ProjectItem">
             <div className='box'>
-                <div className='ProjectItem__box-child'>
-                    <div className={`tag-${projectData.status.toLowerCase()}`}>
-                        {projectData.status}
-                    </div>
-                </div>
                 <div className="itemHeaderContainer">
                     <div className='itemHeaderRow'>
                         <img className="itemHeaderRow__image" alt="" src={projectData.imageSrc} />
@@ -46,49 +42,24 @@ const ProjectItem = ({ projectData }) => {
                             </div>
                         </div>
                     </div>
-                    <div className='itemHeaderRow'>
-                        <div className='itemHeaderText'>
-                            <div className='itemHeaderText__right-header'>
-                                {projectData.bidsInfo.bids}・{projectData.bidsInfo.averageBid}
-                            </div>
-                            <div className='itemHeaderText--right-estimate'>
-                                {projectData.bidsInfo.biddingEnds}
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div className='itemContentRowContainer'>
                     <div className="itemContentRow">
                         <div className="itemContentRow--desc">
                             {projectData.content.description}
                         </div>
-                        <div className="itemContentRow">
-                            <div className='bid-container'>
-                                <div className="bid-edit-text">
-                                    {projectData.content.bid.editBidText}
-                                </div>
-                                <div className="bid-edit-box-container">
-                                    <div className="bid-edit-box-1">
-                                        <div className="bid-edit-box-text">
-                                            {projectData.content.bid.amount}
-                                        </div>
-                                    </div>
-                                    <div className="bid-edit-box-2">
-                                        <div className="bid-edit-box-text">
-                                            {projectData.content.bid.duration}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div className="tags-row">
-                    {projectData.tags.map((tag, index) => (
-                        <div className="tags" key={index}>
-                            {tag}
+                        <div className="tags-fashion">
+                            Fashion
                         </div>
-                    ))}
+                        <div className="tags-silk">
+                            Silk Embroidery
+                        </div>
+                        <div className="tags-customize">
+                            Customize
+                        </div>
                     <div className="posted-time">
                         {projectData.postedTime}
                     </div>
@@ -98,4 +69,4 @@ const ProjectItem = ({ projectData }) => {
     );
 };
 
-export default ProjectItem;
+export default BrowseItem;

@@ -1,5 +1,4 @@
-// PricingSlider.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './PricingSlider.scss';
 
 const PricingSlider = ({ onChange }) => {

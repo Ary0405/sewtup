@@ -1,4 +1,5 @@
 import './DashHeader.scss'
+
 export default function DashHeader({
     headerTitles = [],
     isGreen = false,
@@ -7,15 +8,17 @@ export default function DashHeader({
     className,
     isTitle = true,
 }) {
+    
     const compStyle = {
         gridTemplateColumns: `repeat(${headerTitles.length}, 1fr)`,
     };
+
     return (
         <div
             className={`DashHeaderWrapper ${className} 
-      ${isGreen ? "DashHeaderWrapper--green" : ""}
-      ${isTitle ? "DashHeaderWrapper--title" : ""}
-      `}
+                ${isGreen ? "DashHeaderWrapper--green" : ""}
+                ${isTitle ? "DashHeaderWrapper--title" : ""}
+            `}
             style={{
                 ...compStyle,
                 ...style,

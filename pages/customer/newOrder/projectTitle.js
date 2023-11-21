@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import '../../../styles/routes/newOrder/ProjectTitle.scss'
 import { useRouter } from 'next/router';
 import useOrder from '@/hooks/useOrder';
+import '@/styles/routes/newOrder/ProjectTitle.scss'
 
 export default function ProjectTitle() {
 

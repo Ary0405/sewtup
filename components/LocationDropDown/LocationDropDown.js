@@ -1,5 +1,4 @@
-// Dropdown.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './LocationDropDown.scss';
 
 const Dropdown = ({ options, onSelect }) => {

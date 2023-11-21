@@ -1,8 +1,8 @@
 .CustomerNavbar {
   background-color: white;
   position: fixed;
-  right: 0;
-  width: 75vw;
+  // right: 0;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   padding-right: 2rem;
@@ -10,6 +10,7 @@
   padding-left: 2rem;
   padding-bottom: 0.7rem;
   align-items: center;
+
   &__input {
     font-family: "Inter", sans-serif;
     background-color: rgba(244, 244, 244, 1);

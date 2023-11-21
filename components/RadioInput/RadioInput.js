@@ -1,5 +1,3 @@
-// RadioInput.js
-import React from 'react';
 import './RadioInput.scss';
 
 const RadioInput = ({ label, name, value, checked, onChange }) => {
