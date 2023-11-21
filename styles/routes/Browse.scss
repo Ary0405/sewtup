@@ -2,7 +2,7 @@
   &__top {
     display: flex;
     justify-content: center;
-    padding-top: 5rem;
+    padding-top: 2rem;
 
     &--box {
       background-color: #5f2c00;
@@ -62,11 +62,12 @@
           border: none;
           width: 100%;
           border-radius: 0.5rem;
-          font-size: 1.5rem;
-          padding-bottom: 0.7rem;
+          font-size: 1.1rem;
+          padding-bottom:1rem;
           font-weight: 500;
-          padding-left: 0.5rem;
-          padding-top: 0.7rem;
+          padding-left: 0.8rem;
+          padding-top: 1rem;
+          color: white;
           font-family: 'Inter', sans-serif;
           --input-placeholder-color: rgba(255,255,255,255);
         }
@@ -82,7 +83,7 @@
           right: 0;
           transform: translateY(-50%);
           background-color: white;
-          color: #afa69c;
+          color: black;
           font-family: 'Inter', sans-serif;
           text-align: center;
           border: none;
