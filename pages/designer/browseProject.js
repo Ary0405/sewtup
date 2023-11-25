@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import '@/styles/routes/browseProject/BrowseProject.scss';
+import '@/styles/routes/designer/BrowseProject.scss';
 import Messages from '@/components/Chat/Messages';
 
 export default function BrowseProject({ project }) {

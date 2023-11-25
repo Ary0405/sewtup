@@ -1,4 +1,5 @@
-import '@/styles/routes/newOrder/ProjectTitle.scss'
+import Link from 'next/link';
+import '@/styles/routes/customer/ProjectTitle.scss'
 
 export default function ProjectTitle() {
     return (
@@ -12,7 +13,9 @@ export default function ProjectTitle() {
             <div className='ProjectTitle__bottom'>
                 <div className='ProjectTitle__bottom--box'>
                     <input className='ProjectTitle__bottom--box--input' type='text' placeholder='What do you need done ?' />
-                    <button className='ProjectTitle__bottom--box--button'>Next</button>
+                    <Link href="/customer/newOrder/projectDescription">
+                        <button className='ProjectTitle__bottom--box--button'>Next</button>
+                    </Link>
                 </div>
             </div>
         </div>

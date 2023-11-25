@@ -1,9 +1,11 @@
-import '../styles/routes/Browse.scss';
+import '../../styles/routes/designer/Browse.scss';
 import BrowseItem from "@/components/BrowseItem/BrowseItem";
 import Filter from "@/components/Filter/Filter"
-import img from '../public/Images/img.png';
+import img from '../../public/Images/img.png';
 import Image from 'next/image';
 import Bid from '@/components/Bid/Bid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export default function ProjectTitle() {
     return (
@@ -21,7 +23,8 @@ export default function ProjectTitle() {
                         <div className="Browse__top--box--column--input-container">
                             <div className="Browse__top--box--column--input-wrapper">
                                 <input className="Browse__top--box--column--input" type="text" placeholder="Search projects" />
-                                <button className="Browse__top--box--column--button">Submit</button>
+                                <FontAwesomeIcon icon={faSearch} />
+                                <button className="Browse__top--box--column--button">Search Job</button>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import '@/styles/routes/newOrder/ProjectDescription.scss'
+import Link from 'next/link'
+import '@/styles/routes/customer/ProjectDescription.scss'
 
 export default function ProjectFinalize() {
     return (
@@ -38,7 +39,9 @@ export default function ProjectFinalize() {
                     </div>
                     <div className='ProjectDescription__bottom--box__buttons'>
                         <div className='ProjectDescription__bottom--box__buttons--back'>No, I want to edit</div>
-                        <div className='ProjectDescription__bottom--box__buttons--next'>Yes, post my order</div>
+                        <Link href="/customer/customerDashboard">
+                            <div className='ProjectDescription__bottom--box__buttons--next'>Yes, post my order</div>
+                        </Link>
                     </div>
                 </div>
             </div>

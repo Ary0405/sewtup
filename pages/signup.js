@@ -1,4 +1,4 @@
-import { signup } from "@/operations/user.fetch"
+import { signup } from "@/context/operations/user.fetch"
 import { useState } from "react"
 
 export default function Signup() {
