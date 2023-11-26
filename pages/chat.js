@@ -11,12 +11,10 @@ import {
     updateDoc,
     setDoc
 } from "firebase/firestore";
-import { firebaseConfig } from '@/lib/firebase';
 import { fi } from 'date-fns/locale';
 import { mapper } from '@/utils/mapper';
 
 const db = getFirestore(app);
-
 
 function chat() {
 
@@ -32,7 +30,6 @@ function chat() {
         }).catch((error) => {
             console.error("Error writing document: ", error);
         });
-
     }
 
     return (
