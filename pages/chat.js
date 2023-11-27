@@ -12,7 +12,7 @@ import {
     setDoc,
     arrayUnion
 } from "firebase/firestore";
-import { fi } from 'date-fns/locale';
+import { enIN } from 'date-fns/locale';
 import { mapper } from '@/utils/mapper';
 
 const db = getFirestore(app);
