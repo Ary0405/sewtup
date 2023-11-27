@@ -8,13 +8,14 @@ datasource db {
 }
 
 model User {
-  id       Int     @id @default(autoincrement())
-  email    String  @unique
-  password String
-  name     String
-  role     Role    @default(USER)
-  bid      Bid[]
-  order    Order[]
+  id            Int     @id @default(autoincrement())
+  email         String  @unique
+  password      String
+  name          String
+  role          Role    @default(USER)
+  conversations Int[]
+  bid           Bid[]
+  order         Order[]
 }
 
 model Bid {
