@@ -47,8 +47,17 @@ function chat({ user }) {
 
     const handleSend = async () => {
         const newChat = {
-            message: messages
+            message: messages,
+            ts: new Date(),
+            sender: user1
         }
+
+        /**
+         * Problem:
+         * First chat should be craeted with setDoc
+         * and then the rest should be added with updateDoc
+         */
+
         // await setDoc(doc(db, "chats", chatRef), newChat).then(() => {
         //     console.log("Document successfully written!");
         // }).catch((error) => {
