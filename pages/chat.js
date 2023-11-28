@@ -14,6 +14,8 @@ import {
 } from "firebase/firestore";
 import { enIN } from 'date-fns/locale';
 import { mapper } from '@/utils/mapper';
+import { getConversations } from '@/services/user.service';
+import { isUserInConvos } from '@/services/user.service';
 
 const db = getFirestore(app);
 
@@ -28,22 +30,37 @@ export async function getServerSideProps(context) {
     }
 
     const user = context.req.session.user;
+    const userId = user.id;
+
+    const userConversations = await getConversations(userId)
+    // isUserInConvos(2,4).then((res) => {
+    //     console.log(res)
+    // }
+    // ).catch((err) => {
+    //     console.log(err)
+    // })
 
     return {
-        props: { user: user }
+        props: { user: user, userConversations: userConversations },
     }
 }
 
-function chat({ user }) {
+function chat({ user, userConversations }) {
 
     const [messages, setMessages] = useState([])
     const [user1, setUser1] = useState(user.id)
     const [user2, setUser2] = useState(0)
     const [chatRef, setChatRef] = useState(mapper(user1, user2))
+    const [conversations, setConversations] = useState(userConversations.conversations)
 
     useEffect(() => {
         setChatRef(mapper(user1, user2))
     }, [user2])
+
+    // useEffect(() => {
+    //     localStorage.setItem("conversation", conversations)
+    // }, [])
+
 
     const handleSend = async () => {
         const newChat = {
@@ -73,9 +90,6 @@ function chat({ user }) {
     }
 
 
-
-
-
     const setUserTwo = async (usr2) => {
         setUser2(usr2)
         setChatRef(mapper(user1, user2))
@@ -92,15 +106,19 @@ function chat({ user }) {
 
             <input type="text" onChange={(e) => setMessages(e.target.value)} />
             <button onClick={handleSend}>Send</button>
-            <button onClick={() => setUserTwo(1)}>Chat with user </button>
-            <button onClick={() => setUserTwo(2)}>Chat with user 2</button>
-            <button onClick={() => setUserTwo(5)}>Chat with user 5</button>
-            <button onClick={() => setUserTwo(6)}>Chat with user 6</button>
-            <button onClick={() => setUserTwo(7)}>Chat with user 7</button>
-            <button onClick={() => setUserTwo(8)}>Chat with user 8</button>
             <p>you are user {user1}</p>
             <p>you are chatting with user {user2}</p>
             <p>your chat ref is {chatRef}</p>
+
+            {
+                conversations.map((conversation) => {
+                    return (
+                        <div key={conversation}>
+                            <button onClick={() => setUserTwo(conversation)}>Chat with user {conversation}</button>
+                        </div>
+                    )
+                })
+            }
         </div>
     )
 }

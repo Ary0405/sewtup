@@ -12,8 +12,8 @@ model User {
   email         String  @unique
   password      String
   name          String
-  conversations Int[]
   role          Role    @default(USER)
+  conversations Int[]   @default([])
   bid           Bid[]
   order         Order[]
 }
