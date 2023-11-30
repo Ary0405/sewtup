@@ -3,6 +3,7 @@ import '@/styles/routes/main.scss';
 import MainHero from "@/components/MainHero/MainHero";
 import { useState } from "react";
 import MainFoot from "@/components/MainFoot/MainFoot";
+import MainCust from "@/components/MainCust/MainCust";
 
 export default function Home() {
 
@@ -36,7 +37,7 @@ export default function Home() {
                 Discover the story behind Sew't Up
               </p>
             </div>
-            <hr/>
+            <hr />
             <div className="Main__collapse--sub">
               <p className="Main__collapse--sub--title">
                 TEAM</p>
@@ -44,7 +45,7 @@ export default function Home() {
                 Get to know the faces behind the stitches
               </p>
             </div>
-            <hr/>
+            <hr />
             <div className="Main__collapse--sub">
               <p className="Main__collapse--sub--title">
                 CONTACT
@@ -53,7 +54,7 @@ export default function Home() {
                 Let's chat! Connect with Sew't Up
               </p>
             </div>
-            <hr/>
+            <hr />
             <div className="Main__collapse--sub">
               <p className="Main__collapse--sub--title">
                 LOGIN
@@ -70,6 +71,9 @@ export default function Home() {
         }}>
           <div className="section">
             <MainHero />
+          </div>
+          <div className="section">
+            <MainCust />
           </div>
           <div className="section">
             <MainFoot />

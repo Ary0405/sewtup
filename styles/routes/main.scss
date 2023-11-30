@@ -1,4 +1,6 @@
 .Main {
+    font-family: 'Arges-Thin';
+
     &__sidebar {
         width: 3.95%;
         height: 100vh;
@@ -19,7 +21,6 @@
         font-style: italic;
     }
 
-    font-family: 'Arges-Thin';
 
     &__content {
         width: 96%;
@@ -27,7 +28,6 @@
         position: fixed;
         top: 0;
         right: 0;
-        // z-index: 1;
         overflow: auto;
         box-sizing: border-box;
     }
@@ -35,9 +35,7 @@
     &__collapse {
         background-color: #E7D195;
         width: 55%;
-        // height: 98vh;
         z-index: 100;
-        // position: fixed;
         left: 4%;
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
@@ -46,10 +44,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: stretch;   
-        // stretch
-
-        // padding: 10px 0;
+        align-items: stretch;
 
         &--sub {
             color: #292929;
@@ -68,13 +63,16 @@
                 font-size: 15px;
             }
         }
-        :hover{
+
+        :hover {
             color: #E7D195;
             background-color: #f98b76;
             cursor: pointer;
         }
-        hr{
-            width: 80%;;
+
+        hr {
+            width: 80%;
+            ;
             background-color: #292929;
         }
     }
