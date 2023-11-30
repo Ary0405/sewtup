@@ -1,0 +1,60 @@
+.MainMission {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr) 0.5fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    font-family: 'Arges-Thin';
+    font-size: 50px;
+    text-transform: uppercase;
+
+    &__sub1 {
+        grid-area: 1 / 1 / 3 / 9;
+    }
+
+    &__sub2 {
+        grid-area: 3 / 1 / 4 / 12;
+        font-family: 'Inter', sans-serif;
+        color: #F7E0C8;;
+        font-size: 20px;
+        text-transform: none;
+        font-weight: 250;
+    }
+
+    &__sub3 {
+        grid-area: 4 / 1 / 6 / 9;
+    }
+
+    &__sub4 {
+        grid-area: 6 / 1 / 8 / 9;
+    }
+
+    &__sub5 {
+        grid-area: 1 / 10 / 3 / 12;
+    }
+
+    &__sub6 {
+        grid-area: 4 / 10 / 6 / 12;
+    }
+
+    &__sub7 {
+        grid-area: 6 / 10 / 8 / 12;
+    }
+
+    h1{
+        color: #F98B76;
+    font-weight: 900;
+
+    }
+    p{
+        color:#FFF;
+    font-weight: 900;
+    font-size: 100px;
+
+    }
+    hr{
+        width: 100%;
+    }
+
+
+}

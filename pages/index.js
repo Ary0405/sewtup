@@ -5,6 +5,7 @@ import { useState } from "react";
 import MainFoot from "@/components/MainFoot/MainFoot";
 import MainCust from "@/components/MainCust/MainCust";
 import MainMeet from "@/components/MainMeet/MainMeet";
+import MainMission from "@/components/MainMission/MainMission";
 import Image from 'next/image';
 
 export default function Home() {
@@ -76,6 +77,9 @@ export default function Home() {
           </div>
           <div className="section">
             <img src="/Images/main_model.png" alt="main_model" className="Main__content--img" />
+          </div>
+          <div className="section">
+            <MainMission />
           </div>
           <div className="section">
             <MainCust />
