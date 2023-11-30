@@ -6,3 +6,13 @@
 body {
   background-color: rgba(243, 238, 234, 1);
 }
+
+@font-face {
+  font-family: 'Arges';
+  src: url('../arges.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Arges-Thin';
+  src: url('../arges-thin.ttf') format('truetype');
+}
