@@ -1,0 +1,80 @@
+.MainFoot {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr) 1.2fr 0.7fr repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 20px 30px;
+
+    font-family: 'Arges';
+    background-color: #292929;
+    height: 100vh;
+
+
+    &__sub1 {
+        grid-area: 1 / 1 / 5 / 13;
+        color: #E7D195;
+        font-size: 250px;
+    }
+
+    &__sub2 {
+        grid-area: 5 / 1 / 6 / 13;
+        color: #C0F7FF;
+        font-size: 40px;
+        font-family: 'Arges-Thin';
+        font-weight: 700;
+
+    }
+
+    &__sub3 {
+        grid-area: 6 / 5 / 7 / 9;
+        color: #C0F7FF;
+        font-family: 'Inter', sans-serif;
+        font-size: 22px;
+    }
+
+    &__sub4 {
+        grid-area: 9 / 1 / 13 / 7;
+        background-color: #F98B76;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        padding: 20px;
+        color: #292929;
+        
+        font-family: 'Arges-Thin';
+        &--sub1 {
+            grid-area: 1 / 1 / 5 / 13;
+            font-size: 45px;
+            font-weight: 900;
+        }
+        
+        &--sub2 {
+            grid-area: 8 / 1 / 9 / 6;
+            font-size: 20px;
+        }
+        
+        &--sub3 {
+            font-size: 30px;
+            grid-area: 7 / 8 / 9 / 13;
+            text-align: right;
+            font-weight: 800;
+        }
+    }
+
+    &__sub5 {
+        grid-area: 7 / 7 / 13 / 11;
+        background-image: url("/Images/plant.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__sub6 {
+        grid-area: 12 / 11 / 13 / 13;
+        color: #C0F7FF;
+        font-family: 'Inter', sans-serif;
+    }
+}
