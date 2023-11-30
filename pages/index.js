@@ -4,6 +4,7 @@ import MainHero from "@/components/MainHero/MainHero";
 import { useState } from "react";
 import MainFoot from "@/components/MainFoot/MainFoot";
 import MainCust from "@/components/MainCust/MainCust";
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -73,7 +74,13 @@ export default function Home() {
             <MainHero />
           </div>
           <div className="section">
+            <img src="/Images/main_model.png" alt="main_model" className="Main__content--img" />
+          </div>
+          <div className="section">
             <MainCust />
+          </div>
+          <div className="section">
+            <img src="/Images/multiple_models.png" alt="main_model2" className="Main__content--img" />
           </div>
           <div className="section">
             <MainFoot />

@@ -2,9 +2,9 @@
     font-family: 'Arges-Thin';
 
     &__sidebar {
+        background-color: #292929;
         width: 3.95%;
         height: 100vh;
-        background-color: #292929;
         position: fixed;
         top: 0;
         left: 0;
@@ -30,6 +30,15 @@
         right: 0;
         overflow: auto;
         box-sizing: border-box;
+
+        background-color: #292929;
+        &--img{
+            // height: 88vh;
+            // width: auto;
+            width: 90vw;
+            height: auto;
+            border-radius: 25px;
+        }
     }
 
     &__collapse {
@@ -76,4 +85,10 @@
             background-color: #292929;
         }
     }
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
