@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,800&display=swap');
+
+.MainMeet {
+    background-color: #E7D195;
+    height: 150vh;
+    width: 100vw;
+    margin-bottom: 50px;
+
+    &__meet {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--t1 {
+            padding-top: 200px;
+            font-family: 'Arges-Thin';
+            font-size: 250px;
+            font-weight: 1000;
+            color: #292929;
+            line-height: 190px;
+        }
+
+        &--t2 {
+            font-family: 'Fraunces';
+            color: #F98B76;
+            font-style: italic;
+            font-size: 300px;
+            font-weight: 1000;
+            line-height: 0px;
+        }
+        &--t3{
+            font-family: 'Arges-Thin';
+            font-size: 250px;
+            font-weight: 1000;
+            color: #292929;
+            line-height: 465px;
+        }
+    }
+
+    &__team {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        &--img {
+            width: 30vw;
+            height: auto;
+            border-radius: 25px;
+        }
+    }
+}
