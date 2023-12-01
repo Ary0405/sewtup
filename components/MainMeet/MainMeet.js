@@ -1,8 +1,27 @@
 import React from 'react';
 import './MainMeet.scss';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import Card from '@/components/MainMeetCard/MainMeetCard';
+
+const responsive = {
+    superLargeDesktop: {
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 3
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+    }
+};
 
 function MainMeet() {
     return (
@@ -12,13 +31,16 @@ function MainMeet() {
                 <p className='MainMeet__meet--t2'>the</p>
                 <p className='MainMeet__meet--t3'>TEAM</p>
             </div>
+
             <div className="MainMeet__team">
-                <Carousel autoPlay infiniteLoop>
-                    <Card name="Name 1" photo="/path/to/photo1.jpg" />
-                    <Card name="Name 2" photo="/path/to/photo2.jpg" />
-                    <Card name="Name 3" photo="/path/to/photo3.jpg" />
-                    <Card name="Name 4" photo="/path/to/photo4.jpg" />
-                    <Card name="Name 5" photo="/path/to/photo5.jpg" />
+                <Carousel centerMode={true} responsive={responsive} autoPlay={true} infinite={true} autoPlaySpeed={2000} itemClass="carousel-team" arrows={false}>
+                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
+                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
+                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
+                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
+                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
+                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
+                
                 </Carousel>
             </div>
         </div>

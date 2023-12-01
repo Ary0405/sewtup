@@ -1,48 +1,36 @@
 .div-hero-marquee {
     background-color: var(--secondary-color);
-    border-radius: 29.21px;
-    height: 527px;
-    overflow: hidden;
-    position: relative;
-    width: 423px;
+    border-radius: 5vh; // 29.21px to vh
+    height: 44vh; // 270px to vh
+    width: 33vh; // 212px to vh
+}
+
+.card_photo {
+    width: 19vh;
+    height: auto;
+    padding-left: 7vh;
+    padding-top: 2vh;
 }
 
 .div-hero-marquee .frame {
-    align-items: flex-start;
+    justify-content: center;
     background-color: #192928;
-    border-radius: 49.43px;
+    border-radius: 4.943vh; // 49.43px to vh
+    width: 80%;
     display: inline-flex;
-    gap: 8.99px;
-    left: 11px;
-    padding: 23.59px 39.32px;
+    padding: 1.1vh 1.5vh; // 11px and 15px to vh
     position: relative;
-    top: 442px;
+    // top: 36vh; // 210px to vh
+    margin-left: 2vh;
 }
 
 .div-hero-marquee .text-wrapper {
     color: var(--secondary-color);
     font-family: "Satoshi-Bold", Helvetica;
-    font-size: 23.4px;
-    font-weight: 700;
+    font-size: 2.2vh; // 12px to vh
+    font-weight: 1000;
     letter-spacing: 0;
-    line-height: 23.4px;
-    margin-top: -1.8px;
     position: relative;
     text-align: center;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.div-hero-marquee .div {
-    color: var(--variable-collection-poly-color);
-    font-family: "Satoshi-Regular", Helvetica;
-    font-size: 23.4px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 23.4px;
-    margin-top: -1.8px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
     width: fit-content;
 }

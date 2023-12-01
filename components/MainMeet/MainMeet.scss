@@ -5,6 +5,7 @@
     height: 150vh;
     width: 100vw;
     margin-bottom: 50px;
+    overflow: hidden;
 
     &__meet {
         height: 100vh;
@@ -40,26 +41,16 @@
     }
 
     &__team {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
 
-        &--img {
-            width: 30vw;
-            height: auto;
-            border-radius: 25px;
+        .carousel-team {
+            margin-right: -20px;
+            margin-left: -20px;
         }
-a
+
         .carousel {
             width: 100%;
             margin: 0 auto;
-
-            .slide {
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-            }
+            overflow: hidden;
         }
     }
 }

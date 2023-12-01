@@ -16,3 +16,12 @@ body {
   font-family: 'Arges-Thin';
   src: url('../arges-thin.ttf') format('truetype');
 }
+
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --primary-color: rgba(41, 41, 41, 1);
+  --secondary-color: rgba(249, 139, 118, 1);
+  --tertiary-color: rgba(231, 209, 149, 1);
+  --variable-collection-poly-color: rgba(192, 247, 255, 1);
+  --white: rgba(255, 255, 255, 1);
+}

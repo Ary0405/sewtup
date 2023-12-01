@@ -4,9 +4,9 @@ import './MainMeetCard.scss';
 const Card = ({ name, photo }) => {
     return (
         <div className="div-hero-marquee">
+                <img src={photo} alt={name} className="card_photo" />
             <div className="frame">
-                <div className="text-wrapper">Sanskriti Garg</div>
-                <div className="div">Marketing Lead</div>
+                <div className="text-wrapper">{name}</div>
             </div>
         </div>
     );
