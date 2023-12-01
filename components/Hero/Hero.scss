@@ -1,0 +1,75 @@
+.Hero {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    &__images {
+        position: absolute;
+        &--image1,&--image2,&--image3,&--image4,&--image5,&--image6 {
+            position: relative;
+            border-radius: 1rem;
+        }
+        &--image1 {
+            width: 13vw;
+            top: 21rem;
+            right: 13rem;
+        }
+        &--image2 {
+            width: 13vw;
+            right: 30rem;
+        }
+        &--image3 {
+            right: 24rem;
+            bottom: 12rem;
+        }
+        &--image4 {
+            bottom:10rem;
+            left: 5rem;
+        }
+        &--image5 {
+            top: 4rem;
+            left: 3rem;
+        }
+        &--image6 {
+            width: 13vw;
+            top: 10rem;
+            left: 48rem;
+        }
+    }
+    &__content {
+        &--text{
+            font-family: 'Arges-thin';
+            color: white;
+            font-weight: 900;
+            text-align: center;
+            font-size: 10rem;
+            span {
+                color: rgba(249, 139, 118, 1);
+            }
+        }
+        &--text2 {
+            color:white;
+            text-align: center;
+            font-family: 'Inter',sans-serif;
+            font-size: 1.6rem;
+        }
+        &--buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            &__button {
+                cursor: pointer;
+                margin-right: 2rem;
+                p{
+                    font-family: 'Inter', sans-serif;
+                    background-color: rgba(231, 209, 149, 1);
+                    padding: .7rem 1.2rem .7rem 1.2rem;
+                    border-radius: 1.5rem;
+                }
+                img {
+                    width: 3vw;
+                }
+                align-items: center;
+                display: flex;
+            }
+        }
+    }
+}
