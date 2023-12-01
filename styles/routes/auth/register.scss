@@ -1,0 +1,137 @@
+.Register {
+    display: grid;
+    grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr repeat(5, 1fr) 0.5fr;
+    grid-template-rows: 0.5fr repeat(10, 1fr) 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    background-color: #292929;
+    font-family: 'Inter', sans-serif;
+
+    &__form {
+        width: 85%; // based on view change to 80 if feels too big
+        height: 65vh;
+        grid-area: 3 / 2 / 10 / 6;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        padding-left: 30px;
+
+        input {
+            border: 1.105px solid rgba(255, 255, 255, 0.07);
+            background: rgba(255, 255, 255, 0.04);
+            width: 70%;
+            height: 35px;
+            border-radius: 6px;
+        }
+
+        button {
+            border-radius: 6px;
+            border: 1.105px solid rgba(255, 255, 255, 0.07);
+            background: #F98B76;
+            width: 70%;
+            height: 35px;
+        }
+
+        h1 {
+            color: #F98B76;
+        }
+
+        a {
+            color: #AFDCDF;
+            text-decoration: none;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.84);
+        }
+    }
+
+    &__backimg {
+        grid-area: 2 / 7 / 12 / 12;
+        background-image: url("/Images/signup.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+    }
+
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.toggle{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    font-family: 'Inter', sans-serif;
+
+
+    color: rgba(255, 255, 255, 0.84);
+
+}

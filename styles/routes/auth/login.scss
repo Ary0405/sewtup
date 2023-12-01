@@ -1,0 +1,62 @@
+.Login {
+    display: grid;
+    grid-template-columns: 0.75fr repeat(4, 1fr) 0.5fr repeat(5, 1fr) 0.5fr;
+    grid-template-rows: 0.5fr repeat(10, 1fr) 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    background-color: #292929;
+    font-family: 'Inter', sans-serif;
+
+    &__form {
+        width: 85%; // based on view change to 80 if feels too big
+        height: 50vh;
+        grid-area: 4 / 2 / 10 / 6;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        padding-left: 30px;
+
+        input {
+            border: 1.105px solid rgba(255, 255, 255, 0.07);
+            background: rgba(255, 255, 255, 0.04);
+            width: 70%;
+            height: 35px;
+            border-radius: 6px;
+        }
+
+        button {
+            border-radius: 6px;
+            border: 1.105px solid rgba(255, 255, 255, 0.07);
+            background: #F98B76;
+            width: 70%;
+            height: 35px;
+        }
+
+        h1 {
+            color: #F98B76;
+        }
+
+        a {
+            color: #AFDCDF;
+            text-decoration: none;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.84);
+        }
+    }
+
+    &__backimg {
+        grid-area: 2 / 6 / 12 / 12;
+        background-image: url("/Images/login.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+    }
+
+}
