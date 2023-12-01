@@ -1,0 +1,48 @@
+.div-hero-marquee {
+    background-color: var(--secondary-color);
+    border-radius: 29.21px;
+    height: 527px;
+    overflow: hidden;
+    position: relative;
+    width: 423px;
+}
+
+.div-hero-marquee .frame {
+    align-items: flex-start;
+    background-color: #192928;
+    border-radius: 49.43px;
+    display: inline-flex;
+    gap: 8.99px;
+    left: 11px;
+    padding: 23.59px 39.32px;
+    position: relative;
+    top: 442px;
+}
+
+.div-hero-marquee .text-wrapper {
+    color: var(--secondary-color);
+    font-family: "Satoshi-Bold", Helvetica;
+    font-size: 23.4px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    margin-top: -1.8px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.div-hero-marquee .div {
+    color: var(--variable-collection-poly-color);
+    font-family: "Satoshi-Regular", Helvetica;
+    font-size: 23.4px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    margin-top: -1.8px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}

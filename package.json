@@ -19,6 +19,7 @@
     "prisma": "^5.5.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-responsive-carousel": "^3.2.23",
     "sass": "^1.69.5"
   }
 }
