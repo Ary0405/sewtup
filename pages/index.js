@@ -7,6 +7,8 @@ import MainCust from "@/components/MainCust/MainCust";
 import MainMeet from "@/components/MainMeet/MainMeet";
 import MainMission from "@/components/MainMission/MainMission";
 import Image from 'next/image';
+import Hero from "@/components/Hero/Hero";
+import Waste from "@/components/Waste/Waste";
 
 export default function Home() {
 
@@ -73,6 +75,9 @@ export default function Home() {
           zIndex: sidebar ? -1 : 1
         }}>
           <div className="section">
+            <Hero />
+          </div>
+          <div className="section">
             <MainHero />
           </div>
           <div className="section">
@@ -83,6 +88,9 @@ export default function Home() {
           </div>
           <div className="section">
             <MainCust />
+          </div>
+          <div className="section">
+            <Waste />
           </div>
           <div className="section">
             <MainMeet />
