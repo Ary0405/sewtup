@@ -1,22 +1,24 @@
 .div-hero-marquee {
-    background-color: var(--secondary-color);
+    // background-color: var(--secondary-color);
     border-radius: 5vh; // 29.21px to vh
     height: 44vh; // 270px to vh
-    width: 33vh; // 212px to vh
+    // width: 33vh; // 212px to vh
+    width: 17vw;
 }
 
 .card_photo {
-    width: 19vh;
+    width: 17vw;
     height: auto;
-    padding-left: 7vh;
-    padding-top: 2vh;
+    // padding-left: 1.6rem;
+    padding-left: 1.8vw;
+    // padding-top: 2vh;
 }
 
 .div-hero-marquee .frame {
     justify-content: center;
     background-color: #192928;
     border-radius: 4.943vh; // 49.43px to vh
-    width: 80%;
+    width: 100%;
     display: inline-flex;
     padding: 1.1vh 1.5vh; // 11px and 15px to vh
     position: relative;

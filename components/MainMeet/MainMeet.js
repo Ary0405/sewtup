@@ -34,13 +34,14 @@ function MainMeet() {
 
             <div className="MainMeet__team">
                 <Carousel centerMode={true} responsive={responsive} autoPlay={true} infinite={true} autoPlaySpeed={2000} itemClass="carousel-team" arrows={false}>
-                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
-                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
-                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
-                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
-                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
-                <Card name="Chaitanya Tandon" photo="/Images/photo1.jpg" />
-                
+                <Card name="Naisha Srivastav" photo="/Images/LandingPage/naishaCrop.jpg" />
+                <Card name="Navya Mittal" photo="/Images/LandingPage/navyaCrop.jpg" />
+                <Card name="Mahika Kathuria" photo="/Images/LandingPage/mahikaCrop.jpg" />
+                <Card name="Ira Chawla" photo="/Images/LandingPage/IraCropped.jpg" />
+                <Card name="Devina Mehta" photo="/Images/LandingPage/devinaCrop.jpg" />
+                <Card name="Ramneek K Panesar" photo="/Images/LandingPage/RamneekCrop.jpg" />
+                <Card name="Mansa Dash" photo="/Images/LandingPage/MansaCrop.jpg" />
+
                 </Carousel>
             </div>
         </div>

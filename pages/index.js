@@ -15,6 +15,10 @@ export default function Home() {
   const router = useRouter();
   const [sidebar, setSidebar] = useState(false);
 
+  const handleLoginClick = () => {
+    router.push('/auth/login');
+};
+
   return (
     <>
       <div className="Main">
@@ -60,7 +64,7 @@ export default function Home() {
               </p>
             </div>
             <hr />
-            <div className="Main__collapse--sub">
+            <div className="Main__collapse--sub" onClick={handleLoginClick} style={{ cursor: 'pointer' }}>
               <p className="Main__collapse--sub--title">
                 LOGIN
               </p>
