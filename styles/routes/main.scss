@@ -68,7 +68,7 @@
             width: 100%;
             height: 91vh;
             top: 9vh;
-
+            overflow-x: hidden;
         }
 
 
@@ -157,4 +157,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 768px) {
+        overflow-x: hidden;
+    }
 }

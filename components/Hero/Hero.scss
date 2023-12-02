@@ -1,75 +1,194 @@
 .Hero {
     padding-top: 4rem;
     padding-bottom: 4rem;
+
+    @media (max-width: 768px) {
+        height: 70vh;
+        padding-top: 0rem;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
     &__images {
         position: absolute;
-        &--image1,&--image2,&--image3,&--image4,&--image5,&--image6 {
+        // width: 100%;
+
+        &--image1,
+        &--image2,
+        &--image3,
+        &--image4,
+        &--image5,
+        &--image6 {
             position: relative;
             border-radius: 1rem;
+
+            @media (max-width: 768px) {
+                border-radius: 0;
+            }
+
         }
+
         &--image1 {
             width: 13vw;
             top: 21rem;
             right: 13rem;
         }
+
         &--image2 {
             width: 13vw;
             right: 30rem;
         }
+
         &--image3 {
             right: 24rem;
             bottom: 12rem;
         }
+
         &--image4 {
-            bottom:10rem;
+            bottom: 10rem;
             left: 5rem;
         }
+
         &--image5 {
             top: 4rem;
             left: 3rem;
         }
+
         &--image6 {
             width: 13vw;
             top: 10rem;
             left: 48rem;
         }
+
+        @media (max-width: 768px) {
+            width: 100vw;
+            
+            &--image1,
+            &--image2,
+            &--image3,
+            &--image4,
+            &--image5,
+            &--image6 {
+                // position: sticky;
+                border-radius: 0;
+            }
+
+
+            &--image1 {
+                width: 25vw;
+                top: 19rem;
+                right: 2rem;
+            }
+
+            &--image2 {
+                width: 26vw;
+                right: -14rem;
+                top: -3rem;
+            }
+
+            &--image3 {
+                width: 48vw;
+                right: -1rem;
+                top: 27rem;
+            }
+
+            &--image4 {
+                width: 32vw;
+                bottom: 12rem;
+                left: -3rem;
+            }
+
+            &--image5 {
+                width: 30vw;
+                top: 10rem;
+                left: 12rem
+            }
+
+            &--image6 {
+                width: 30vw;
+                top: 20rem;
+                left: -11rem;
+            }
+        }
+
+
+
     }
+
     &__content {
-        &--text{
+        &--text {
             font-family: 'Arges-thin';
             color: white;
             font-weight: 900;
             text-align: center;
             font-size: 10rem;
+
             span {
                 color: rgba(249, 139, 118, 1);
             }
         }
+
         &--text2 {
-            color:white;
+            color: white;
             text-align: center;
-            font-family: 'Inter',sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 1.6rem;
         }
+
         &--buttons {
             margin-top: 1.5rem;
             display: flex;
             justify-content: center;
+
             &__button {
                 cursor: pointer;
                 margin-right: 2rem;
-                p{
+
+                p {
                     font-family: 'Inter', sans-serif;
                     background-color: rgba(231, 209, 149, 1);
                     padding: .7rem 1.2rem .7rem 1.2rem;
                     border-radius: 1.5rem;
                 }
+
                 img {
                     width: 3vw;
                 }
+
                 align-items: center;
                 display: flex;
             }
+
+
+            @media (max-width: 768px) {
+                font-size: .8rem;   
+            }
+
         }
+
+
+        @media (max-width: 768px) {
+            &--text {
+                font-size: 4.7rem;
+            }
+
+            &--text2 {
+                font-size: 1.2rem;
+            }
+
+            &--buttons {
+                flex-direction: column;
+                align-items: center;
+
+                &__button {
+                    margin-bottom: 1rem;
+                    margin-right: 0rem;
+                }
+                img{
+                    width: 10vw;
+                }
+            }
+        }
+
     }
 }
