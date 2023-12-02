@@ -1,0 +1,116 @@
+.div-hero-marquee {
+    // background-color: var(--secondary-color);
+    border-radius: 5vh; // 29.21px to vh
+    height: 44vh; // 270px to vh
+    // width: 33vh; // 212px to vh
+    width: 17vw;
+}
+
+.card_photo {
+    width: 17vw;
+    height: auto;
+    // padding-left: 1.6rem;
+    padding-left: 1.8vw;
+    // padding-top: 2vh;
+
+    @media (max-width: 768px) {
+        width: 60vw;
+        height: auto;
+        padding-top: 0;
+
+    }
+
+}
+
+.div-hero-marquee .frame {
+    justify-content: center;
+    background-color: #192928;
+    border-radius: 4.943vh; // 49.43px to vh
+    width: 100%;
+    display: inline-flex;
+    padding: 1.1vh 1.5vh; // 11px and 15px to vh
+    position: relative;
+    // top: 36vh; // 210px to vh
+    margin-left: 2vh;
+
+    @media (max-width: 768px) {
+        top: 0;
+        margin-left: 0;
+        // padding: 0 100px;
+        // border-radius: 0;
+    }
+
+}
+
+.div-hero-marquee .text-wrapper {
+    color: var(--secondary-color);
+    font-family: "Satoshi-Bold", Helvetica;
+    font-size: 2.2vh; // 12px to vh
+    font-weight: 1000;
+    letter-spacing: 0;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+
+
+.Card {
+
+    // background-color: #F98B76;
+    width: 20vw;
+    height: 46vh;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media (max-width: 768px) {
+        width: 60vw;
+        // height: auto;
+        padding-top: 0;
+
+    }
+
+    &__img {
+        width: 17vw;
+        height: auto;
+        border-radius: 20px;
+
+        @media (max-width: 768px) {
+            width: 60vw;
+            height: auto;
+            padding-top: 0;
+
+        }
+    }
+
+    &__text {
+
+
+        background-color: #292929;
+        color: var(--secondary-color);
+        font-family: "Satoshi-Bold", Helvetica;
+        padding: 10px 20px;
+        border-radius: 20px;
+
+        &--name {
+            font-size: 2.2vh; // 12px to vh
+            font-weight: 1000;
+            letter-spacing: 0;
+            position: relative;
+            text-align: center;
+            width: fit-content;
+
+
+
+        }
+
+        @media (max-width: 768px) {
+            
+        }
+
+    }
+}
