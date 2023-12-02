@@ -33,7 +33,7 @@ export default function Home() {
           }}>
             <img src="/dots.svg" alt="dots" />
           </div>
-          <div>
+          <div className="Main__sidebar--sub3">
           </div>
         </div>
         {

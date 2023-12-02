@@ -19,6 +19,23 @@
         font-weight: 800;
         font-size: 50px;
         font-style: italic;
+
+
+        @media (max-width: 768px) {
+            width: 100%;
+            height: 10vh;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 45px;
+            padding: 20px 20px 0 20px;
+
+            &--sub3 {
+                display: none;
+            }
+
+        }
+
     }
 
 
@@ -32,11 +49,28 @@
         box-sizing: border-box;
 
         background-color: #292929;
-        &--img{
+
+        &--img {
             width: 90vw;
             height: auto;
             border-radius: 25px;
+
+            // @media (max-width: 768px) {
+            //     height: 60vh;
+            //     width: auto;
+            //     padding: 0 20px;
+            // }
+
         }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            height: 90vh;
+            top: 10vh;
+
+        }
+
+
     }
 
     &__collapse {
@@ -85,7 +119,7 @@
     }
 }
 
-.section{
+.section {
     display: flex;
     align-items: center;
     justify-content: center;
