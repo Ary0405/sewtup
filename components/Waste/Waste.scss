@@ -6,4 +6,13 @@
     img {
         width: 70vw;
     }
+
+    @media (max-width: 768px) {
+        img{
+            width: 115vw;
+        }
+        height: auto;
+        padding: 80px 0px;
+    }
+
 }
