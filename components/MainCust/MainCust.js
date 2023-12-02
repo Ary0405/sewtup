@@ -34,9 +34,7 @@ function MainCust() {
                     <hr/>
                     <p>Connect with customers, discuss designs, and build relationships.</p>
                 </div>
-
             </div>
-
         </div>
     )
 }

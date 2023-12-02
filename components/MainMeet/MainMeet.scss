@@ -31,13 +31,36 @@
             font-weight: 1000;
             line-height: 0px;
         }
-        &--t3{
+
+        &--t3 {
             font-family: 'Arges-Thin';
             font-size: 250px;
             font-weight: 1000;
             color: #292929;
             line-height: 465px;
         }
+
+
+        @media (max-width: 768px) {
+            height: 60vh;
+            &--t1 {
+                padding-top: 100px;
+                font-size: 175px;
+                line-height: 130px;
+            }
+
+            &--t2 {
+                font-size: 175px;
+                line-height: 0px;
+            }
+
+            &--t3 {
+                font-size: 175px;
+                line-height: 300px;
+            }
+
+        }
+
     }
 
     &__team {
