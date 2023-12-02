@@ -47,9 +47,9 @@ function register() {
                 <p>Sign up and get to access a world of<br /> convenience.</p>
                 <div className='toggle'>
                     <label>Customer</label>
-                    <label class="switch">
+                    <label className="switch">
                         <input type="checkbox" onChange={(e) => setRole(e.target.checked ? "DESIGNER" : "USER")} />
-                        <span class="slider round"></span>
+                        <span className="slider round"></span>
                     </label>
                     <label>Designer</label>
                 </div>

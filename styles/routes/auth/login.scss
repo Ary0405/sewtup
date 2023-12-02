@@ -59,4 +59,16 @@
         border-radius: 20px;
     }
 
+    @media (max-width: 768px) {
+        &__backimg {
+            display: none;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+
 }

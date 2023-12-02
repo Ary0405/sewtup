@@ -59,6 +59,16 @@
         border-radius: 20px;
     }
 
+    &__backimg {
+        display: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+
 }
 
 
@@ -124,7 +134,7 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-.toggle{
+.toggle {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
