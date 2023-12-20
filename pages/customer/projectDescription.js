@@ -21,7 +21,7 @@ export default function ProjectDescription() {
                     </div>
                     <div className='ProjectDescription__bottom--box__attach'>
                         <div className='ProjectDescription__bottom--box__attach--logo'>
-                            <Image className='ProjectDescription__bottom--box__attach--logo__image' src='/Images/Customer/attach_files.png' width={30} height={30} />
+                            <Image className='ProjectDescription__bottom--box__attach--logo__image' src='/Images/Customer/attach_files.webp' width={30} height={30} />
                             <input type='file' />
                         </div>
                         <p className='ProjectDescription__bottom--box__attach--text'>Upload any images or documents that might be helpful in explaining your brief here (Max file size: 10MB)</p>

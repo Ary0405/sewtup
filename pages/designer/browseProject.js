@@ -19,9 +19,9 @@ export default function BrowseProject({ project }) {
         Additional Specifications: I have a specific request for the outfit's design, including detailed embroidery on the collar and cuffs, adding a touch of sophistication and elegance.
         I'm open to discussing the design further and considering various bids from talented designers. Please provide your proposals, including estimated costs, and I look forward to collaborating with the selected designer to create a truly remarkable piece.`,
         attachments: [
-            '/Images/attach1.jpg',
-            '/Images/attach2.jpg',
-            '/Images/attach3.jpg',
+            '/Images/attach1.webp',
+            '/Images/attach2.webp',
+            '/Images/attach3.webp',
         ],
     };
 
