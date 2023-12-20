@@ -7,13 +7,13 @@ export default function CustomerSidebar({ user }) {
         <div className="CustomerSidebar" >
             <div className="CustomerSidebar__top">
                 <div className="CustomerSidebar__top__row">
-                    <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/my_projects.png'} width={25} height={25} />
+                    <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/my_projects.webp'} width={25} height={25} />
                     <Link href="/customer/customerDashboard">
                         <p className="CustomerSidebar__top__row--text">My Projects</p>
                     </Link>
                 </div>
                 <div className="CustomerSidebar__top__row">
-                    <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/bid_management.png'} width={20} height={20} />
+                    <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/bid_management.webp'} width={20} height={20} />
                     <Link href="/customer/bidManagement">
                         <p className="CustomerSidebar__top__row--text">Bid Management</p>
                     </Link>
@@ -24,7 +24,7 @@ export default function CustomerSidebar({ user }) {
                     <p className="CustomerSidebar__bottom--column__name">{user.name}</p>
                     <p className="CustomerSidebar__bottom--column__email">{user.email}</p>
                 </div>
-                <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/logout.png'} width={20} height={20} />
+                <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/logout.webp'} width={20} height={20} />
             </div>
         </div>
     )
