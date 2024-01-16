@@ -1,6 +1,8 @@
 .Hero {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    font-family: 'Sprite Graffiti', sans-serif;
+    height: 100vh;
 
     @media (max-width: 768px) {
         height: 70vh;
@@ -117,11 +119,11 @@
 
     &__content {
         &--text {
-            font-family: 'Arges-thin';
             color: white;
-            font-weight: 900;
+            font-weight: 400;
             text-align: center;
             font-size: 10rem;
+            color: #F98B76;
 
             span {
                 color: rgba(249, 139, 118, 1);
@@ -131,8 +133,8 @@
         &--text2 {
             color: white;
             text-align: center;
-            font-family: 'Inter', sans-serif;
-            font-size: 1.6rem;
+            font-family: 'Nohemi', sans-serif;
+            font-size: 2rem;
         }
 
         &--buttons {

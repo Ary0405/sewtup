@@ -87,9 +87,9 @@ export default function Home() {
           <div className="section">
             <img src="/Images/main_model.png" alt="main_model" className="Main__content--img" />
           </div>
-          <div className="section">
+          {/* <div className="section">
             <MainMission />
-          </div>
+          </div> */}
           <div className="section">
             <MainCust />
           </div>
