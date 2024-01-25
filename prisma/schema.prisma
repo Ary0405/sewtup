@@ -7,17 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id            Int     @id @default(autoincrement())
-  email         String  @unique
-  password      String
-  name          String
-  role          Role    @default(USER)
-  conversations Int[]
-  bid           Bid[]
-  order         Order[]
-}
-
 model Bid {
   id       Int       @id @default(autoincrement())
   amount   Int       @default(0)
@@ -44,32 +33,31 @@ model Order {
   finalPrice  Int?
   maxBudget   Int        @default(0)
   minBudget   Int        @default(0)
-  bids        Bid[]
+  date        DateTime   @default(now())
+  Bid         Bid[]
   User        User       @relation(fields: [userId], references: [id])
 }
 
-enum Role {
-  DESIGNER
-  USER
-}
-
-enum Experience {
-  ENTRY_LEVEL
-  INTERMEDIATE
-  EXPERT
-}
-
-enum Status {
-  UNASSIGNED
-  STICHING
-  DESIGNING
-  COMPLETED
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  password String
+  name     String
+  role     Role    @default(USER)
+  Bid      Bid[]
+  Order    Order[]
 }
 
 enum BidStatus {
   PENDING
   ACCEPTED
   REJECTED
+}
+
+enum Experience {
+  ENTRY_LEVEL
+  INTERMEDIATE
+  EXPERT
 }
 
 enum Location {
@@ -103,4 +91,16 @@ enum Location {
   WEST_BENGAL
   REMOTE
   OTHER
+}
+
+enum Role {
+  DESIGNER
+  USER
+}
+
+enum Status {
+  UNASSIGNED
+  STICHING
+  DESIGNING
+  COMPLETED
 }

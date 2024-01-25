@@ -53,3 +53,16 @@ export async function getOrderById(id) {
         },
     });
 }
+
+
+export async function browseProjects() {
+    return db.order.findMany({
+        where: {
+            status: 'UNASSIGNED',
+        },
+        orderBy: {
+            date: 'desc',
+        },
+    });
+}
+

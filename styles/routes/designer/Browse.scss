@@ -102,5 +102,11 @@
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+
+    &--order{
+      display: flex;
+      flex-direction: column;
+    }
+
   }
 }

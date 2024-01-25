@@ -3,20 +3,31 @@ import "./BrowseItem.scss"
 import DashHeader from "@/components/DashTable/DashHeader/DashHeader";
 import Image from "next/image";
 
-const BrowseItem = ({ projectData }) => {
+const BrowseItem = ({ projectData, order }) => {
+
+    // calculate time since posted
+    const calculateTimeSincePosted = (date) => {
+        const postedDate = new Date(date);
+        const currentDate = new Date();
+        const timeSincePosted = currentDate - postedDate;
+        const timeSincePostedInDays = Math.floor(timeSincePosted / (1000 * 60 * 60 * 24));
+        return timeSincePostedInDays;
+    }
+
+
     // Provide default values if projectData is not provided
-    projectData = projectData || {
-        status: "Accepted",
+    projectData = {
+        status: order.status,
         imageSrc: "/Images/img-2.jpg",
-        title: "Custom Silk Outfit with Embroidery",
-        estimate: "Estimate Budget: INR 6,000 - INR 8,000",
+        title: order.title,
+        estimate: "Estimate Budget: INR "+order.minBudget+" - INR "+order.maxBudget,
         bidsInfo: {
             bids: "34 Bids",
             averageBid: "Average Bid $2790",
             biddingEnds: "BIDDING ENDS IN 6 DAYS, 23 HOURS",
         },
         content: {
-            description: "I'm seeking a skilled fashion designer to craft a custom silk outfit with intricate embroidery for a special occasion. I've attached reference pictures to convey the desired style. The outfit's delivery address is 123 Fashion Street, Cityville, State, and my measurements are as follows: Chest - 40 inches",
+            description: order.description,
             bid: {
                 editBidText: "Edit your bid",
                 amount: "$3400",
@@ -24,7 +35,7 @@ const BrowseItem = ({ projectData }) => {
             },
         },
         tags: ["Fashion", "Silk Embroidery", "Customise"],
-        postedTime: "Posted 5 mins ago",
+        postedTime: calculateTimeSincePosted(order.date) + " days ago",
     };
 
     return (
@@ -51,15 +62,15 @@ const BrowseItem = ({ projectData }) => {
                     </div>
                 </div>
                 <div className="tags-row">
-                        <div className="tags-fashion">
-                            Fashion
-                        </div>
-                        <div className="tags-silk">
-                            Silk Embroidery
-                        </div>
-                        <div className="tags-customize">
-                            Customize
-                        </div>
+                    <div className="tags-fashion">
+                        Fashion
+                    </div>
+                    <div className="tags-silk">
+                        Silk Embroidery
+                    </div>
+                    <div className="tags-customize">
+                        Customize
+                    </div>
                     <div className="posted-time">
                         {projectData.postedTime}
                     </div>
