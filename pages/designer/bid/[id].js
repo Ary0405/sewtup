@@ -1,23 +1,65 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import '@/styles/routes/designer/BrowseProject.scss';
-import Messages from '@/components/Chat/Messages';
+import Image from 'next/image';
+import { getOrderById } from '@/services/order.service';
+import { useState } from 'react';
 
-export default function BrowseProject({ project }) {
-    // Placeholder data, replace it with actual project data
+export async function getServerSideProps(context) {
+
+    const user = context.req.session.user;
+    const orderId = context.params.id;
+
+    if (user === undefined || user.role !== 'DESIGNER') {
+        return {
+            redirect: {
+                destination: '/auth/login',
+                permanent: false,
+            },
+        }
+    }
+
+    const order = await getOrderById(parseInt(orderId));
+    if (order === null || order.status !== 'UNASSIGNED') {
+        return {
+            redirect: {
+                destination: '/designer/browse',
+                permanent: false,
+            }
+        }
+    }
+
+
+    order.date = JSON.parse(JSON.stringify(order.date));
+
+    return {
+        props: { user: user, orderId: orderId, order: order }
+    }
+
+}
+
+function DesignerBid({ user, orderId, order }) {
+
+    const [bidAmount, setBidAmount] = useState(0);
+    const [deliveryTime, setDeliveryTime] = useState(0);
+    const [proposal, setProposal] = useState('');
+
+    const onSendBid = async () => {
+        const bid = {
+            amount: parseInt(bidAmount),
+            days: parseInt(deliveryTime),
+            proposal: proposal,
+        };
+
+        console.log(bid);
+
+    }
+
     const projectData = {
-        title: 'Custom Silk Outfit with Embroidery',
+        title: order.title,
         bids: 34,
         averageBid: '7430',
-        description: `I'm looking for a talented fashion designer to create a custom silk outfit with exquisite embroidery. The outfit is intended for a special occasion and needs to be both elegant and unique. Here are the details:
-        Pictures: I will attach pictures of the style and design I have in mind. These images should serve as a reference for the designer.
-        Address Details: The delivery address is 123 Fashion Street, Cityville, State, ensuring that the outfit will reach me promptly.
-        Measurements: Chest: 40 inches, Waist: 34 inches, Hips: 42 inches
-        Date of Delivery: require the outfit to be delivered by November 15, 2023, in time for my event.
-        Materials: I'd like the outfit to be crafted using high-quality silk fabric, ensuring a luxurious and comfortable feel.
-        Additional Specifications: I have a specific request for the outfit's design, including detailed embroidery on the collar and cuffs, adding a touch of sophistication and elegance.
-        I'm open to discussing the design further and considering various bids from talented designers. Please provide your proposals, including estimated costs, and I look forward to collaborating with the selected designer to create a truly remarkable piece.`,
+        minBudget: order.minBudget,
+        maxBudget: order.maxBudget,
+        description: order.description,
         attachments: [
             '/Images/attach1.jpg',
             '/Images/attach2.jpg',
@@ -46,7 +88,7 @@ export default function BrowseProject({ project }) {
                                 Project Details
                             </div>
                             <div className="projectStats">
-                                <div className="budget">Budget INR 6000 - 8000</div>
+                                <div className="budget">Budget INR {projectData.minBudget} - {projectData.maxBudget}</div>
                                 <div className="timeline">Bidding ends in 6 days, 23 hours</div>
                             </div>
                         </div>
@@ -58,7 +100,7 @@ export default function BrowseProject({ project }) {
                             Attachments
                         </div>
                         <div className="BrowseProject__projectDetails--attachments">
-                            {projectData.attachments.map((attachment,index) => (
+                            {projectData.attachments.map((attachment, index) => (
                                 <div key={index} className="browseProjectDetailsAttachment">
                                     <Image
                                         src={attachment}
@@ -83,7 +125,7 @@ export default function BrowseProject({ project }) {
                             </div>
                             <div className="BrowseProject__biddingArea--bidAmountInput">
                                 <div className="currencySymbol">₹</div>
-                                <input type="text"/>
+                                <input type="text" onChange={(e) => setBidAmount(e.target.value)} />
                                 <div className="currencyText">INR</div>
                             </div>
                         </div>
@@ -92,7 +134,7 @@ export default function BrowseProject({ project }) {
                                 The project will be delivered in
                             </div>
                             <div className="BrowseProject__biddingArea--deliveryTimeInput">
-                                <input type="text"/>
+                                <input type="number" onChange={(e) => setDeliveryTime(e.target.value)} />
                                 <div className="daysText">Days</div>
                             </div>
                         </div>
@@ -103,14 +145,16 @@ export default function BrowseProject({ project }) {
                             className="BrowseProject__biddingArea--proposalTextarea"
                             // rows="4"
                             placeholder="What makes you the best candidate for this project?"
+                            onChange={(e) => setProposal(e.target.value)}
                         ></textarea>
-                        <button className="BrowseProject__biddingArea--bidButton">
+                        <button className="BrowseProject__biddingArea--bidButton" onClick={onSendBid}>
                             Bid
                         </button>
                     </div>
                 </div>
             </div>
-            <Messages />
         </div>
     );
 }
+
+export default DesignerBid

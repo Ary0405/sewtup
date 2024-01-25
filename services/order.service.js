@@ -6,6 +6,7 @@ export async function createOrder(data) {
     });
 }
 
+
 export async function deleteOrder(id) {
     return db.order.delete({
         where: {
