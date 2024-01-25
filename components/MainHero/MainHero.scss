@@ -1,6 +1,19 @@
 
 .MainHero {
     &__header{
-        
+        &--text{
+            font-family: 'Nohemi';
+            color: #F7E0C8;
+            font-size: 9rem;
+            font-weight: 500;
+        }
+    }
+    &__content{
+        &--text{
+            font-family: 'Inter';
+            color: #F7E0C8;
+            font-size: 1.3rem;
+        }
+        padding: 2rem  1rem;
     }
 }

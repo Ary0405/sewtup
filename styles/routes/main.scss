@@ -1,52 +1,14 @@
 .Main {
     font-family: 'Arges-Thin';
 
-    &__sidebar {
-        background-color: #292929;
-        width: 3.95%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        padding: 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-        font-weight: 800;
-        font-size: 50px;
-        font-style: italic;
-
-
-        @media (max-width: 768px) {
-            width: 100%;
-            height: 9vh;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 45px;
-            padding: 20px 20px 10px 20px;
-            
-
-            &--sub3 {
-                display: none;
-            }
-
-        }
-
-    }
-
-
     &__content {
-        width: 96%;
+        // width: 96%;
         height: 100vh;
         position: fixed;
         top: 0;
         right: 0;
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
         box-sizing: border-box;
 
         background-color: #292929;
