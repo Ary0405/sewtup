@@ -2,6 +2,7 @@ import '@/styles/routes/designer/BrowseProject.scss';
 import Image from 'next/image';
 import { getOrderById } from '@/services/order.service';
 import { useState } from 'react';
+import { postBid } from '@/operations/bids.fetch';
 
 export async function getServerSideProps(context) {
 
@@ -27,6 +28,19 @@ export async function getServerSideProps(context) {
         }
     }
 
+    const didUserBid = order.Bid.some((bid) => bid.userId === user.id);
+    if (didUserBid) {
+        return {
+            redirect: {
+                destination: '/designer/browse',
+                permanent: false,
+            }
+        }
+    }
+
+    order.numBids = order.Bid.length;
+    order.avgBid = order.Bid.reduce((acc, bid) => acc + bid.amount, 0) / order.numBids;
+    order.Bid = undefined;
 
     order.date = JSON.parse(JSON.stringify(order.date));
 
@@ -43,20 +57,50 @@ function DesignerBid({ user, orderId, order }) {
     const [proposal, setProposal] = useState('');
 
     const onSendBid = async () => {
+
+        if(isNaN(bidAmount) || isNaN(deliveryTime)) {
+            alert('Bid amount and delivery time must be numbers');
+            return;
+        }
+
+        if (bidAmount < order.minBudget || bidAmount > order.maxBudget || bidAmount < 1) {
+            alert('Bid amount must be between the minimum and maximum budget');
+            return;
+        }
+
+        if (deliveryTime < 1) {
+            alert('Delivery time must be at least 1 day');
+            return;
+        }
+
+        if (proposal.length < 100 || proposal.length > 5000){
+            alert('Proposal must be between 100 and 5000 characters');
+            return;
+        }
+
         const bid = {
             amount: parseInt(bidAmount),
             days: parseInt(deliveryTime),
             proposal: proposal,
+            userId: user.id,
+            orderId: parseInt(orderId),
         };
 
-        console.log(bid);
+        const response = await postBid(bid);
+        if (response.status === 200) {
+            alert('Bid sent successfully');
+        }
+        else {
+            alert('Error sending bid');
+        }
+
 
     }
 
     const projectData = {
         title: order.title,
-        bids: 34,
-        averageBid: '7430',
+        bids: order.numBids,
+        averageBid: order.avgBid,
         minBudget: order.minBudget,
         maxBudget: order.maxBudget,
         description: order.description,

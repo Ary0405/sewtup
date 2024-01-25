@@ -52,6 +52,9 @@ export async function getOrderById(id) {
         where: {
             id,
         },
+        include: {
+            Bid: true,
+        },
     });
 }
 
