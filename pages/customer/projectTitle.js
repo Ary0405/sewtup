@@ -47,7 +47,7 @@ export default function ProjectTitle() {
                         setTitle(e.target.value);
                         localStorage.setItem('title', e.target.value);
                     }} />
-                    <Link href="/customer/newOrder/projectDescription">
+                    <Link href="/customer/projectDescription">
                         <button className='ProjectTitle__bottom--box--button'>Next</button>
                     </Link>
                 </div>

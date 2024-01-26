@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import '@/styles/routes/customer/ProjectDescription.scss'
 import { useEffect, useState } from 'react';
+import { postOrder } from '@/operations/orders.fetch';
 
 export async function getServerSideProps(context) {
 
@@ -22,51 +23,67 @@ export async function getServerSideProps(context) {
 
 }
 
-export default function ProjectFinalize() {
-
-    // const title = localStorage.getItem('title');
-    // const description = localStorage.getItem('description');
-    // const skills = localStorage.getItem('skills');
-    // const minBudget = localStorage.getItem('minBudget');
-    // const maxBudget = localStorage.getItem('maxBudget');
+export default function ProjectFinalize({ user }) {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [skills, setSkills] = useState('');
+    const [skills, setSkills] = useState([]);
     const [minBudget, setMinBudget] = useState(0);
     const [maxBudget, setMaxBudget] = useState(0);
+    const [experience, setExperience] = useState('');
+    const [location, setLocation] = useState('');
 
     useEffect(() => {
         const localTitle = localStorage.getItem('title');
-        console.log(localTitle, 'localTitle');
-        if (!localTitle || localTitle === '') {
-            window.location.href = '/customer/projectTitle';
-        }
         setTitle(localTitle);
         const localDescription = localStorage.getItem('description');
         const localSkills = localStorage.getItem('skills');
         const localMinBudget = localStorage.getItem('minBudget');
         const localMaxBudget = localStorage.getItem('maxBudget');
-        if (!localDescription || localDescription === '' || !localSkills || localSkills === '' || !localMinBudget || localMinBudget === '' || !localMaxBudget || localMaxBudget === '') {
-            window.location.href = '/customer/projectDescription';
-        }
+        const localExperience = localStorage.getItem('experience');
+        const localLocation = localStorage.getItem('location');
         setDescription(localDescription);
         setSkills(localSkills);
         setMinBudget(localMinBudget);
         setMaxBudget(localMaxBudget);
+        setExperience(localExperience);
+        setLocation(localLocation);
 
     }, []);
 
-    const postOrder = async () => {
-        // post
+    const postOrderUser = async () => {
+        if (!title || title === '' || !description || description === '' || !minBudget || minBudget === '' || !maxBudget || maxBudget === '' || !experience || experience === '' || !location || location === '') {
+            alert('Please fill all the fields');
+            return;
+        }
 
-        // clear local storage
-        localStorage.removeItem('title');
-        localStorage.removeItem('description');
-        localStorage.removeItem('skills');
-        localStorage.removeItem('minBudget');
-        localStorage.removeItem('maxBudget');
+        const data = {
+            title,
+            description,
+            location,
+            attachments: [],
+            skills: [],
+            userId: user.id,
+            experience,
+            maxBudget: parseInt(maxBudget),
+            minBudget: parseInt(minBudget)
+        }
 
+        const response = await postOrder(data);
+        if (response.status === 200) {
+            alert('Order created successfully');
+            localStorage.removeItem('title');
+            localStorage.removeItem('description');
+            localStorage.removeItem('skills');
+            localStorage.removeItem('minBudget');
+            localStorage.removeItem('maxBudget');
+            localStorage.removeItem('experience');
+            localStorage.removeItem('location');
+            // window.location.href = '/customer/customerDashboard';
+        }
+        else {
+            alert('Something went wrong');
+        }
     }
 
     return (
@@ -94,10 +111,7 @@ export default function ProjectFinalize() {
                     </div>
                     <div className='ProjectDescription__bottom--box__skills'>
                         <p className='ProjectDescription__bottom--box__skills--header'>Enter Skills required</p>
-                        <input type='text' className='ProjectDescription__bottom--box__skills--input' placeholder='Enter skills required' value={skills} onChange={(e) => {
-                            localStorage.setItem('skills', e.target.value);
-                        }
-                        } />
+                        <input type='text' className='ProjectDescription__bottom--box__skills--input' placeholder='Enter skills required' />
                     </div>
                     <div className='ProjectDescription__bottom--box__budget'>
                         <p className='ProjectDescription__bottom--box__budget--heading'>What is your estimated budget</p>
@@ -106,10 +120,16 @@ export default function ProjectFinalize() {
                             <p className='ProjectDescription__bottom--box__budget--text__min'>INR {maxBudget}</p>
                         </div>
                     </div>
+                    <div className='ProjectDescription__bottom--box__experience'>
+                        <p className='ProjectDescription__bottom--box__experience--text'>{experience}</p>
+                    </div>
+                    <div className='ProjectDescription__bottom--box__location'>
+                        <p className='ProjectDescription__bottom--box__location--text'>{location}</p>
+                    </div>
                     <div className='ProjectDescription__bottom--box__buttons'>
                         <div className='ProjectDescription__bottom--box__buttons--back'>No, I want to edit</div>
                         <div className='ProjectDescription__bottom--box__buttons--next'
-                            onClick={postOrder}
+                            onClick={postOrderUser}
                         >Yes, post my order</div>
                     </div>
                 </div>

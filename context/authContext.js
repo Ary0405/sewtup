@@ -20,6 +20,8 @@ export function AuthProvider({ children, ssrUser, ...props }) {
     const [skills,setSkills] = useState('');
     const [minBudget,setMinBudget] = useState(0);
     const [maxBudget,setMaxBudget] = useState(0);
+    const [experience,setExperience] = useState('');
+    const [location,setLocation] = useState('');
 
     const auth = {
         user,
@@ -34,6 +36,10 @@ export function AuthProvider({ children, ssrUser, ...props }) {
         setMinBudget,
         maxBudget,
         setMaxBudget,
+        experience,
+        setExperience,
+        location,
+        setLocation,
         ...props,
     }
     return <AuthContext.Provider value={auth}>{children}</AuthContext.Provider>;

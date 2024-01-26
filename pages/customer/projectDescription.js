@@ -25,29 +25,37 @@ export async function getServerSideProps(context) {
 
 export default function ProjectDescription() {
 
-    const { description, setDescription, skills, setSkills, minBudget, setMinBudget, maxBudget, setMaxBudget } = useAuth();
+    const { description, setDescription, skills, setSkills, minBudget, setMinBudget, maxBudget, setMaxBudget, experience, setExperience, location, setLocation } = useAuth();
     const [title, setTitle] = useState('');
 
     useEffect(() => {
         const localTitle = localStorage.getItem('title');
-        if (localTitle) {
+        if (localTitle && localTitle !== '') {
             setTitle(localTitle);
         }
         const localDescription = localStorage.getItem('description');
-        if (localDescription) {
+        if (localDescription && localDescription !== '') {
             setDescription(localDescription);
         }
         const localSkills = localStorage.getItem('skills');
-        if (localSkills) {
+        if (localSkills && localSkills !== '') {
             setSkills(localSkills);
         }
         const localMinBudget = localStorage.getItem('minBudget');
-        if (localMinBudget) {
+        if (localMinBudget && localMinBudget !== '') {
             setMinBudget(localMinBudget);
         }
         const localMaxBudget = localStorage.getItem('maxBudget');
-        if (localMaxBudget) {
+        if (localMaxBudget && localMaxBudget !== '') {
             setMaxBudget(localMaxBudget);
+        }
+        const localExperience = localStorage.getItem('experience');
+        if (localExperience && localExperience !== '') {
+            setExperience(localExperience);
+        }
+        const localLocation = localStorage.getItem('location');
+        if (localLocation && localLocation !== '') {
+            setLocation(localLocation);
         }
     }, []);
 
@@ -100,14 +108,70 @@ export default function ProjectDescription() {
                             } />
                         </div>
                     </div>
+                    <div className='ProjectDescription__bottom--box__location'>
+                        <p className='ProjectDescription__bottom--box__location--header'>Where do you want to work?</p>
+                        <div className='ProjectDescription__bottom--box__location--text'>
+                            <select className='ProjectDescription__bottom--box__location--text__select' onChange={(e) => {
+                                localStorage.setItem('location', e.target.value);
+                            }}>
+                                <option value=''>Select Location</option>
+                                <option value='ANDHRA_PRADESH'>Andhra Pradesh</option>
+                                <option value='ARUNACHAL_PRADESH'>Arunachal Pradesh</option>
+                                <option value='ASSAM'>Assam</option>
+                                <option value='BIHAR'>Bihar</option>
+                                <option value='CHHATTISGARH'>Chhattisgarh</option>
+                                <option value='GOA'>Goa</option>
+                                <option value='GUJARAT'>Gujarat</option>
+                                <option value='HARYANA'>Haryana</option>
+                                <option value='HIMACHAL_PRADESH'>Himachal Pradesh</option>
+                                <option value='JHARKHAND'>Jharkhand</option>
+                                <option value='KARNATAKA'>Karnataka</option>
+                                <option value='KERALA'>Kerala</option>
+                                <option value='MADHYA_PRADESH'>Madhya Pradesh</option>
+                                <option value='MAHARASHTRA'>Maharashtra</option>
+                                <option value='MANIPUR'>Manipur</option>
+                                <option value='MEGHALAYA'>Meghalaya</option>
+                                <option value='MIZORAM'>Mizoram</option>
+                                <option value='NAGALAND'>Nagaland</option>
+                                <option value='ODISHA'>Odisha</option>
+                                <option value='PUNJAB'>Punjab</option>
+                                <option value='RAJASTHAN'>Rajasthan</option>
+                                <option value='SIKKIM'>Sikkim</option>
+                                <option value='TAMIL_NADU'>Tamil Nadu</option>
+                                <option value='TELANGANA'>Telangana</option>
+                                <option value='TRIPURA'>Tripura</option>
+                                <option value='UTTAR_PRADESH'>Uttar Pradesh</option>
+                                <option value='UTTARAKHAND'>Uttarakhand</option>
+                                <option value='WEST_BENGAL'>West Bengal</option>
+                                <option value='REMOTE'>Remote</option>
+                                <option value='OTHER'>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className='ProjectDescription__bottom--box__experience'>
+                        <p className='ProjectDescription__bottom--box__experience--header'>Whats the required experience level?</p>
+                        <div className='ProjectDescription__bottom--box__experience--text'>
+                            <select className='ProjectDescription__bottom--box__experience--text__select' onChange={(e) => {
+                                localStorage.setItem('experience', e.target.value);
+                            }}>
+                                <option value=''>Select Experience</option>
+                                <option value='ENTRY_LEVEL'>Entry Level</option>
+                                <option value='INTERMEDIATE'>Intermediate</option>
+                                <option value='EXPERT'>Expert</option>
+                            </select>
+                        </div>
+                    </div>
                     <div className='ProjectDescription__bottom--box__buttons'>
                         <div className='ProjectDescription__bottom--box__buttons--back'>Back</div>
-                        <Link href="/customer/newOrder/projectFinalize">
+                        <Link href="/customer/projectFinalize">
                             <div className='ProjectDescription__bottom--box__buttons--next'>Next</div>
                         </Link>
                     </div>
+
                 </div>
             </div>
         </div>
     )
+
+
 }
