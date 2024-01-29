@@ -9,6 +9,7 @@ import MainMission from "@/components/MainMission/MainMission";
 import Image from 'next/image';
 import Hero from "@/components/Hero/Hero";
 import Waste from "@/components/Waste/Waste";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
 
@@ -17,13 +18,15 @@ export default function Home() {
 
   const handleLoginClick = () => {
     router.push('/auth/login');
-};
+  };
 
   return (
     <>
       <div className="Main">
-        <div className="Main__content" style={{
-        }}>
+        <div className="Main__content">
+          <div className="section">
+            <Navbar/>
+          </div>
           <div className="section">
             <Hero />
           </div>

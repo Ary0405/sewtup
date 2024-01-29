@@ -1,0 +1,54 @@
+.Navbar {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 13vh;
+    width: 100vw;
+    margin-bottom: 20px;
+
+    &__logo {
+        grid-area: 1 / 1 / 2 / 3;
+        color: white;
+        font-family: 'Sprite Graffiti', sans-serif;
+        font-size: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__links {
+        grid-area: 1 / 4 / 2 / 9;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.70);
+        font-family: 'Inter', sans-serif;
+        // margin-right: 20px;
+        // margin-left: 20px;
+    }
+
+    &__buttons {
+        grid-area: 1 / 11 / 2 / 13;
+        display: flex;
+        flex-direction: row;
+        justify-items: 'space-between';
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        color: #292929; 
+
+        &--button {
+            cursor: pointer;
+            margin-right: 2rem;
+            background-color: rgba(231, 209, 149, 1);
+            width: 100px;
+            height: 40px;
+            border-radius: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
