@@ -1,6 +1,6 @@
 .parent {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(9, 1fr);
     // grid-column-gap: 5px;
     // grid-row-gap: 5px;
@@ -8,17 +8,18 @@
 }
 
 .div1 {
-    grid-area: 1 / 1 / 10 / 4;
+    grid-area: 1 / 1 / 10 / 6;
     overflow: hidden;
 }
 
 .div2 {
-    grid-area: 1 / 4 / 2 / 13;
+    grid-area: 1 / 6 / 2 / 26;
     overflow: hidden;
 }
 
 .div3 {
-    grid-area: 2 / 4 / 10 / 13;
+    // padding-top: 22px;
+    grid-area: 2 / 6 / 10 / 26;
     display: flex;
     justify-content: center;
     align-items: center;

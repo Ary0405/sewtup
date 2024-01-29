@@ -1,11 +1,11 @@
 .CustomerSidebar {
   // position: fixed;
   // width: 250px;
-  height: 90vh;
+  height: 87vh;
   background-color: white;
   padding-left: 2rem;
-  padding-top: 2rem;
   padding-right: 1rem;
+  padding-top: 2rem;
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -33,6 +33,7 @@
 
   &__bottom {
     display: flex;
+    // flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
