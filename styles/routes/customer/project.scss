@@ -1,0 +1,22 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    overflow: hidden !important;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 10 / 6;
+    overflow: hidden;
+}
+
+.div2 {
+    grid-area: 1 / 6 / 2 / 26;
+    overflow: hidden;
+}
+
+.div3 {
+    grid-area: 2 / 6 / 10 / 26;
+    display: flex;
+    flex-direction: column;
+}
