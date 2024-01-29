@@ -23,6 +23,7 @@ export default async function bidAccept(req, res) {
         res.send({ status: 200, bid });
     }
     catch (error) {
+        console.log(error);
         res.send({ status: 400, error });
     }
 
