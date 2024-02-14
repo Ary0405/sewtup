@@ -8,7 +8,7 @@ export default function CustomerProjects({ userData }) {
     return (
         <div className="CustomerProjects">
             <div className='CustomerProjects__header'>
-                My Projects
+                My Orders
             </div>
             <DashHeader
                 style={{

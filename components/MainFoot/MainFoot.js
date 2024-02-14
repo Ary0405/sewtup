@@ -33,8 +33,8 @@ function MainFoot() {
                 <p>LOGIN</p>
 
             </div>
-            <div className="MainFoot__sub5">
-            </div>
+            {/* <div className="MainFoot__sub5">
+            </div> */}
             <div className="MainFoot__sub6">
                 Design by WannabeEngineers
             </div>
