@@ -53,10 +53,10 @@ function register() {
                     </label>
                     <label>Designer</label>
                 </div>
-                <input type="text" placeholder="   Name" onChange={(e) => setName(e.target.value)} />
-                <input type="text" placeholder="   Email" onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" placeholder="   Password" onChange={(e) => setPassword(e.target.value)} />
-                <input type="password" placeholder="   Confirm Password" onChange={(e) => setConfirm(e.target.value)} />
+                <input type="text" placeholder="Name" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setName(e.target.value)} />
+                <input type="text" placeholder="Email" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setEmail(e.target.value)} />
+                <input type="password" placeholder="Password" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setPassword(e.target.value)} />
+                <input type="password" placeholder="Confirm Password" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setConfirm(e.target.value)} />
                 <button onClick={handleSignUp}>Sign Up</button>
                 <p>Already have an account? <a href="/auth/login">Login</a></p>
                 <p>By signing up, you agree to our <a href="#"> <br />Terms of Use </a>and <a href="#">Privacy Policy</a></p>

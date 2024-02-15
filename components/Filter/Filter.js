@@ -42,7 +42,7 @@ const Filter = ({ filterData }) => {
                     </div>
                     <DropDown {...filterData.locations}>random text</DropDown>
                 </div>
-                <div className="experienceContainer">
+                {/* <div className="experienceContainer">
                     <div className="filterHeader">
                         Experience Levels
                     </div>
@@ -62,7 +62,7 @@ const Filter = ({ filterData }) => {
                 </div>
                 <div className="sliderContainer">
                     <PricingSlider />
-                </div>
+                </div> */}
             </div>
         </div>
     );

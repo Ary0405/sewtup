@@ -38,9 +38,9 @@ function Login() {
             <div className='Login__form'>
                 <h1>Welcome</h1>
                 <p>Login to you account to access a <br />world of convenience</p>
-                <input type="text" placeholder="   Email" onChange={(e) => setEmail(e.target.value)}
+                <input type="text" placeholder="Email" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setEmail(e.target.value)}
                 />
-                <input type="password" placeholder="   Password" onChange={(e) => setPassword(e.target.value)} />
+                <input type="password" placeholder="Password" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setPassword(e.target.value)} />
                 <button onClick={handleLogin}>Login</button>
                 <p>Don't have an account? <a href="/auth/register">Register</a></p>
             </div>
