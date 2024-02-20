@@ -8,6 +8,10 @@
     width: 100vw;
     margin-bottom: 20px;
 
+    .mobile{
+        display: none;
+    }
+
     &__logo {
         grid-area: 1 / 1 / 2 / 3;
         color: white;
@@ -37,7 +41,7 @@
         justify-items: 'space-between';
         align-items: center;
         font-family: 'Inter', sans-serif;
-        color: #292929; 
+        color: #292929;
 
         &--button {
             cursor: pointer;
@@ -51,4 +55,39 @@
             align-items: center;
         }
     }
+
+
+    @media (max-width: 768px) {
+
+        .large{
+            display: none;
+        }
+
+        .mobile{
+            display: block;
+        }
+        
+        &__links {
+            display: none;
+        }
+
+        &__buttons {
+            
+            font-size: 0.8rem;
+
+            &--button {
+                margin-right: 1rem;
+                background-color: rgba(231, 209, 149, 1);
+                width: 80px;
+                height: 30px;
+                border-radius: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+
 }
