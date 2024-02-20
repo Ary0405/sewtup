@@ -9,7 +9,7 @@ export async function getServerSideProps(context) {
         return {
             redirect: {
                 permanent: false,
-                destination: "/login",
+                destination: "/auth/login",
             },
         };
     }
