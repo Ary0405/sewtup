@@ -109,7 +109,7 @@ export default function ProjectDescription() {
                         </div>
                     </div>
                     <div className='ProjectDescription__bottom--box__location'>
-                        <p className='ProjectDescription__bottom--box__location--header'>Where do you want to work?</p>
+                        <p className='ProjectDescription__bottom--box__location--header'>Select order location</p>
                         <div className='ProjectDescription__bottom--box__location--text'>
                             <select className='ProjectDescription__bottom--box__location--text__select' onChange={(e) => {
                                 localStorage.setItem('location', e.target.value);

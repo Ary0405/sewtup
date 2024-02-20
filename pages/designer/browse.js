@@ -68,9 +68,9 @@ export default function ProjectTitle({ projects, user }) {
                     {
                         projects.map((project) => {
                             return (
-                                <div index={project.id} key={project.id}>
-
+                                <div index={project.id} key={project.id} >
                                     <BrowseItem order={project} />
+
                                 </div>
                             )
                         })

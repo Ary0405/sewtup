@@ -20,7 +20,7 @@ const BrowseItem = ({ projectData, order }) => {
         status: order.status,
         imageSrc: "/Images/img-2.jpg",
         title: order.title,
-        estimate: "Estimate Budget: INR "+order.minBudget+" - INR "+order.maxBudget,
+        estimate: "Estimate Budget: INR " + order.minBudget + " - INR " + order.maxBudget,
         bidsInfo: {
             bids: "34 Bids",
             averageBid: "Average Bid $2790",
@@ -70,6 +70,20 @@ const BrowseItem = ({ projectData, order }) => {
                     </div>
                     <div className="tags-customize">
                         Customize
+                    </div>
+                    <div className="bids-button">
+                        <button className="bids-button--button" onClick={
+                            () => {
+                                window.location.href = `/designer/bid/${project.id}`;
+                            }
+                        }
+                            style={{
+                                width: "100px",
+                                height: "40px",
+                                borderRadius: "5px",
+                                textDecoration: "none",
+                            }}
+                        >Place Bid</button>
                     </div>
                     <div className="posted-time">
                         {projectData.postedTime}
