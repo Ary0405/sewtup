@@ -1,24 +1,13 @@
-import { useRouter } from "next/router";
 import '@/styles/routes/main.scss';
 import MainHero from "@/components/MainHero/MainHero";
-import { useState } from "react";
 import MainFoot from "@/components/MainFoot/MainFoot";
 import MainCust from "@/components/MainCust/MainCust";
 import MainMeet from "@/components/MainMeet/MainMeet";
-import MainMission from "@/components/MainMission/MainMission";
-import Image from 'next/image';
 import Hero from "@/components/Hero/Hero";
 import Waste from "@/components/Waste/Waste";
 import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
-
-  const router = useRouter();
-  const [sidebar, setSidebar] = useState(false);
-
-  const handleLoginClick = () => {
-    router.push('/auth/login');
-  };
 
   return (
     <>

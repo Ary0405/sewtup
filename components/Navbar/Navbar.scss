@@ -28,6 +28,10 @@
         font-family: 'Inter', sans-serif;
         // margin-right: 20px;
         // margin-left: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__buttons {
@@ -49,6 +53,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

@@ -1,7 +1,18 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import './Navbar.scss'
 
 function Navbar() {
+  const router = useRouter();
+
+  const handleLoginClick = () => {
+    router.push('/auth/login');
+  };
+
+  const handleSignUpClick = () => {
+    router.push('/auth/register');
+  };
+
   return (
     <div className='Navbar'>
         <div className='Navbar__logo'>
@@ -15,10 +26,10 @@ function Navbar() {
             <p className='Navbar__links--link'>Privacy Policy</p>
         </div>
         <div className='Navbar__buttons'>
-            <p className='Navbar__buttons--button'>Login</p>
-            <p className='Navbar__buttons--button'>Register</p>
+            <p className='Navbar__buttons--button' onClick={handleLoginClick}>Login</p>
+            <p className='Navbar__buttons--button' onClick={handleSignUpClick}>Register</p>
         </div>
-    </div>
+    </div> 
   )
 }
 
