@@ -9,8 +9,7 @@ function MainHero() {
                 flexDirection: 'column',
                 alignItems: 'center'
             }}>
-                <p className='MainHero__header--text'>WELCOME</p>
-                <p className='MainHero__header--text'>TO SEW'T UP</p>
+                <p className='MainHero__header--text'>WELCOME TO SEW'T UP</p>
             </div>
             <div className="MainHero__content" style={{
                 display: 'flex',

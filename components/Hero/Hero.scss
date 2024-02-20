@@ -1,8 +1,5 @@
 .Hero {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
     font-family: 'Sprite Graffiti', sans-serif;
-    height: 100vh;
 
     @media (max-width: 768px) {
         height: 70vh;
@@ -12,60 +9,13 @@
     }
 
     &__images {
-        position: absolute;
-        // width: 100%;
-
-        &--image1,
-        &--image2,
-        &--image3,
-        &--image4,
-        &--image5,
-        &--image6 {
-            position: relative;
-            border-radius: 1rem;
-
-            @media (max-width: 768px) {
-                border-radius: 0;
-            }
-
-        }
-
-        &--image1 {
-            width: 13vw;
-            top: 21rem;
-            right: 13rem;
-        }
-
-        &--image2 {
-            width: 13vw;
-            right: 30rem;
-        }
-
-        &--image3 {
-            right: 24rem;
-            bottom: 12rem;
-        }
-
-        &--image4 {
-            bottom: 10rem;
-            left: 5rem;
-        }
-
-        &--image5 {
-            top: 4rem;
-            left: 3rem;
-        }
-
-        &--image6 {
-            width: 13vw;
-            top: 10rem;
-            left: 48rem;
-        }
-
+        
         &--image7 {
-            width: 25vw;
-            top: 6rem;
-            left: 20rem;
+            width: 100%;
+            height: 80%;
+            margin-bottom: -28vh;
+            margin-left: 1vw;
+            background: linear-gradient(to top, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%), url('/Images/hero/heroImage.png');
         }
 
         @media (max-width: 768px) {

@@ -1,20 +1,16 @@
 .MainFoot {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4, 1fr) 1.2fr 0.7fr repeat(6, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px 30px;
-
     font-family: 'Arges';
     background-color: #292929;
-    height: 100vh;
-
+    height: 95vh;
 
     &__sub1 {
-        grid-area: 1 / 1 / 5 / 13;
         color: #E7D195;
         font-size: 250px;
+        font-weight: bold;
 
         @media (max-width: 768px) {
             font-size: 70px;
@@ -22,7 +18,6 @@
     }
 
     &__sub2 {
-        grid-area: 5 / 1 / 6 / 13;
         color: #C0F7FF;
         font-size: 40px;
         font-family: 'Arges-Thin';
@@ -31,8 +26,16 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        margin-top: -18vw;
+
+        &--link1{
+            &:hover {
+                cursor: pointer;
+            }
+        }
 
         &--links{
+            margin-left: 6vw;
             &:hover {
                 cursor: pointer;
             }
@@ -44,75 +47,96 @@
             align-items: flex-start;
             font-size: 35px;
         }
-
     }
 
     &__sub3 {
-        grid-area: 6 / 5 / 7 / 9;
         color: #C0F7FF;
         font-family: 'Inter', sans-serif;
         font-size: 22px;
+        margin-top: -9vw;
 
         @media (max-width: 768px) {
             font-size: 20px;
             padding: 10px 0px;
         }
-
     }
 
-    &__sub4 {
-        grid-area: 9 / 1 / 13 / 7;
-        background-color: #F98B76;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        padding: 20px;
-        color: #292929;
+    &__sub7 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
-        font-family: 'Arges-Thin';
-
-        &--sub1 {
-            grid-area: 1 / 1 / 5 / 13;
-            font-size: 45px;
-            font-weight: 900;
-        }
-
-        &--sub2 {
-            grid-area: 8 / 1 / 9 / 6;
-            font-size: 20px;
-        }
-
-        &--sub3 {
-            font-size: 30px;
-            grid-area: 7 / 8 / 9 / 13;
-            text-align: right;
-            font-weight: 800;
-        }
-
-        @media (max-width: 768px) {
-            width: 80vw;
-            height: 20vh;
+        &--sub4 {
+            background-color: #F98B76;
+            padding: 20px;
+            color: #292929;
+            font-family: 'Arges-Thin';
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 40%;
+            // margin-bottom: 12vh;
 
             &--sub1 {
-                font-size: 30px;
+                font-size: 45px;
+                font-weight: 900;
             }
 
             &--sub2 {
-                font-size: 25px;
+                font-size: 20px;
             }
 
             &--sub3 {
-                font-size: 25px;
+                font-size: 30px;
+                color: #292929;
+                text-align: right;
+                font-weight: 800;
             }
-            margin: 0px 0px 30px 0px;
-        }
 
+            @media (max-width: 768px) {
+                width: 80vw;
+                height: 20vh;
+
+                &--sub1 {
+                    font-size: 30px;
+                }
+
+                &--sub2 {
+                    font-size: 25px;
+                }
+
+                &--sub3 {
+                    font-size: 25px;
+                }
+                margin: 0px 0px 30px 0px;
+            }
+        }
+        &--sub8{
+            display: flex;
+            flex-direction: column;
+            
+
+            &--text{
+                color: #FFFFFF;
+                font-size: 2.5rem;
+            }
+
+            &--sub9 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                &--icon {
+                    color: #C0F7FF;
+                    font-size: 2.5rem;
+                    margin-left: 1vw;
+                    margin-top: 1vh;
+                }
+            }
+        }
     }
 
     &__sub5 {
-        grid-area: 7 / 7 / 13 / 11;
         background-image: url("/Images/plant.png");
         background-size: contain;
         background-position: center;
@@ -121,7 +145,6 @@
     }
 
     &__sub6 {
-        grid-area: 12 / 11 / 13 / 13;
         color: #C0F7FF;
         font-family: 'Inter', sans-serif;
         @media (max-width: 768px) {
@@ -131,11 +154,8 @@
     }
 
     @media (max-width: 768px) {
-        display: flex;
         flex-direction: column;
         height: auto;
         padding: 0;
     }
-
-
 }

@@ -4,36 +4,33 @@ import './MainCust.scss'
 function MainCust() {
     return (
         <div className='MainCust'>
-            <div className='MainCust__box' style={{
-                color: '#F7E0C8',
-                gridArea: '2 / 2 / 6 / 12',
-            }}>
-                <div className='MainCust__box--main'>
-                    <h1>CUSTOMERS</h1>
-                </div>
-                <div className='MainCust__box--sub'>
-                    <p>Design your dream look with our intuitive order placement system.</p>
-                    <hr/>
-                    <p>Interact with designers through bidding and select the best fit for your style.</p>
-                    <hr/>
-                    <p>Collaborate with designers to ensure your vision is perfectly captured.</p>
-                </div>
-
+            <div className='MainCust__header'>
+                <p className='MainCust_header--text1'>QUALITY CUSTOMIZATION IS OUR MOTTO</p>
+                <p className='MainCust_header--text2'>Sew’t Up is a collaborative space for designers and customers for the creation of customized clothing. </p>\
             </div>
-            <div className='MainCust__box' style={{
-                gridArea: '7 / 2 / 11 / 12',
-                color: '#C0F7FF',
-            }}>
-                <div className='MainCust__box--main'>
-                    <h1>DESIGNERS</h1>
+
+            <div className='MainCust_customdes'>
+                <p className='MainCust_customdes--heading'>CUSTOMERS</p>
+                <div className='MainCust_customdes--content'>
+                    <div className='MainCust_customdes--content--text'>
+                        <p>Through our website customers can place orders for clothes that they want . They can choose from a large number of quality designers to give life to their vision by getting their clothes made  exactly the way they want them.</p>
+                    </div>
+
+                    <img className='MainCust_customdes--content--image' src='/Images/arrow.png' alt='customer' />
                 </div>
-                <div className='MainCust__box--sub'>
-                    <p>Showcase your designs with a personalized portfolio.</p>
-                    <hr/>
-                    <p>Seamlessly manage orders from creation to delivery.</p>
-                    <hr/>
-                    <p>Connect with customers, discuss designs, and build relationships.</p>
+            </div>
+        
+            <div className='MainCust_customdes2'>
+                <p className='MainCust_customdes2--heading'>DESIGNERS</p>
+                <div className='MainCust_customdes2--content'>
+                    <div className='MainCust_customdes2--content--text3'>
+                        <p>We give fashion designers and even fashion designing students a platform to showcase their talent and grow their business. </p>
+                    </div>
+                    <img className='MainCust_customdes2--content--image' src='/Images/arrow.png' alt='customer' />
                 </div>
+            </div>
+            <div className='MainCust_trustimage'>
+                <img className='MainCust_trustimage--image1' src='/Images/trust.png' alt='trust' />
             </div>
         </div>
     )

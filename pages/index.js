@@ -28,9 +28,9 @@ export default function Home() {
           <div className="section">
             <MainCust />
           </div>
-          <div className="section">
+          {/* <div className="section">
             <Waste />
-          </div>
+          </div> */}
           <div id="team" className="section">
             <MainMeet />
           </div>

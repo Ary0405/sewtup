@@ -7,6 +7,9 @@
     height: 13vh;
     width: 100vw;
     margin-bottom: 20px;
+    position: fixed;
+    z-index: 4;
+    padding-top: 14vh;
 
     .mobile{
         display: none;
