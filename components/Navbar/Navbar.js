@@ -3,6 +3,17 @@ import { useRouter } from 'next/router'
 import './Navbar.scss'
 
 function Navbar() {
+
+  function scrollToSection(sectionId) {
+		const section = document.getElementById(sectionId);
+
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		} else {
+			console.error(`Section with ID ${sectionId} not found.`);
+		}
+	}
+  
   const router = useRouter();
 
   const handleLoginClick = () => {
@@ -19,9 +30,9 @@ function Navbar() {
             SEW'TUP.
         </div>
         <div className='Navbar__links'>
-            <p className='Navbar__links--link'>Home</p>
-            <p className='Navbar__links--link'>About</p>
-            <p className='Navbar__links--link'>Team</p>
+            <p className='Navbar__links--link' onClick={() => { scrollToSection('home') }}>Home</p>
+            <p className='Navbar__links--link' onClick={() => { scrollToSection('about') }}>About</p>
+            <p className='Navbar__links--link' onClick={() => { scrollToSection('team') }}>Team</p>
             <p className='Navbar__links--link'>Terms & Conditions</p>
             <p className='Navbar__links--link'>Privacy Policy</p>
         </div>

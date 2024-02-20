@@ -16,10 +16,10 @@ export default function Home() {
           <div className="section">
             <Navbar/>
           </div>
-          <div className="section">
+          <div id="home" className="section">
             <Hero />
           </div>
-          <div className="section">
+          <div id="about" className="section">
             <MainHero />
           </div>
           <div className="section">
@@ -31,7 +31,7 @@ export default function Home() {
           <div className="section">
             <Waste />
           </div>
-          <div className="section">
+          <div id="team" className="section">
             <MainMeet />
           </div>
           <div className="section">

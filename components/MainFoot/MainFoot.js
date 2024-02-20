@@ -7,6 +7,16 @@ function MainFoot() {
         router.push('/auth/login');
       };
 
+      function scrollToSection(sectionId) {
+		const section = document.getElementById(sectionId);
+
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		} else {
+			console.error(`Section with ID ${sectionId} not found.`);
+		}
+	}
+
     return (
         <div className='MainFoot'>
             <div className="MainFoot__sub1" style={{
@@ -29,10 +39,10 @@ function MainFoot() {
             </div>
             <div className="MainFoot__sub2">
 
-                <p className="MainFoot__sub2--links">HOME</p>
-                <p className="MainFoot__sub2--links">ABOUT</p>
+                <p className="MainFoot__sub2--links" onClick={() => { scrollToSection('home') }}>HOME</p>
+                <p className="MainFoot__sub2--links" onClick={() => { scrollToSection('about') }}>ABOUT</p>
                 <p className="MainFoot__sub2--links">CONTACT</p>
-                <p className="MainFoot__sub2--links">TEAM</p>
+                <p className="MainFoot__sub2--links" onClick={() => { scrollToSection('team') }}>TEAM</p>
                 <p className="MainFoot__sub2--links">TERMS & CONDITIONS</p>
                 <p className="MainFoot__sub2--links">PRIVACY POLICY</p>
                 <p className="MainFoot__sub2--links" onClick={handleLoginClick}>LOGIN</p>
