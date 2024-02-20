@@ -25,7 +25,7 @@ function MainFoot() {
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
-                LET'S COLLABORATE
+                GET STARTED !
             </div>
             <div className="MainFoot__sub3"
                 style={{
@@ -50,9 +50,9 @@ function MainFoot() {
             </div>
             {/* <div className="MainFoot__sub5">
             </div> */}
-            <div className="MainFoot__sub6">
+            {/* <div className="MainFoot__sub6">
                 Design by WannabeEngineers
-            </div>
+            </div> */}
             <div className="MainFoot__sub4">
                 <div className='MainFoot__sub4--sub1'>
                     IF YOU'VE GOT A STORY THAT  NEEDS TO BE<br /> TOLD, PLEASE GET IN TOUCH!

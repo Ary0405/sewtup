@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import './Navbar.scss'
-import { useRouter } from 'next/router'
 
 function Navbar() {
 
