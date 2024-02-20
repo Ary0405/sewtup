@@ -32,6 +32,12 @@
         align-items: center;
         justify-content: space-evenly;
 
+        &--links{
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
         @media (max-width: 768px) {
             flex-direction: column;
             justify-content: left;
