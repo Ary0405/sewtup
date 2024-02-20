@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import './Navbar.scss'
+import { useRouter } from 'next/router'
 
 function Navbar() {
 
@@ -26,8 +27,11 @@ function Navbar() {
 
   return (
     <div className='Navbar'>
-        <div className='Navbar__logo'>
+        <div className='Navbar__logo large'>
             SEW'TUP.
+        </div>
+        <div className='Navbar__logo mobile'>
+            S.
         </div>
         <div className='Navbar__links'>
             <p className='Navbar__links--link' onClick={() => { scrollToSection('home') }}>Home</p>
