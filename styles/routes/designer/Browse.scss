@@ -49,6 +49,10 @@
         &--input-container {
           display: flex;
           align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          position: relative;
+          flex: 1;
         }
 
         &--input-wrapper {
@@ -79,7 +83,7 @@
         &--button {
           position: absolute;
           top: 30%;
-          right: 0;
+          right: 0.6rem;
           transform: translateY(-50%);
           background-color: white;
           color: #afa69c;

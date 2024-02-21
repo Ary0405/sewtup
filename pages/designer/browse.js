@@ -50,11 +50,11 @@ export default function ProjectTitle({ projects, user }) {
                             your talent, our platform offers you a world of opportunities.
                         </p>
                         <div className="Browse__top--box--column--input-container">
-                            <div className="Browse__top--box--column--input-wrapper">
+                            {/* <div className="Browse__top--box--column--input-wrapper"> */}
                                 <input className="Browse__top--box--column--input" type="text" placeholder="Search projects" />
-                                <FontAwesomeIcon icon={faSearch} />
+                                {/* <FontAwesomeIcon icon={faSearch} /> */}
                                 <button className="Browse__top--box--column--button">Search Job</button>
-                            </div>
+                            {/* </div> */}
                         </div>
                     </div>
                     <div className="Browse__top--box-child">
