@@ -7,14 +7,24 @@ import Hero from "@/components/Hero/Hero";
 import Waste from "@/components/Waste/Waste";
 import Navbar from "@/components/Navbar/Navbar";
 
-export default function Home() {
+export async function getServerSideProps(context) {
+
+  const user = context.req.session.user;
+
+  return {
+      props: { user: user }
+  }
+
+}
+
+export default function Home({user}) {
 
   return (
     <>
       <div className="Main">
         <div className="Main__content">
           <div className="section">
-            <Navbar/>
+            <Navbar user={user} />
           </div>
           <div id="home" className="section">
             <Hero />
