@@ -2,8 +2,12 @@ import React from "react";
 import "./BrowseItem.scss"
 import DashHeader from "@/components/DashTable/DashHeader/DashHeader";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const BrowseItem = ({ projectData, order }) => {
+
+
+    const router = useRouter();
 
     // calculate time since posted
     const calculateTimeSincePosted = (date) => {
@@ -74,7 +78,8 @@ const BrowseItem = ({ projectData, order }) => {
                     <div className="bids-button">
                         <button className="bids-button--button" onClick={
                             () => {
-                                window.location.href = `/designer/bid/${project.id}`;
+                                // window.location.href = `/designer/bid/${project.id}`;
+                                router.push(`/designer/bid/${order.id}`);
                             }
                         }
                             style={{

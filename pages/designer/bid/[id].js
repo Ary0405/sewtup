@@ -38,11 +38,17 @@ export async function getServerSideProps(context) {
         }
     }
 
-    order.numBids = order.Bid.length;
-    order.avgBid = order.Bid.reduce((acc, bid) => acc + bid.amount, 0) / order.numBids;
-    order.Bid = undefined;
+    if (order.Bid !== undefined) {
 
+        order.numBids = order.Bid.length;
+        order.avgBid = order.Bid.reduce((acc, bid) => acc + bid.amount, 0) / order.numBids;
+        order.Bid = undefined;
+    }
+    // remove order.Bid
+    delete order["Bid"];
     order.date = JSON.parse(JSON.stringify(order.date));
+
+    console.log(order);
 
     return {
         props: { user: user, orderId: orderId, order: order }
@@ -58,7 +64,7 @@ function DesignerBid({ user, orderId, order }) {
 
     const onSendBid = async () => {
 
-        if(isNaN(bidAmount) || isNaN(deliveryTime)) {
+        if (isNaN(bidAmount) || isNaN(deliveryTime)) {
             alert('Bid amount and delivery time must be numbers');
             return;
         }
@@ -73,7 +79,7 @@ function DesignerBid({ user, orderId, order }) {
             return;
         }
 
-        if (proposal.length < 100 || proposal.length > 5000){
+        if (proposal.length < 100 || proposal.length > 5000) {
             alert('Proposal must be between 100 and 5000 characters');
             return;
         }

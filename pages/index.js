@@ -11,13 +11,19 @@ export async function getServerSideProps(context) {
 
   const user = context.req.session.user;
 
+  if (user === undefined) {
+    return {
+      props: { user: null }
+    }
+  }
+
   return {
-      props: { user: user }
+    props: { user: user }
   }
 
 }
 
-export default function Home({user}) {
+export default function Home({ user }) {
 
   return (
     <>

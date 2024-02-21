@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from 'next/link';
 import './CustomerSidebar.scss';
+import { useRouter } from "next/router";
+import { logout } from "@/operations/user.fetch";
+
 
 export default function CustomerSidebar({ user }) {
+
+    const router = useRouter();
+
     return (
         <div className="CustomerSidebar" >
             <div className="CustomerSidebar__top">
@@ -24,7 +30,12 @@ export default function CustomerSidebar({ user }) {
                     <p className="CustomerSidebar__bottom--column__name">{user.name}</p>
                     <p className="CustomerSidebar__bottom--column__email">{user.email}</p>
                 </div>
-                <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/logout.png'} width={20} height={20} />
+                <div onClick={() => {
+                    logout();
+                    window.location.reload();
+                }}>
+                    <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/logout.png'} width={20} height={20} />
+                </div>
             </div>
         </div>
     )
