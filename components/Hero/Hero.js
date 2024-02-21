@@ -4,7 +4,9 @@ const Hero = () => {
     return (
         <div className='Hero'>
             <div className='Hero__images'>
-                <img className='Hero__images--image7' src='/Images/hero/homeImage.png' />
+                <div className='Hero__images--wrapper'>
+                    <img className='Hero__images--image7' src='/Images/hero/homeImage.png' />
+                </div>
             </div>
         </div>
     )

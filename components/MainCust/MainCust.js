@@ -13,20 +13,20 @@ function MainCust() {
                 <p className='MainCust_customdes--heading'>CUSTOMERS</p>
                 <div className='MainCust_customdes--content'>
                     <div className='MainCust_customdes--content--text'>
-                        <p>Through our website customers can place orders for clothes that they want . They can choose from a large number of quality designers to give life to their vision by getting their clothes made  exactly the way they want them.</p>
+                        <p>Through our website customers can place orders for clothes that they want. They can choose from a large number of quality designers to give life to their vision by getting their clothes made exactly the way they want them.</p>
                     </div>
 
                     <img className='MainCust_customdes--content--image' src='/Images/arrow.png' alt='customer' />
                 </div>
             </div>
         
-            <div className='MainCust_customdes2'>
-                <p className='MainCust_customdes2--heading'>DESIGNERS</p>
-                <div className='MainCust_customdes2--content'>
-                    <div className='MainCust_customdes2--content--text3'>
+            <div className='MainCust_customdes'>
+                <p className='MainCust_customdes--heading'>DESIGNERS</p>
+                <div className='MainCust_customdes--content'>
+                    <div className='MainCust_customdes--content--text'>
                         <p>We give fashion designers and even fashion designing students a platform to showcase their talent and grow their business. </p>
                     </div>
-                    <img className='MainCust_customdes2--content--image' src='/Images/arrow.png' alt='customer' />
+                    <img className='MainCust_customdes--content--image' src='/Images/arrow.png' alt='customer' />
                 </div>
             </div>
             <div className='MainCust_trustimage'>

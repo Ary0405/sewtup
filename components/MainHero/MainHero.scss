@@ -1,7 +1,9 @@
 
 .MainHero {
     &__header{
+
         &--text{
+            z-index: 2;
             font-family: 'Nohemi';
             color: #F7E0C8;
             font-size: 6rem;
@@ -10,6 +12,7 @@
     }
     &__content{
         &--text{
+            z-index: 2;
             font-family: 'Inter';
             color: #F7E0C8;
             font-size: 1.3rem;
