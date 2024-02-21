@@ -19,6 +19,9 @@ const nextConfig = {
   sassOptions: {
     additionalData: `@import "styles/root/_mixins.scss";`,
   },
+  images: {
+    domains: ['ymufvizxarumdwktdhni.supabase.co'],
+  },
 };
 
 module.exports = nextConfig;

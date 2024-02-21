@@ -4,7 +4,9 @@ import { isExperienceLevel, isLocation } from "@/utils/validator";
 export default async function orderCreate(req, res) {
     const { title, description, location, attachments, skills, userId, experience, maxBudget, minBudget } = req.body;
 
-    if (!title || !description || !location || !attachments || !skills || !userId || !experience || !maxBudget || !minBudget || !isExperienceLevel(experience) || !isLocation(location)) {
+    console.log(req.body);
+
+    if (!title || !description || !location || !attachments || !skills || !userId || !experience || !maxBudget || minBudget===undefined) {
         return res.send({ status: 400, error: 'Missing body parameter' });
     }
 
