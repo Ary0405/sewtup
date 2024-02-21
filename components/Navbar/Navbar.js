@@ -53,7 +53,7 @@ function Navbar({ user }) {
           <div className='Navbar__buttons'>
             <p className='Navbar__buttons--button' onClick={() => {
               router.push('/designer/browse')
-            }}>Browse Projects</p>
+            }}>Designs</p>
           </div>
         :
         <div className='Navbar__buttons'>
