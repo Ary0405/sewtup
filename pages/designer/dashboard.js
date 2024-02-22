@@ -17,7 +17,7 @@ export async function getServerSideProps(context) {
     const user = context.req.session.user;
     // fetch user bids
     const userBids = await getBidsByUser(user.id);
-console.log(userBids)
+    
     return {
         props: { user: user, userBids: userBids },
     }

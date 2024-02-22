@@ -3,6 +3,8 @@ import '@/styles/routes/customer/project.scss';
 import CustomerNavbar from "@/components/CustomerNavbar/CustomerNavbar";
 import CustomerSidebar from "@/components/CustomerSidebar/CustomerSidebar";
 import { acceptBid } from "@/operations/bids.fetch";
+import DashHeader from "@/components/DashTable/DashHeader/DashHeader";
+import DashRow from "@/components/DashTable/DashRow/DashRow";
 
 export async function getServerSideProps(context) {
 
@@ -79,7 +81,7 @@ function project({ user, project }) {
                     </div>
                 </div>
                 <div className="project__bids">
-                    <table className="project__bids__table">
+                    {/* <table className="project__bids__table">
                         <tr>
                             <th>Proposal</th>
                             <th>Price</th>
@@ -105,7 +107,53 @@ function project({ user, project }) {
                                 </tr>
                             ))
                         }
-                    </table>
+                    </table> */}
+                    <DashHeader
+                        style={{
+                            padding: "14px 0 14px 20px",
+                            gap: "20px",
+                            borderTop: "none",
+                        }}
+                        headerTitles={[
+                            "Proposal",
+                            "Price",
+                            "Delivery Time",
+                            "Status",
+                            "Action",
+                        ]}
+                    />
+                    <div className='project__bids__body'>
+                        {
+                            project.Bid.map((bid, index) => (
+                                <DashRow
+                                    key={index}
+                                    index={bid.id}
+                                    className="project__bids__body__row"
+                                    data={[
+                                        bid.proposal,
+                                        bid.amount,
+                                        bid.days,
+                                        bid.status,
+                                        bid.status !== 'ACCEPTED' ?
+                                            <button
+                                                onClick={() => accBid(bid.id)}
+                                                style={{
+                                                    backgroundColor: "green",
+                                                    color: "white",
+                                                    padding: "10px 20px",
+                                                    border: "none",
+                                                    borderRadius: "5px",
+                                                    cursor: "pointer"
+                                                }}
+                                            >Accept</button> : null
+                                    ]}
+                                    style={{
+                                        padding: "14px 0 14px 0",
+                                    }}
+                                />
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>
