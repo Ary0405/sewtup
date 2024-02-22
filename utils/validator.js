@@ -31,6 +31,7 @@ const LOCATIONS = [
     "UTTARAKHAND",
     "WEST_BENGAL",
     "REMOTE",
+    "DELHI_NCR",
     "OTHER",
 ];
 
