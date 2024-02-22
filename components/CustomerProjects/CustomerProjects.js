@@ -1,7 +1,6 @@
 import DashHeader from '../DashTable/DashHeader/DashHeader'
 import DashRow from '../DashTable/DashRow/DashRow'
 import './CustomerProjects.scss'
-import { useRouter } from 'next/router'
 
 export default function CustomerProjects({ userData }) {
     

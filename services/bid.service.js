@@ -12,6 +12,13 @@ export async function getBidsByUser(userId) {
         where: {
             userId,
         },
+        include: {
+            Order: {
+                select: {
+                    title: true,
+                },
+            }
+        },
     });
 }
 

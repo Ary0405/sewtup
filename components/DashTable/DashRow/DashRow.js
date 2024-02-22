@@ -9,6 +9,7 @@ export default function DashRow({
     className,
     isTitle = true,
     index,
+    type = 0,
 }) {
 
     const router = useRouter();
@@ -28,7 +29,10 @@ export default function DashRow({
                 ...style,
             }}
             onClick={
-                () => router.push(`/customer/project/${index}`)
+                () => {
+                    if (type === 0) 
+                    router.push(`/customer/project/${index}`)
+                }
             }
             
         >

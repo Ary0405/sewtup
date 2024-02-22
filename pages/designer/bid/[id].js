@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getOrderById } from '@/services/order.service';
 import { useState } from 'react';
 import { postBid } from '@/operations/bids.fetch';
+import { useRouter } from 'next/router';
 
 export async function getServerSideProps(context) {
 
@@ -59,6 +60,7 @@ function DesignerBid({ user, orderId, order }) {
     const [bidAmount, setBidAmount] = useState(0);
     const [deliveryTime, setDeliveryTime] = useState(0);
     const [proposal, setProposal] = useState('');
+    const router = useRouter();
 
     const onSendBid = async () => {
 
@@ -93,7 +95,7 @@ function DesignerBid({ user, orderId, order }) {
         const response = await postBid(bid);
         if (response.status === 200) {
             alert('Bid sent successfully');
-            window.location.reload();
+            router.push('/designer/dashboard');
         }
         else {
             alert('Error sending bid');
