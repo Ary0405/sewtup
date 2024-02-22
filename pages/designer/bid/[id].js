@@ -48,8 +48,6 @@ export async function getServerSideProps(context) {
     delete order["Bid"];
     order.date = JSON.parse(JSON.stringify(order.date));
 
-    console.log(order);
-
     return {
         props: { user: user, orderId: orderId, order: order }
     }
@@ -110,11 +108,7 @@ function DesignerBid({ user, orderId, order }) {
         minBudget: order.minBudget,
         maxBudget: order.maxBudget,
         description: order.description,
-        attachments: [
-            '/Images/attach1.jpg',
-            '/Images/attach2.jpg',
-            '/Images/attach3.jpg',
-        ],
+        attachments: order.attachments,
     };
 
     return (

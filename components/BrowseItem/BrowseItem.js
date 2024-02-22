@@ -22,7 +22,7 @@ const BrowseItem = ({ projectData, order }) => {
     // Provide default values if projectData is not provided
     projectData = {
         status: order.status,
-        imageSrc: "/Images/img-2.jpg",
+        imageSrc: order.attachments[0],
         title: order.title,
         estimate: "Estimate Budget: INR " + order.minBudget + " - INR " + order.maxBudget,
         bidsInfo: {
