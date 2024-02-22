@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import '@/styles/routes/auth/register.scss'
 import { signup } from '@/operations/user.fetch'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 
 function register() {
@@ -11,6 +12,7 @@ function register() {
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirm] = useState("")
     const [role, setRole] = useState("USER")
+    const router = useRouter();
 
     const handleSignUp = async () => {
         if (name === '' || email === '' || password === '') {
@@ -31,7 +33,7 @@ function register() {
             const response = await signup(data);
             if (response.status === 200) {
                 alert('Signed Up successfully');
-                window.location.reload();
+                router.push('/auth/login');
             } else {
                 alert('Internal Server Error');
             }

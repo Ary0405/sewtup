@@ -124,11 +124,6 @@ export default function ProjectDescription() {
         }
 
 
-        if(!experience){
-            alert('Please enter experience');
-            return false;
-        }
-
         if(!location){
             alert('Please enter location');
             return false;
@@ -248,7 +243,7 @@ export default function ProjectDescription() {
                                 </select>
                             </div>
                         </div>
-                        <div className='ProjectDescription__bottom--box__experience'>
+                        {/* <div className='ProjectDescription__bottom--box__experience'>
                             <p className='ProjectDescription__bottom--box__experience--header'>Whats the required experience level?</p>
                             <div className='ProjectDescription__bottom--box__experience--text'>
                                 <select className='ProjectDescription__bottom--box__experience--text__select' onChange={(e) => {
@@ -260,7 +255,7 @@ export default function ProjectDescription() {
                                     <option value='EXPERT'>Expert</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> */}
                         <div className='ProjectDescription__bottom--box__buttons'>
                             <div className='ProjectDescription__bottom--box__buttons--back'>Back</div>
                             {/* <Link href="/customer/projectFinalize"> */}

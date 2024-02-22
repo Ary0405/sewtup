@@ -3,6 +3,7 @@ import Link from 'next/link'
 import '@/styles/routes/customer/ProjectDescription.scss'
 import { useEffect, useState } from 'react';
 import { postOrder } from '@/operations/orders.fetch';
+import { useRouter } from 'next/router';
 
 export async function getServerSideProps(context) {
 
@@ -24,6 +25,8 @@ export async function getServerSideProps(context) {
 }
 
 export default function ProjectFinalize({ user }) {
+
+    const router = useRouter();
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -76,10 +79,10 @@ export default function ProjectFinalize({ user }) {
             return;
         }
 
-        if(!experience){
-            alert('Please enter experience');
-            return;
-        }
+        // if(!experience){
+        //     alert('Please enter experience');
+        //     return;
+        // }
 
         if(!location){
             alert('Please enter location');
@@ -101,7 +104,6 @@ export default function ProjectFinalize({ user }) {
             attachments: attachments ? attachments : [],
             skills: [],
             userId: user.id,
-            experience,
             maxBudget: parseInt(maxBudget),
             minBudget: parseInt(minBudget)
         }
@@ -116,7 +118,8 @@ export default function ProjectFinalize({ user }) {
             localStorage.removeItem('maxBudget');
             localStorage.removeItem('experience');
             localStorage.removeItem('location');
-            window.location.reload();
+            localStorage.removeItem('ImageUrls');
+            router.push('/customer/customerDashboard');
         }
         else {
             console.log(response);
