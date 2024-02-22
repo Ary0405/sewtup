@@ -70,34 +70,42 @@ function project({ user, project }) {
                     <div className="project__data__status">
                         <p>{project.status}</p>
                     </div>
+                    <div className="project__data__image">
+                        {
+                            project.attachments.map((attachment, index) => (
+                                <img key={index} src={attachment} alt="" width={200} height={200} />
+                            ))
+                        }
+                    </div>
                 </div>
                 <div className="project__bids">
-                    {project.Bid.map((bid, index) => (
-                        <div className="project__bids__bid" key={index}>
-                            <hr />
-                            <div className="project__bids__bid__description">
-                                <p>{bid.proposal}</p>
-                            </div>
-                            <div className="project__bids__bid__price">
-                                <p>{bid.amount}</p>
-                            </div>
-                            <div className="project__bids__bid__date">
-                                <p>{bid.days}</p>
-                            </div>
-                            <div className="project__bids__bid__status">
-                                <p>{bid.status}</p>
-                            </div>
-                            {
-                                bid.status !== 'ACCEPTED' ?
-                                    <div className="project__bids__bid__button">
-                                        <p className="project__bids__bid__button__text"
-                                            onClick={() => accBid(bid.id)}
-                                        >Accept</p>
-                                    </div> : null
-                            }
-                        </div>
-                    ))}
-
+                    <table className="project__bids__table">
+                        <tr>
+                            <th>Proposal</th>
+                            <th>Price</th>
+                            <th>Delivery Time</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                        {
+                            project.Bid.map((bid, index) => (
+                                <tr key={index}>
+                                    <td>{bid.proposal}</td>
+                                    <td>{bid.amount}</td>
+                                    <td>{bid.days}</td>
+                                    <td>{bid.status}</td>
+                                    <td>
+                                        {
+                                            bid.status !== 'ACCEPTED' ?
+                                                <button
+                                                    onClick={() => accBid(bid.id)}
+                                                >Accept</button> : null
+                                        }
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                    </table>
                 </div>
             </div>
         </div>

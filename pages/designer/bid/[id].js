@@ -93,6 +93,7 @@ function DesignerBid({ user, orderId, order }) {
         const response = await postBid(bid);
         if (response.status === 200) {
             alert('Bid sent successfully');
+            window.location.reload();
         }
         else {
             alert('Error sending bid');
