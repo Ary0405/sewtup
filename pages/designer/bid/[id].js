@@ -77,10 +77,10 @@ function DesignerBid({ user, orderId, order }) {
             return;
         }
 
-        if (proposal.length < 100 || proposal.length > 5000) {
-            alert('Proposal must be between 100 and 5000 characters');
-            return;
-        }
+        // if (proposal.length < 100 || proposal.length > 5000) {
+        //     alert('Proposal must be between 100 and 5000 characters');
+        //     return;
+        // }
 
         const bid = {
             amount: parseInt(bidAmount),

@@ -55,17 +55,13 @@ export default function ProjectFinalize({ user }) {
     }, []);
 
     const postOrderUser = async () => {
-        if (!title || title === '' || !description || description === '' || !minBudget || !maxBudget || maxBudget === '' || !experience || experience === '' || !location || location === '') {
-            alert('Please fill all the fields');
-            return;
-        }
         
-        if(!title){
+        if(!title || title === '') {
             alert('Please enter title');
             return;
         }
 
-        if(!description){
+        if(!description || description === '') {
             alert('Please enter description');
             return;
         }
@@ -120,7 +116,7 @@ export default function ProjectFinalize({ user }) {
             localStorage.removeItem('maxBudget');
             localStorage.removeItem('experience');
             localStorage.removeItem('location');
-            // window.location.href = '/customer/customerDashboard';
+            window.location.reload();
         }
         else {
             console.log(response);
