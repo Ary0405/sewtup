@@ -38,7 +38,7 @@ export default function ProjectTitle() {
             <div className="ProjectTitle__top">
                 <div className='ProjectTitle__top--box'>
                     <p className='ProjectTitle__top--box--text'>Tell us what needs to be done</p>
-                    <p className='ProjectTitle__top--box--desc'>Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay them. Pay the freelancer only when you are 100% satisfied with their work.</p>
+                    <p className='ProjectTitle__top--box--desc'>Contact skilled designers within minutes.</p>
                 </div>
             </div>
             <div className='ProjectTitle__bottom'>

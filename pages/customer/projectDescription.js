@@ -213,11 +213,12 @@ export default function ProjectDescription() {
                                     localStorage.setItem('location', e.target.value);
                                 }}>
                                     <option value=''>Select Location</option>
-                                    <option value='ANDHRA_PRADESH'>Andhra Pradesh</option>
+                                    <option value='ANDHRA_PRADESH'>Andhra Pradesh</option>                                    <option value='ANDHRA_PRADESH'>Andhra Pradesh</option>
                                     <option value='ARUNACHAL_PRADESH'>Arunachal Pradesh</option>
                                     <option value='ASSAM'>Assam</option>
                                     <option value='BIHAR'>Bihar</option>
                                     <option value='CHHATTISGARH'>Chhattisgarh</option>
+                                    <option value='GOA'>Delhi NCR</option>
                                     <option value='GOA'>Goa</option>
                                     <option value='GUJARAT'>Gujarat</option>
                                     <option value='HARYANA'>Haryana</option>
