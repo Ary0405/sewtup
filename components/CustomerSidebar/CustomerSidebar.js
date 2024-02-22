@@ -5,22 +5,25 @@ import { useRouter } from "next/router";
 import { logout } from "@/operations/user.fetch";
 
 
-export default function CustomerSidebar({ user }) {
+export default function CustomerSidebar({ user, option = 0 }) {
 
     const router = useRouter();
 
     return (
         <div className="CustomerSidebar" >
             <div className="CustomerSidebar__top">
-                <div className="CustomerSidebar__top__row">
-                    <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/my_projects.png'} width={25} height={25} />
-                    <Link href="/customer/customerDashboard">
-                        <p className="CustomerSidebar__top__row--text">My Projects</p>
-                    </Link>
-                </div>
+
+                {option === 0 ?
+                    <div className="CustomerSidebar__top__row">
+                        <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/my_projects.png'} width={25} height={25} />
+                        <Link href="/customer/customerDashboard">
+                            <p className="CustomerSidebar__top__row--text">My Projects</p>
+                        </Link>
+                    </div>
+                    : null}
                 <div className="CustomerSidebar__top__row">
                     <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/bid_management.png'} width={20} height={20} />
-                    <Link href="/customer/bidManagement">
+                    <Link href="/">
                         <p className="CustomerSidebar__top__row--text">Bid Management</p>
                     </Link>
                 </div>
