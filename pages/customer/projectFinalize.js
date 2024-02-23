@@ -89,7 +89,7 @@ export default function ProjectFinalize({ user }) {
             return;
         }
 
-        if(minBudget > maxBudget){
+        if(parseInt(minBudget) > parseInt(maxBudget)){
             alert('Minimum budget cannot be greater than maximum budget');
             return;
         }
