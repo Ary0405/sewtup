@@ -3,6 +3,7 @@ import CustomerProjects from "@/components/CustomerProjects/CustomerProjects";
 import CustomerSidebar from "@/components/CustomerSidebar/CustomerSidebar";
 import { getOrdersByUser } from "@/services/order.service";
 import "@/styles/routes/customer/customerDashboard.scss";
+import { useEffect } from "react";
 
 export async function getServerSideProps(context) {
     if (context.req.session.user === undefined) {
@@ -28,6 +29,19 @@ export async function getServerSideProps(context) {
 }
 
 export default function CustomerDashboard({ user, projects }) {
+
+    useEffect(() => {
+        localStorage.removeItem('title');
+        localStorage.removeItem('description');
+        localStorage.removeItem('skills');
+        localStorage.removeItem('minBudget');
+        localStorage.removeItem('maxBudget');
+        localStorage.removeItem('experience');
+        localStorage.removeItem('location');
+        localStorage.removeItem('ImageUrls');
+    }, []);
+    
+
     return (
         <div className="parent">
             <div className="div1">

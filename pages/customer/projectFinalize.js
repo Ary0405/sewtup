@@ -111,6 +111,7 @@ export default function ProjectFinalize({ user }) {
         const response = await postOrder(data);
         if (response.status === 200) {
             alert('Order created successfully');
+            localStorage.removeItem('ImageUrls');
             localStorage.removeItem('title');
             localStorage.removeItem('description');
             localStorage.removeItem('skills');
@@ -118,7 +119,6 @@ export default function ProjectFinalize({ user }) {
             localStorage.removeItem('maxBudget');
             localStorage.removeItem('experience');
             localStorage.removeItem('location');
-            localStorage.removeItem('ImageUrls');
             
             router.push('/customer/customerDashboard');
         }
