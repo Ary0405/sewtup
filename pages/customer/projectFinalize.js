@@ -185,7 +185,9 @@ export default function ProjectFinalize({ user }) {
                         <p className='ProjectDescription__bottom--box__location--text'>{location}</p>
                     </div>
                     <div className='ProjectDescription__bottom--box__buttons'>
-                        <div className='ProjectDescription__bottom--box__buttons--back'>No, I want to edit</div>
+                        <div className='ProjectDescription__bottom--box__buttons--back'
+                        onClick={() => router.push('/customer/projectDescription')}
+                        >No, I want to edit</div>
                         <div className='ProjectDescription__bottom--box__buttons--next'
                             onClick={postOrderUser}
                         >Yes, post my order</div>
