@@ -186,7 +186,7 @@ function DesignerBid({ user, orderId, order }) {
                             </div>
                         </div>
                         <div className="BrowseProject__biddingArea--proposalTitle">
-                            Describe your proposal (minimum 100 characters)
+                            Describe your proposal (optional)
                         </div>
                         <textarea
                             className="BrowseProject__biddingArea--proposalTextarea"

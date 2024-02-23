@@ -47,7 +47,7 @@ export default function ProjectDescription() {
         } else {
             setImageUrls([...imageUrls, res['data'].publicUrl])
         }
-        console.log(data,"data\n",imageUrls,"imageUrls\n",res,"res\n");
+        
         setIsLoading(false);
     }
 
@@ -93,7 +93,7 @@ export default function ProjectDescription() {
         if (localImageUrls && localImageUrls !== '') {
             setImageUrls(JSON.parse(localImageUrls));
         }
-        console.log(localImageUrls, "localImageUrls\n", imageUrls, "imageUrls\n");
+        
 
     }, []);
 
@@ -206,9 +206,9 @@ export default function ProjectDescription() {
                             <div className='ProjectDescription__bottom--box__location--text'>
                                 <select className='ProjectDescription__bottom--box__location--text__select' onChange={(e) => {
                                     localStorage.setItem('location', e.target.value);
+                                    setLocation(e.target.value);
                                 }}>
-                                    <option value=''>Select Location</option>
-                                    <option value='ANDHRA_PRADESH'>Andhra Pradesh</option>                                    <option value='ANDHRA_PRADESH'>Andhra Pradesh</option>
+                                    <option value=''>Select Location</option>                            <option value='ANDHRA_PRADESH'>Andhra Pradesh</option>
                                     <option value='ARUNACHAL_PRADESH'>Arunachal Pradesh</option>
                                     <option value='ASSAM'>Assam</option>
                                     <option value='BIHAR'>Bihar</option>
