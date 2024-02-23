@@ -47,7 +47,7 @@ export default function ProjectDescription() {
         } else {
             setImageUrls([...imageUrls, res['data'].publicUrl])
         }
-        
+
         setIsLoading(false);
     }
 
@@ -93,38 +93,38 @@ export default function ProjectDescription() {
         if (localImageUrls && localImageUrls !== '') {
             setImageUrls(JSON.parse(localImageUrls));
         }
-        
+
 
     }, []);
 
     useEffect(() => {
-        if(imageUrls.length > 0)
-        localStorage.setItem('ImageUrls', JSON.stringify(imageUrls));
+        if (imageUrls.length > 0)
+            localStorage.setItem('ImageUrls', JSON.stringify(imageUrls));
     }, [imageUrls]);
 
     const checkFields = () => {
-        if(!title || title === '') {
+        if (!title || title === '') {
             alert('Please enter title');
             return false;
         }
 
-        if(!description || description === '') {
+        if (!description || description === '') {
             alert('Please enter description');
             return false;
         }
 
-        if(!minBudget){
+        if (!minBudget) {
             alert('Please enter minimum budget');
             return false;
         }
 
-        if(!maxBudget){
+        if (!maxBudget) {
             alert('Please enter maximum budget');
             return false;
         }
 
 
-        if(!location){
+        if (!location) {
             alert('Please enter location');
             return false;
         }
@@ -158,14 +158,15 @@ export default function ProjectDescription() {
                             }} />
                         </div>
                         <div className='ProjectDescription__bottom--box__attach'>
-                            <div className='ProjectDescription__bottom--box__attach--logo'>
-                                <Image className='ProjectDescription__bottom--box__attach--logo__image' src='/Images/Customer/attach_files.png' width={30} height={30} />
-                                <input type='file' onChange={(e) => {
-                                    uploadImage(e.target.files[0]);
-                                }
-                                } />
+                            <div className='ProjectDescription__bottom--box__attach--header'>
+                                <div className='ProjectDescription__bottom--box__attach--logo'>
+                                    <Image className='ProjectDescription__bottom--box__attach--logo__image' src='/Images/Customer/attach_files.png' width={30} height={30} />
+                                    <input type='file' onChange={(e) => {
+                                        uploadImage(e.target.files[0]);
+                                    }} />
+                                </div>
+                                <p className='ProjectDescription__bottom--box__attach--text'>Upload any images or documents that might be helpful in explaining your brief here (Max file size: 10MB)</p>
                             </div>
-                            <p className='ProjectDescription__bottom--box__attach--text'>Upload any images or documents that might be helpful in explaining your brief here (Max file size: 10MB)</p>
                             {
                                 imageUrls.length > 0 ? <div className='ProjectDescription__bottom--box__attach--images'>
                                     {
@@ -201,14 +202,20 @@ export default function ProjectDescription() {
                                 } />
                             </div>
                         </div>
-                        <div className='ProjectDescription__bottom--box__location'>
-                            <p className='ProjectDescription__bottom--box__location--header'>Select order location</p>
+                        <div className='ProjectDescription__bottom--box__location' >
+                            {/* <p className='ProjectDescription__bottom--box__location--header'>Select order location</p> */}
                             <div className='ProjectDescription__bottom--box__location--text'>
-                                <select className='ProjectDescription__bottom--box__location--text__select' onChange={(e) => {
-                                    localStorage.setItem('location', e.target.value);
-                                    setLocation(e.target.value);
-                                }}>
-                                    <option value=''>Select Location</option>                            <option value='ANDHRA_PRADESH'>Andhra Pradesh</option>
+                                <select className='ProjectDescription__bottom--box__location--text__select'
+                                    style={{
+                                        display: 'block',
+                                        textDecoration: 'none',
+                                    }}
+                                    onChange={(e) => {
+                                        localStorage.setItem('location', e.target.value);
+                                        setLocation(e.target.value);
+                                    }}>
+                                    <option value=''>Select Location</option>
+                                    <option value='ANDHRA_PRADESH'>Andhra Pradesh</option>
                                     <option value='ARUNACHAL_PRADESH'>Arunachal Pradesh</option>
                                     <option value='ASSAM'>Assam</option>
                                     <option value='BIHAR'>Bihar</option>
@@ -259,14 +266,14 @@ export default function ProjectDescription() {
                         <div className='ProjectDescription__bottom--box__buttons'>
                             <div className='ProjectDescription__bottom--box__buttons--back'>Back</div>
                             {/* <Link href="/customer/projectFinalize"> */}
-                                <div className='ProjectDescription__bottom--box__buttons--next'
+                            <div className='ProjectDescription__bottom--box__buttons--next'
                                 onClick={() => {
-                                    if(checkFields()){
+                                    if (checkFields()) {
                                         router.push('/customer/projectFinalize');
                                     }
 
                                 }}
-                                >Next</div>
+                            >Next</div>
                             {/* </Link> */}
                         </div>
 

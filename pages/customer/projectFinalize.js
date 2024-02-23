@@ -119,6 +119,7 @@ export default function ProjectFinalize({ user }) {
             localStorage.removeItem('experience');
             localStorage.removeItem('location');
             localStorage.removeItem('ImageUrls');
+            
             router.push('/customer/customerDashboard');
         }
         else {
