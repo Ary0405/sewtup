@@ -220,7 +220,7 @@ export default function ProjectDescription() {
                                     <option value='ASSAM'>Assam</option>
                                     <option value='BIHAR'>Bihar</option>
                                     <option value='CHHATTISGARH'>Chhattisgarh</option>
-                                    <option value='GOA'>Delhi NCR</option>
+                                    <option value='DELHI_NCR'>Delhi NCR</option>
                                     <option value='GOA'>Goa</option>
                                     <option value='GUJARAT'>Gujarat</option>
                                     <option value='HARYANA'>Haryana</option>
@@ -244,7 +244,6 @@ export default function ProjectDescription() {
                                     <option value='UTTAR_PRADESH'>Uttar Pradesh</option>
                                     <option value='UTTARAKHAND'>Uttarakhand</option>
                                     <option value='WEST_BENGAL'>West Bengal</option>
-                                    <option value='DELHI_NCR'>Delhi NCR</option>
                                     <option value='REMOTE'>Remote</option>
                                     <option value='OTHER'>Other</option>
                                 </select>
