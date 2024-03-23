@@ -4,21 +4,36 @@
     align-items: center;
     font-family: 'Nohemi', sans-serif;
 
-    &_header{
+    @media (max-width: 768px) {
+        flex-direction: column; // Stack the items vertically on smaller screens
+    }
 
+    &_header{
         &--text1{
             color: #C0F7FF;
             font-size: 4rem;
             font-weight: bold;
             margin-top: 25px;
+
+            @media (max-width: 768px) {
+                font-size: 1.9rem; // Adjust the font size for smaller screens
+                text-align: center;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
         }
         &--text2{
             color: #C0F7FF;
             font-size: 1.2rem;
             margin-top: 20px;
             text-align: center;
-        }
 
+            @media (max-width: 768px) {
+                font-size: 0.8rem;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
     }
 
     &_customdes {
@@ -26,11 +41,21 @@
         align-items: center;
         margin-left: 5vw;
 
+        @media (max-width: 768px) {
+            flex-direction: column; // Stack the items vertically on smaller screens
+            margin-left: 10vw; // Remove the left margin on smaller screens
+            margin-top: 5vh;
+            // width: 90%;
+        }
 
         &--heading {
             color: #F98B76;
             font-size: 2.5rem;
             font-weight:bolder;
+
+            @media (max-width: 768px) {
+                font-size: 1.5rem; // Adjust the font size for smaller screens
+            }
         }
 
         &--content {
@@ -43,12 +68,22 @@
                 font-size: 1.2rem;
                 width: 54%;
                 margin-top: 20px;
+
+                @media (max-width: 768px) {
+                    font-size: 0.8rem; // Adjust the font size for smaller screens
+                    width: 100%;
+                }
             }
 
             &--image{
                 width: 130px;
                 margin-right: 4vw;
                 margin-top: -4vh;
+
+                @media (max-width: 768px) {
+                    width: 40%; // Make the image take up the full width on smaller screens
+                    margin-right: 0; // Remove the right margin on smaller screens
+                }
             }
 
             &--text3 {
@@ -56,9 +91,12 @@
                 font-size: 1.2rem;
                 width: 54%;
                 margin-top: 20px;
-                // margin-left: -9vw;
-            }
 
+                @media (max-width: 768px) {
+                    font-size: 0.8rem; // Adjust the font size for smaller screens
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -67,11 +105,19 @@
         align-items: center;
         margin-left: 2vw;
 
+        @media (max-width: 768px) {
+            flex-direction: column; // Stack the items vertically on smaller screens
+            margin-left: 0; // Remove the left margin on smaller screens
+        }
 
         &--heading {
             color: #F98B76;
             font-size: 2.5rem;
             font-weight:bolder;
+
+            @media (max-width: 768px) {
+                font-size: 1.5rem; // Adjust the font size for smaller screens
+            }
         }
 
         &--content {
@@ -84,12 +130,22 @@
                 font-size: 1.2rem;
                 width: 54%;
                 margin-top: 20px;
+
+                @media (max-width: 768px) {
+                    font-size: 0.8rem; // Adjust the font size for smaller screens
+                    width: 100%;
+                }
             }
 
             &--image{
                 width: 130px;
                 margin-left: 4.5vw;
                 margin-top: -4vh;
+
+                @media (max-width: 768px) {
+                    width: 100%; // Make the image take up the full width on smaller screens
+                    margin-left: 0; // Remove the left margin on smaller screens
+                }
             }
 
             &--text3 {
@@ -97,9 +153,12 @@
                 font-size: 1.2rem;
                 width: 44%;
                 margin-top: 20px;
-                // margin-left: -9vw;
-            }
 
+                @media (max-width: 768px) {
+                    font-size: 0.8rem; // Adjust the font size for smaller screens
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -107,7 +166,11 @@
         &--image1{
             width: 100%;
             margin-top: 5vh;
+
+            @media (max-width: 768px) {
+                width: 100%; // Make the image take up the full width on smaller screens
+                margin-bottom: 90px;
+            }
         }
     }
-
 }

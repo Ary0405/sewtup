@@ -13,7 +13,7 @@
         font-weight: bold;
 
         @media (max-width: 768px) {
-            font-size: 70px;
+            font-size: 100px;
         }
     }
 
@@ -32,6 +32,10 @@
             &:hover {
                 cursor: pointer;
             }
+
+            @media (max-width: 768px) {
+                margin-left: 6vw;
+            }
         }
 
         &--links{
@@ -46,6 +50,7 @@
             justify-content: left;
             align-items: flex-start;
             font-size: 35px;
+            margin-top: 0; // Adjust margin-top for smaller screens
         }
     }
 
@@ -58,6 +63,7 @@
         @media (max-width: 768px) {
             font-size: 20px;
             padding: 10px 0px;
+            margin-top: 0; // Adjust margin-top for smaller screens
         }
     }
 
@@ -65,6 +71,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @media (max-width: 768px){
+            flex-direction: column;
+        }
+
 
         &--sub4 {
             background-color: #F98B76;
@@ -94,9 +105,9 @@
             }
 
             @media (max-width: 768px) {
-                width: 80vw;
-                height: 20vh;
-
+                width: 100%; // Make the width 100% on smaller screens
+                height: auto; // Adjust the height automatically
+                align-self: center;
                 &--sub1 {
                     font-size: 30px;
                 }
@@ -114,11 +125,15 @@
         &--sub8{
             display: flex;
             flex-direction: column;
-            
 
             &--text{
                 color: #FFFFFF;
                 font-size: 2.5rem;
+
+                @media (max-width: 768px) {
+                    text-align: center;
+                    font-size: 2rem; // Reduce the font size on smaller screens
+                }
             }
 
             &--sub9 {
@@ -133,23 +148,16 @@
                     margin-top: 1vh;
                 }
             }
-        }
-    }
 
-    &__sub5 {
-        background-image: url("/Images/plant.png");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 45vh;
-    }
+            @media (max-width: 768px) {
+                &--text {
+                    font-size: 2rem; // Reduce the font size on smaller screens
+                }
 
-    &__sub6 {
-        color: #C0F7FF;
-        font-family: 'Inter', sans-serif;
-        @media (max-width: 768px) {
-            font-size: 20px;
-            padding: 10px 0px;
+                &--icon {
+                    font-size: 2rem; // Reduce the font size on smaller screens
+                }
+            }
         }
     }
 

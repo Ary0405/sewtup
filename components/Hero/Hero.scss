@@ -2,14 +2,13 @@
     font-family: 'Sprite Graffiti', sans-serif;
 
     @media (max-width: 768px) {
-        height: 70vh;
+        height:82vh;
         padding-top: 0rem;
         width: 100vw;
         overflow-x: hidden;
     }
 
     &__images {
-
         &--wrapper::after {
             content: "";
             z-index: 1;
@@ -19,19 +18,34 @@
             width: 100%;
             height: 160%;
             background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgb(10, 10, 10) 100%);
+
+            @media (max-width: 768px) {
+                height: 82%;
+            }
         }
 
         &--image7 {
-            width: 100%;
-            height: 80%;
-            margin-bottom: -34vh;
-            margin-left: 1vw;
+            display: none; // Hide image 7 by default
+
+            @media (min-width: 769px) {
+                display: block; // Show image 7 on screens larger than 768px
+                width: 100%;
+                height: 80%;
+                margin-bottom: -34vh;
+                margin-left: 1vw;
+            }
         }
 
-        @media (max-width: 768px) {
-            width: 100vw;
-            
+        &--image8 {
+            display: none; // Hide image 8 by default
+            position: relative;
 
+            @media (max-width: 768px) {
+                display: block; // Show image 8 on screens smaller than 768px
+                width: 100vw;
+                height: auto;
+                margin-bottom: -20vh;   
+            }
         }
     }
 }

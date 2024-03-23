@@ -6,6 +6,7 @@ const Hero = () => {
             <div className='Hero__images'>
                 <div className='Hero__images--wrapper'>
                     <img className='Hero__images--image7' src='/Images/hero/homeImage.png' />
+                    <img className='Hero__images--image8' src='/Images/hero/newImage.png' />
                 </div>
             </div>
         </div>

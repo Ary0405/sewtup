@@ -20,14 +20,14 @@ function MainMeet() {
                         <Card name="Devina Mehta" photo="/Images/LandingPage/devinaCrop.jpg" />
                         <Card name="Ira Chawla" photo="/Images/LandingPage/IraCropped.jpg" />
                         <Card name="Navya Mittal" photo="/Images/LandingPage/navyaCrop.jpg" />
-                        <Card name="Ramneek K Panesar" photo="/Images/LandingPage/RamneekCrop.jpg" />
+                        <Card name="Ramneek Panesar" photo="/Images/LandingPage/RamneekCrop.jpg" />
                         <Card name="Mansa Dash" photo="/Images/LandingPage/MansaCrop.jpg" />
                         <Card name="Naisha Srivastav" photo="/Images/LandingPage/naishaCrop.jpg" />
                         <Card name="Mahika Kathuria" photo="/Images/LandingPage/mahikaCrop.jpg" />
                         <Card name="Devina Mehta" photo="/Images/LandingPage/devinaCrop.jpg" />
                         <Card name="Ira Chawla" photo="/Images/LandingPage/IraCropped.jpg" />
                         <Card name="Navya Mittal" photo="/Images/LandingPage/navyaCrop.jpg" />
-                        <Card name="Ramneek K Panesar" photo="/Images/LandingPage/RamneekCrop.jpg" />
+                        <Card name="Ramneek Panesar" photo="/Images/LandingPage/RamneekCrop.jpg" />
                     </div>
                 </div>
             </div>
