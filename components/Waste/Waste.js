@@ -3,7 +3,7 @@ import './Waste.scss'
 const Waste = () => {
     return (
         <div className='Waste'>
-            <img src='/Images/hero/waste.png' />
+            <img src='/Images/hero/waste.webp' />
         </div>
     )
 }

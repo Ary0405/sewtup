@@ -38,7 +38,7 @@ export default function Home({ user }) {
             <MainHero />
           </div>
           <div className="section">
-            <img src="/Images/main_model.png" alt="main_model" className="Main__content--img" />
+            <img src="/Images/main_model.webp" alt="main_model" className="Main__content--img" />
           </div>
           <div className="section">
             <MainCust />
@@ -47,7 +47,7 @@ export default function Home({ user }) {
             <MainMeet />
           </div>
           <div className="section">
-            <img src="/Images/multiple_models.png" alt="main_model2" className="Main__content--img" />
+            <img src="/Images/multiple_models.webp" alt="main_model2" className="Main__content--img" />
           </div>
           <div className="section">
             <MainFoot />

@@ -14,20 +14,20 @@ function MainMeet() {
             <div className="MainMeet__team">
                 <div className="SportsSlider">
                     <div className="SportsSlider__track">
-                        <Card name="Mansa Dash" photo="/Images/LandingPage/MansaCrop.jpg" />
-                        <Card name="Naisha Srivastav" photo="/Images/LandingPage/naishaCrop.jpg" />
-                        <Card name="Mahika Kathuria" photo="/Images/LandingPage/mahikaCrop.jpg" />
-                        <Card name="Devina Mehta" photo="/Images/LandingPage/devinaCrop.jpg" />
-                        <Card name="Ira Chawla" photo="/Images/LandingPage/IraCropped.jpg" />
-                        <Card name="Navya Mittal" photo="/Images/LandingPage/navyaCrop.jpg" />
-                        <Card name="Ramneek Panesar" photo="/Images/LandingPage/RamneekCrop.jpg" />
-                        <Card name="Mansa Dash" photo="/Images/LandingPage/MansaCrop.jpg" />
-                        <Card name="Naisha Srivastav" photo="/Images/LandingPage/naishaCrop.jpg" />
-                        <Card name="Mahika Kathuria" photo="/Images/LandingPage/mahikaCrop.jpg" />
-                        <Card name="Devina Mehta" photo="/Images/LandingPage/devinaCrop.jpg" />
-                        <Card name="Ira Chawla" photo="/Images/LandingPage/IraCropped.jpg" />
-                        <Card name="Navya Mittal" photo="/Images/LandingPage/navyaCrop.jpg" />
-                        <Card name="Ramneek Panesar" photo="/Images/LandingPage/RamneekCrop.jpg" />
+                        <Card name="Mansa Dash" photo="/Images/LandingPage/MansaCrop.webp" />
+                        <Card name="Naisha Srivastav" photo="/Images/LandingPage/naishaCrop.webp" />
+                        <Card name="Mahika Kathuria" photo="/Images/LandingPage/mahikaCrop.webp" />
+                        <Card name="Devina Mehta" photo="/Images/LandingPage/devinaCrop.webp" />
+                        <Card name="Ira Chawla" photo="/Images/LandingPage/IraCropped.webp" />
+                        <Card name="Navya Mittal" photo="/Images/LandingPage/navyaCrop.webp" />
+                        <Card name="Ramneek Panesar" photo="/Images/LandingPage/RamneekCrop.webp" />
+                        <Card name="Mansa Dash" photo="/Images/LandingPage/MansaCrop.webp" />
+                        <Card name="Naisha Srivastav" photo="/Images/LandingPage/naishaCrop.webp" />
+                        <Card name="Mahika Kathuria" photo="/Images/LandingPage/mahikaCrop.webp" />
+                        <Card name="Devina Mehta" photo="/Images/LandingPage/devinaCrop.webp" />
+                        <Card name="Ira Chawla" photo="/Images/LandingPage/IraCropped.webp" />
+                        <Card name="Navya Mittal" photo="/Images/LandingPage/navyaCrop.webp" />
+                        <Card name="Ramneek Panesar" photo="/Images/LandingPage/RamneekCrop.webp" />
                     </div>
                 </div>
             </div>

@@ -54,7 +54,7 @@ export default function ProjectTitle({ projects, user }) {
                         </div>
                     </div>
                     <div className="Browse__top--box-child">
-                        <Image className="Browse__top--box--image" src={'/Images/img.png'} width={400} height={300} />
+                        <Image className="Browse__top--box--image" src={'/Images/img.webp'} width={400} height={300} />
                     </div>
                 </div>
             </div>

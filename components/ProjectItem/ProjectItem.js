@@ -6,7 +6,7 @@ const ProjectItem = ({ projectData }) => {
     // Provide default values if projectData is not provided
     projectData = projectData || {
         status: "Accepted",
-        imageSrc: "/Images/img-2.jpg",
+        imageSrc: "/Images/img-2.webp",
         title: "Custom Silk Outfit with Embroidery",
         estimate: "Estimate Budget: INR 6,000 - INR 8,000",
         bidsInfo: {

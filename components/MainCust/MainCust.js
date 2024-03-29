@@ -16,7 +16,7 @@ function MainCust() {
                         <p>Through our website customers can place orders for clothes that they want. They can choose from a large number of quality designers to give life to their vision by getting their clothes made exactly the way they want them.</p>
                     </div>
 
-                    <img className='MainCust_customdes--content--image' src='/Images/arrow.png' alt='customer' />
+                    <img className='MainCust_customdes--content--image' src='/Images/arrow.webp' alt='customer' />
                 </div>
             </div>
         
@@ -26,11 +26,11 @@ function MainCust() {
                     <div className='MainCust_customdes--content--text'>
                         <p>We give fashion designers and even fashion designing students a platform to showcase their talent and grow their business. </p>
                     </div>
-                    <img className='MainCust_customdes--content--image' src='/Images/arrow.png' alt='customer' />
+                    <img className='MainCust_customdes--content--image' src='/Images/arrow.webp' alt='customer' />
                 </div>
             </div>
             <div className='MainCust_trustimage'>
-                <img className='MainCust_trustimage--image1' src='/Images/trust.png' alt='trust' />
+                <img className='MainCust_trustimage--image1' src='/Images/trust.webp' alt='trust' />
             </div>
         </div>
     )

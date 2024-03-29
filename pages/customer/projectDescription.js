@@ -158,7 +158,7 @@ export default function ProjectDescription() {
                         <div className='ProjectDescription__bottom--box__attach'>
                             <div className='ProjectDescription__bottom--box__attach--header'>
                                 <div className='ProjectDescription__bottom--box__attach--logo'>
-                                    <Image className='ProjectDescription__bottom--box__attach--logo__image' src='/Images/Customer/attach_files.png' width={30} height={30} />
+                                    <Image className='ProjectDescription__bottom--box__attach--logo__image' src='/Images/Customer/attach_files.webp' width={30} height={30} />
                                     <input type='file' onChange={(e) => {
                                         uploadImage(e.target.files[0]);
                                     }} />
