@@ -6,7 +6,7 @@ function MainCust() {
         <div className='MainCust'>
             <div className='MainCust__header'>
                 <p className='MainCust_header--text1'>QUALITY CUSTOMIZATION IS OUR MOTTO</p>
-                <p className='MainCust_header--text2'>Sew’t Up is a collaborative space for designers and customers for the creation of customized clothing. </p>\
+                <p className='MainCust_header--text2'>Sew’t Up is a collaborative space for designers and customers for the creation of customized clothing. </p>
             </div>
 
             <div className='MainCust_customdes'>

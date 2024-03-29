@@ -62,6 +62,3 @@ BEFORE DELETE ON "Order"
 FOR EACH ROW
 EXECUTE FUNCTION before_order_delete();
 ```
-
-
-`
