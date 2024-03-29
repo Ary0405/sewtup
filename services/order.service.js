@@ -43,10 +43,6 @@ export async function isOrderByUser(orderId, userId) {
 
 }
 
-export async function getAllOrders() {
-    return db.order.findMany();
-}
-
 export async function getOrderById(id) {
     return db.order.findUnique({
         where: {

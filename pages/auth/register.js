@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import '@/styles/routes/auth/register.scss'
 import { signup } from '@/operations/user.fetch'
 import { useState } from 'react'

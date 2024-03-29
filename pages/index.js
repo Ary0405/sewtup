@@ -4,7 +4,6 @@ import MainFoot from "@/components/MainFoot/MainFoot";
 import MainCust from "@/components/MainCust/MainCust";
 import MainMeet from "@/components/MainMeet/MainMeet";
 import Hero from "@/components/Hero/Hero";
-import Waste from "@/components/Waste/Waste";
 import Navbar from "@/components/Navbar/Navbar";
 
 export async function getServerSideProps(context) {
@@ -44,9 +43,6 @@ export default function Home({ user }) {
           <div className="section">
             <MainCust />
           </div>
-          {/* <div className="section">
-            <Waste />
-          </div> */}
           <div id="team" className="section">
             <MainMeet />
           </div>

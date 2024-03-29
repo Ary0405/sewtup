@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import '@/styles/routes/customer/ProjectDescription.scss'
 import useAuth from '@/hooks/useAuth';
 import { useEffect, useState } from 'react';
@@ -8,7 +7,6 @@ import { generate } from 'random-words'
 import { useRouter } from 'next/router';
 
 export const supabase = createClient("https://ymufvizxarumdwktdhni.supabase.co", process.env.NEXT_PUBLIC_SUPABASE_KEY)
-
 
 export async function getServerSideProps(context) {
 

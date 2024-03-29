@@ -1,4 +1,3 @@
-import React from 'react'
 import '@/styles/routes/auth/login.scss'
 import { useState } from 'react'
 import { login } from '@/operations/user.fetch'

@@ -2,11 +2,7 @@ import '@/styles/routes/designer/Browse.scss';
 import BrowseItem from "@/components/BrowseItem/BrowseItem";
 import Filter from "@/components/Filter/Filter";
 import Image from 'next/image';
-import Bid from '@/components/Bid/Bid';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { browseProjects } from '@/services/order.service';
-import { useEffect } from 'react';
 
 
 export async function getServerSideProps(context) {

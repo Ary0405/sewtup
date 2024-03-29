@@ -1,5 +1,4 @@
 import { createOrder } from "@/services/order.service";
-import { isExperienceLevel, isLocation } from "@/utils/validator";
 
 export default async function orderCreate(req, res) {
     const { title, description, location, attachments, skills, userId, maxBudget, minBudget } = req.body;

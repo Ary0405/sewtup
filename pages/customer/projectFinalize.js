@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import '@/styles/routes/customer/ProjectDescription.scss'
 import { useEffect, useState } from 'react';
 import { postOrder } from '@/operations/orders.fetch';
