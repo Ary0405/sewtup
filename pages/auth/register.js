@@ -3,6 +3,7 @@ import '@/styles/routes/auth/register.scss'
 import { signup } from '@/operations/user.fetch'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { isPhone } from '@/utils/validator'
 
 
 function register() {
@@ -11,11 +12,12 @@ function register() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirm] = useState("")
+    const [phone, setPhone] = useState("")
     const [role, setRole] = useState("USER")
     const router = useRouter();
 
     const handleSignUp = async () => {
-        if (name === '' || email === '' || password === '') {
+        if (name === '' || email === '' || password === '' || phone === '') {
             alert('Please fill in all the fields');
             return;
         }
@@ -23,11 +25,16 @@ function register() {
             alert('Passwords do not match');
             return;
         }
+        if (!isPhone(phone)) {
+            alert('Invalid Phone Number');
+            return;
+        }
         const data = {
             "name": name,
             "email": email,
             "password": password,
             "role": role,
+            "phone": phone
         }
         try {
             const response = await signup(data);
@@ -57,6 +64,7 @@ function register() {
                 </div>
                 <input type="text" placeholder="Name" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setName(e.target.value)} />
                 <input type="text" placeholder="Email" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setEmail(e.target.value)} />
+                <input type="text" placeholder="Phone Number" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setPhone(e.target.value)} />
                 <input type="password" placeholder="Password" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setPassword(e.target.value)} />
                 <input type="password" placeholder="Confirm Password" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setConfirm(e.target.value)} />
                 <button onClick={handleSignUp}>Sign Up</button>

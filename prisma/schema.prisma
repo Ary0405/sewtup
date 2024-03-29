@@ -36,6 +36,7 @@ model Order {
   date        DateTime   @default(now())
   Bid         Bid[]
   User        User       @relation(fields: [userId], references: [id])
+  Payment     Payment[]
 }
 
 model User {
@@ -43,9 +44,21 @@ model User {
   email    String  @unique
   password String
   name     String
+  phone    String  @default("")
   role     Role    @default(USER)
   Bid      Bid[]
   Order    Order[]
+}
+
+model Payment {
+  id          Int           @id @default(autoincrement())
+  amount      Int
+  orderId     Int
+  Order       Order         @relation(fields: [orderId], references: [id])
+  status      PaymentStatus @default(PENDING)
+  date        DateTime      @default(now())
+  imageURL    String
+  transaction String
 }
 
 enum BidStatus {
@@ -97,6 +110,11 @@ enum Location {
 enum Role {
   DESIGNER
   USER
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
 }
 
 enum Status {
