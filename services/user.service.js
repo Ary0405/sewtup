@@ -13,3 +13,15 @@ export async function createUser(data) {
         data,
     });
 }
+
+export async function updatePassword(id,email, password) {
+    return db.user.update({
+        where: {
+            id,
+            email,
+        },
+        data: {
+            password,
+        },
+    });
+}

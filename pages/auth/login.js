@@ -42,8 +42,9 @@ function Login() {
                 <input type="password" placeholder="Password" style={{color: 'white', paddingLeft: '10px'}} onChange={(e) => setPassword(e.target.value)} />
                 <button onClick={handleLogin}>Login</button>
                 <p>Don't have an account? <a href="/auth/register">Register</a></p>
+                <p>Forgot your password? <a href="/auth/forgotpassword">Reset</a></p>
             </div>
-            <div className='Login__backimg'></div>'
+            <div className='Login__backimg'></div>
         </div>
     )
 }
