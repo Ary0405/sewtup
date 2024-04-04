@@ -110,6 +110,7 @@ enum Location {
 enum Role {
   DESIGNER
   USER
+  ADMIN
 }
 
 enum PaymentStatus {

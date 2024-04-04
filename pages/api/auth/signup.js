@@ -13,6 +13,12 @@ async function SignUp(req, res) {
         return;
     }
 
+    if(body.role !== 'USER' || body.role !== 'DESIGNER') 
+    {
+        res.send({ status: 400, message: "Invalid role" });
+        return;
+    } 
+
     try {
         const response = await createUser({
             name: body.name,
