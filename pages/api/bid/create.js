@@ -15,7 +15,7 @@ export default async function bidCreate(req, res) {
     }
     catch (error) {
         console.log(error);
-        return res({ status: 400, error})
+        return res.send({ status: 400, error})
     }
 
 }

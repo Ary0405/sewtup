@@ -47,6 +47,14 @@ export async function isBidUnderOrder(orderId, bidId) {
             id: bidId,
             orderId,
         },
+        include:{
+            User: {
+                select: {
+                    email: true,
+                    phone: true
+                },
+            }
+        }
     });
 }
 

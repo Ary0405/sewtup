@@ -52,6 +52,7 @@ export default function ProjectFinalize({ user }) {
         setMaxBudget(localMaxBudget);
         setExperience(localExperience);
         setLocation(localLocation);
+        if(localAttachments !== null)
         setAttachments(JSON.parse(localAttachments));
         if(localMinBudget === null) setMinBudget(0);
     }, []);

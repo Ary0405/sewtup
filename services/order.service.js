@@ -39,6 +39,14 @@ export async function isOrderByUser(orderId, userId) {
             id: orderId,
             userId,
         },
+        include: {
+            User: {
+                select: {
+                    email: true,
+                    phone: true,
+                },
+            }
+        }
     });
 
 }
