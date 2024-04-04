@@ -1,6 +1,10 @@
 import { Input, Button, FormControl } from '@chakra-ui/react';
 import { payPayment } from '@/operations/orders.fetch';
 import { useState } from 'react';
+import { generate } from "random-words";
+import Loading from '@/components/Loading/Loading';
+import { supabase } from './projectDescription';
+
 
 export async function getServerSideProps(context) {
   const user = context.req.session.user;
@@ -39,16 +43,39 @@ export async function getServerSideProps(context) {
 
 
   return {
-    props: { user: user, orderId: orderId, value: value }
+    props: { orderId: orderId, value: value }
   }
 
 }
 
 
-function pay({ user, orderId, value }) {
+function pay({ orderId, value }) {
 
   const [transaction, setTransaction] = useState("");
   const [imageURL, setImageURL] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const uploadImages = async (file) => {
+    const file_path = generate();
+    if (file.size > 1024 * 1024 * 3) {
+      alert('File is larger than 3MB');
+      return;
+    }
+    await uploadFile(file, file_path);
+  }
+
+  const uploadFile = async (file, file_path) => {
+    setLoading(true);
+    const { data, error } = await supabase.storage.from('payments').upload(file_path, file)
+    const res = supabase.storage.from('payments').getPublicUrl(file_path);
+    if (error) {
+      console.log(error)
+    } else {
+      setImageURL(res['data'].publicUrl)
+    }
+    setLoading(false);
+  }
+
 
   const handlePay = async () => {
     if (transaction === "" || imageURL === "") {
@@ -65,23 +92,24 @@ function pay({ user, orderId, value }) {
 
     const response = await payPayment(data);
 
-    if(response.status === 200){
+    if (response.status === 200) {
       alert("Payment successful");
       window.location.href = "/";
     }
-    else{
+    else {
       alert("Payment failed");
     }
   }
 
   return (
     <div>
+      {loading && <Loading />}
       <h1>Pay</h1>
       <h2>Order ID: {orderId}</h2>
       <h2>Amount: {value}</h2>
       <FormControl>
         <Input placeholder="Transaction ID" onChange={(e) => setTransaction(e.target.value)} required />
-        <Input placeholder="Image URL" onChange={(e) => setImageURL(e.target.value)} required />
+        <Input type="file" onChange={(e) => uploadImages(e.target.files[0])} />
         <Button onClick={handlePay}>Pay</Button>
       </FormControl>
     </div>
