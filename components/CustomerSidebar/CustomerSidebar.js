@@ -33,8 +33,8 @@ export default function CustomerSidebar({ user, option = 0 }) {
                     <p className="CustomerSidebar__bottom--column__name">{user.name}</p>
                     <p className="CustomerSidebar__bottom--column__email">{user.email}</p>
                 </div>
-                <div onClick={() => {
-                    logout();
+                <div onClick={async () => {
+                    await logout();
                     window.location.reload();
                 }}>
                     <Image className="CustomerSidebar__top__row--image" src={'/Images/Customer/logout.webp'} width={20} height={20} />

@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 import { useRouter } from "next/router";
-import { updatePassword, sendOtp } from "@/services/user.service";
+import { sendOtp,updatePassword } from "@/operations/user.fetch";
 import { useState } from "react";
 import { Input, Button, FormControl, InputGroup, InputRightElement } from '@chakra-ui/react'
 import {
