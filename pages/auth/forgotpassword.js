@@ -1,13 +1,8 @@
 const bcrypt = require("bcryptjs");
 import { useRouter } from "next/router";
-import { sendOtp,updatePassword } from "@/operations/user.fetch";
+import { sendOtp, updatePassword } from "@/operations/user.fetch";
 import { useState } from "react";
-import { Input, Button, FormControl, InputGroup, InputRightElement } from '@chakra-ui/react'
-import {
-    Modal, ModalOverlay,
-    ModalContent,
-    CloseButton
-} from '@chakra-ui/react';
+import { Input, Button, FormControl, Modal, ModalOverlay, ModalContent, CloseButton } from '@chakra-ui/react';
 import { isPassword } from "@/utils/validator";
 import '@/styles/routes/auth/login.scss';
 

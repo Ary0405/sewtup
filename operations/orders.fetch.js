@@ -63,3 +63,19 @@ export async function getOrderById(data) {
     });
 }
 
+
+export async function payPayment(data) {
+    return await fetch(
+        "/api/pay/create", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data),
+        credentials: "include"
+    }).then((res) => {
+        return res.json()
+    }).catch((err) => {
+        console.log(err)
+    });
+}
