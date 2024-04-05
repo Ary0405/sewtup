@@ -44,8 +44,8 @@ model User {
   email    String  @unique
   password String
   name     String
-  phone    String  @default("")
   role     Role    @default(USER)
+  phone    String  @default("")
   Bid      Bid[]
   Order    Order[]
 }
@@ -54,11 +54,11 @@ model Payment {
   id          Int           @id @default(autoincrement())
   amount      Int
   orderId     Int
-  Order       Order         @relation(fields: [orderId], references: [id])
   status      PaymentStatus @default(PENDING)
   date        DateTime      @default(now())
   imageURL    String
   transaction String
+  Order       Order         @relation(fields: [orderId], references: [id])
 }
 
 enum BidStatus {
@@ -102,9 +102,9 @@ enum Location {
   UTTAR_PRADESH
   UTTARAKHAND
   WEST_BENGAL
-  DELHI_NCR
   REMOTE
   OTHER
+  DELHI_NCR
 }
 
 enum Role {

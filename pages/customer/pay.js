@@ -7,39 +7,39 @@ import { supabase } from './projectDescription';
 import { Image } from '@chakra-ui/react';
 
 export async function getServerSideProps(context) {
-  // const user = context.req.session.user;
+  const user = context.req.session.user;
 
-  // if (user === undefined) {
-  //   return {
-  //     redirect: {
-  //       permanent: false,
-  //       destination: "/auth/login",
-  //     },
-  //   };
-  // }
+  if (user === undefined) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/auth/login",
+      },
+    };
+  }
 
   const userId = parseInt(context.query.user);
 
   const orderId = parseInt(context.query.id);
   const value = parseInt(context.query.amount);
 
-  // if (isNaN(userId) || isNaN(orderId) || isNaN(value) || !userId || !orderId || !value) {
-  //   return {
-  //     redirect: {
-  //       permanent: false,
-  //       destination: "/",
-  //     },
-  //   };
-  // }
+  if (isNaN(userId) || isNaN(orderId) || isNaN(value) || !userId || !orderId || !value) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/",
+      },
+    };
+  }
 
-  // if (userId !== user.id) {
-  //   return {
-  //     redirect: {
-  //       permanent: false,
-  //       destination: "/auth/login",
-  //     },
-  //   };
-  // }
+  if (userId !== user.id) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/auth/login",
+      },
+    };
+  }
 
 
   return {
