@@ -47,12 +47,30 @@ export async function isBidUnderOrder(orderId, bidId) {
             id: bidId,
             orderId,
         },
-        include:{
+        include: {
             User: {
                 select: {
                     email: true,
                     phone: true
                 },
+            }
+        }
+    });
+}
+
+export async function fetchBidForMail(orderId) {
+    return db.bid.findFirst({
+        where: {
+            orderId,
+            status: 'ACCEPTED'
+        },
+        include: {
+            User: {
+                select: {
+                    name: true,
+                    email: true,
+                    phone: true
+                }
             }
         }
     });

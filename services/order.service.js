@@ -62,6 +62,24 @@ export async function getOrderById(id) {
     });
 }
 
+export async function fetchOrderForMail(id) {
+    return db.order.findUnique({
+        where: {
+            id
+        },
+        include: {
+            User: {
+                select: {
+                    name: true,
+                    email: true,
+                    phone: true
+                }
+            }
+        }
+    })
+
+}
+
 
 export async function browseProjects() {
     return db.order.findMany({
