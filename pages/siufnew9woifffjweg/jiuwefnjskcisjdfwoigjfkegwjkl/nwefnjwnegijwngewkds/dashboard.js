@@ -29,14 +29,14 @@ export async function getServerSideProps(context) {
   }
 
   const user = context.req.session.user;
-  // if (user.role !== 'ADMIN') {
-  //   return {
-  //     redirect: {
-  //       permanent: false,
-  //       destination: "/",
-  //     },
-  //   };
-  // }
+  if (user.role !== 'ADMIN') {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/",
+      },
+    };
+  }
 
   const payments = await fetchAllPayments();
 
