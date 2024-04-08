@@ -41,7 +41,8 @@ function register() {
                 alert('Signed Up successfully');
                 router.push('/auth/login');
             } else {
-                alert('Internal Server Error');
+                console.log(response);
+                alert('Error signing up, Try again');
             }
         } catch (error) {
             console.log(error.message);

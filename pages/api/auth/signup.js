@@ -13,11 +13,10 @@ async function SignUp(req, res) {
         return;
     }
 
-    if(body.role !== 'USER' || body.role !== 'DESIGNER') 
-    {
+    if (body.role !== 'USER' && body.role !== 'DESIGNER') {
         res.send({ status: 400, message: "Invalid role" });
         return;
-    } 
+    }
 
     try {
         const response = await createUser({
@@ -34,9 +33,9 @@ async function SignUp(req, res) {
 
         res.send({ status: 200, message: JSON.stringify(response) });
     } catch (error) {
-        
+
         console.log(error.message);
-        res.send({ status: 400, message: "Internal Server Error" });
+        res.send({ status: 400, message: "Internal Server Error", error: error.message });
     }
 
 }

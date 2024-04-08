@@ -77,7 +77,6 @@ function dashboard({ user, payments }) {
       <Tabs>
         <TabList>
           <Tab>Payments</Tab>
-          <Tab>Users</Tab>
         </TabList>
 
         <TabPanels>
@@ -114,9 +113,6 @@ function dashboard({ user, payments }) {
                 </Tbody>
               </Table>
             </TableContainer>
-          </TabPanel>
-          <TabPanel>
-            <p>Users</p>
           </TabPanel>
         </TabPanels>
       </Tabs>
