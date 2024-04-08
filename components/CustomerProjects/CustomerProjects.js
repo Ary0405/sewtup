@@ -1,51 +1,42 @@
-import DashHeader from '../DashTable/DashHeader/DashHeader'
-import DashRow from '../DashTable/DashRow/DashRow'
 import './CustomerProjects.scss'
+import { Table, Th, Td, Tr, Thead, Tbody } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
 
 export default function CustomerProjects({ userData }) {
-    
+
+    const router = useRouter();
+
     return (
         <div className="CustomerProjects">
             <div className='CustomerProjects__header'>
                 My Orders
             </div>
-            <DashHeader
-                style={{
-                    padding: "14px 0 14px 20px",
-                    gap: "20px",
-                    borderTop: "none",
-                }}
-                headerTitles={[
-                    "Project Name",
-                    "Description",
-                    "Status",
-                    "Estimated Price",
-                    "Price",
-                ]}
-            />
-            <div className='CustomerProjects__body'>
-                {
-                    userData.map((project, index) => (
-                        <DashRow
-                            key={index}
-                            index={project.id}
-                            className="CustomerProjects__body__row"
-                            data={[
-                                project.title,
-                                project.description,
-                                project.status,
-                                project.minBudget,
-                                project.finalPrice,
-                            ]}
-                            style={{
-                                padding: "14px 0 14px 0",
-                            }}
-                        />
-                    ))
-                }
-
-            </div>
-
+            <Table variant="striped">
+                <Thead>
+                    <Tr>
+                        <Th>Project Name</Th>
+                        <Th>Description</Th>
+                        <Th>Status</Th>
+                        <Th>Estimated Price</Th>
+                        <Th>Price</Th>
+                        <Th>Actions</Th>
+                    </Tr>
+                </Thead>
+                <Tbody>
+                    {
+                        userData.map((project, index) => (
+                            <Tr key={index} onClick={() => router.push(`/customer/project/${project.id}`)} style={{ cursor: 'pointer' }} >
+                                <Td>{project.title}</Td>
+                                <Td>{project.description}</Td>
+                                <Td>{project.status}</Td>
+                                <Td>{project.minBudget}</Td>
+                                <Td>{project.finalPrice}</Td>
+                                <Td>View Details</Td>
+                            </Tr>
+                        ))
+                    }
+                </Tbody>
+            </Table>
         </div>
     )
 }

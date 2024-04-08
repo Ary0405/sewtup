@@ -1,53 +1,38 @@
-import DashHeader from '../DashTable/DashHeader/DashHeader'
-import DashRow from '../DashTable/DashRow/DashRow'
 import './DesignerBids.scss'
+import { Table, Th, Td, Tr, Thead, Tbody } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
 
 function DesignerBids({ userBids }) {
+
+    const router = useRouter();
+
     return (
         <div>
             <div className='DesignerBids__header'>
                 My Bids
             </div>
-            <div className="DesignerBids__row">
-                <DashHeader
-                    style={{
-                        padding: "14px 0 14px 20px",
-                        gap: "20px",
-                        borderTop: "none",
-                    }}
-                    headerTitles={[
-                        "Project Name",
-                        "Amount",
-                        "Days",
-                        "Proposal",
-                        "Status",
-                    ]}
-                />
-                <div className='DesignerBids__body'>
+            <Table variant="striped">
+                <Thead>
+                    <Th>Project Name</Th>
+                    <Th>Amount</Th>
+                    <Th>Days</Th>
+                    <Th>Proposal</Th>
+                    <Th>Status</Th>
+                </Thead>
+                <Tbody>
                     {
                         userBids.map((bid, index) => (
-                            <DashRow
-                                key={index}
-                                index={bid.id}
-                                className="DesignerBids__body__row"
-                                data={[
-                                    bid.Order.title,
-                                    bid.amount,
-                                    bid.days,
-                                    bid.proposal,
-                                    bid.status,
-                                ]}
-                                style={{
-                                    padding: "14px 0 14px 0",
-                                }}
-                                type={1}
-                            />
+                            <Tr key={index} onClick={() => router.push(`/customer/project/${bid.Order.id}`)} style={{ cursor: 'pointer' }} >
+                                <Td>{bid.Order.title}</Td>
+                                <Td>{bid.amount}</Td>
+                                <Td>{bid.days}</Td>
+                                <Td>{bid.proposal}</Td>
+                                <Td>{bid.status}</Td>
+                            </Tr>
                         ))
                     }
-
-                </div>
-
-            </div>
+                </Tbody>
+            </Table>
         </div>
     )
 }
