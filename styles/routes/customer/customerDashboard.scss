@@ -2,25 +2,41 @@
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    // grid-column-gap: 5px;
-    // grid-row-gap: 5px;
     overflow: hidden !important;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 .div1 {
     grid-area: 1 / 1 / 10 / 6;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+        display: block;
+        grid-area: 1 / 1 / 2 / 2;
+    }
 }
 
 .div2 {
     grid-area: 1 / 6 / 2 / 26;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
 }
 
 .div3 {
-    // padding-top: 22px;
     grid-area: 2 / 6 / 10 / 26;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 768px) {
+        grid-area: 3 / 1 / 4 / 2;
+        margin-top: 50px;
+    }
 }

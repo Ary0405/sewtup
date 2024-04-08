@@ -6,9 +6,22 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+
     &--box {
-        width: 50rem;
-        margin-bottom: 1rem;
+      width: 50rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 768px) {
+        width: 90%; // Adjust as needed
+      }
+
+      &--input {
+        @media (max-width: 768px) {
+          
+        }
+
+      }
+
       &--text {
         color: white;
         font-family: "Inter";
@@ -16,6 +29,7 @@
         font-size: 2.2rem;
         margin-bottom: .7rem;
       }
+
       &--desc {
         color: white;
         font-family: "Inter";
@@ -24,45 +38,57 @@
       }
     }
   }
+
   &__bottom {
     display: flex;
     justify-content: center;
     padding-top: .7rem;
+
     &--box {
-        background-color: white;
-        width: 50rem;
-        border-radius: .5rem;
-        height: 10rem;
-        padding-left: 3rem;
-        padding-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        &--input {
-            border: none;
-            width: 30rem;
-            font-size: 1.5rem;
-            padding-bottom: .7rem;
-            font-weight: 500;
-            padding-left: .5rem;
-            padding-top: .7rem;
-            font-family: 'Inter', sans-serif;
-            border-bottom: 1.17px solid rgba(188, 197, 211, 1);
+      background-color: white;
+      width: 50rem;
+      border-radius: .5rem;
+      height: 10rem;
+      padding-left: 3rem;
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @media (max-width: 768px) {
+        width: 90%; // Adjust as needed
+      }
+
+      &--input {
+        border: none;
+        width: 30rem;
+        font-size: 1.5rem;
+        padding-bottom: .7rem;
+        font-weight: 500;
+        padding-left: .5rem;
+        padding-top: .7rem;
+        font-family: 'Inter', sans-serif;
+        border-bottom: 1.17px solid rgba(188, 197, 211, 1);
+
+        @media (max-width: 768px) {
+          width: 80%; // Adjust as needed
         }
-        &--button {
-            background-color: rgba(88, 47, 0, 1);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            text-align: center;
-            border: none;
-            padding-left: 2rem; 
-            padding-top: .6rem;
-            padding-bottom: .6rem;
-            padding-right: 2rem; 
-            margin-top: 2rem;
-            border-radius: .3rem;
-            cursor: pointer;
-        }
+      }
+
+      &--button {
+        background-color: rgba(88, 47, 0, 1);
+        color: white;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        border: none;
+        padding-left: 2rem; 
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-right: 2rem; 
+        margin-top: 2rem;
+        border-radius: .3rem;
+        cursor: pointer;
+      }
     }
   }
 }

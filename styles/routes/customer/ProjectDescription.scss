@@ -11,6 +11,10 @@
       width: 50rem;
       margin-bottom: 1rem;
 
+      @media (max-width: 768px) {
+        width: 90%; // Adjust as needed
+      }
+
       &--text {
         color: white;
         font-family: "Inter";
@@ -43,6 +47,11 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
+      @media (max-width: 768px) {
+        width: 90%; // Adjust as needed
+        padding-left: 0rem;
+      }
 
       &__heading {
         font-family: "Inter", sans-serif;
@@ -79,6 +88,10 @@
           height: 2rem;
           margin-top: 0.8rem;
           margin-bottom: 0.8rem;
+
+          @media (max-width: 768px) {
+            width: 80%; // Adjust as needed
+          }
         }
       }
 
@@ -90,11 +103,21 @@
         padding: 1rem;
         flex-direction: column;
 
+        @media (max-width: 768px) {
+          padding-left: 0rem;
+          padding-right: 0rem;
+        }
+
         &--header {
           display: flex;
           flex-direction: row;
           align-items: center;
           padding: 1.2rem;
+
+          @media (max-width: 768px) {
+            padding-left: 0rem;
+            padding-right: 0rem;
+          }
         }
 
         &--logo {
@@ -105,6 +128,11 @@
           padding: 0.5rem;
           border-radius: 0.5rem;
           margin-right: 1rem;
+
+          @media (max-width: 768px) {
+            // width: 20%; // Adjust as needed
+            padding-left: 0rem;
+          }
 
           input {
             background-color: transparent;
@@ -156,6 +184,10 @@
           height: 2rem;
           margin-top: 0.8rem;
           margin-bottom: 0.8rem;
+
+          @media (max-width: 768px) {
+            width: 80%; // Adjust as needed
+          }
         }
       }
 
@@ -187,7 +219,12 @@
             margin-top: 0.8rem;
             margin-bottom: 0.8rem;
             padding-left: 0.5rem;
+
+            @media (max-width: 768px) {
+              width: 60%; // Adjust as needed
+            }
           }
+
         }
       }
 
@@ -233,6 +270,10 @@
             margin-top: 0.8rem;
             margin-bottom: 0.8rem;
             padding-left: 0.5rem;
+
+            @media (max-width: 768px) {
+              width: 80%; // Adjust as needed
+            }
 
           }
         }

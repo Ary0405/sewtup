@@ -29,16 +29,6 @@ function MainFoot() {
             }}>
                 <p className='MainFoot--text'>GET STARTED !</p>
             </div>
-            <div className="MainFoot__sub3"
-                style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                }}
-            >
-                ©2023 Sew't Up
-            </div>
             <div className="MainFoot__sub2">
 
                 <p className="MainFoot__sub2--link1" onClick={() => { scrollToSection('home') }}>HOME</p>
@@ -49,6 +39,16 @@ function MainFoot() {
                 <p className="MainFoot__sub2--links">PRIVACY POLICY</p>
                 <p className="MainFoot__sub2--links" onClick={handleLoginClick}>LOGIN</p>
 
+            </div>
+            <div className="MainFoot__sub3"
+                style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}
+            >
+                ©2023 Sew't Up
             </div>
             {/* <div className="MainFoot__sub5">
             </div> */}

@@ -1,10 +1,12 @@
 .CustomerProjects {
     width: 95%;
-    // left: 49.5%;
-    // transform: translate(-50%, 0);
-    // top: 13%;
     overflow-x: auto;
     height: 84vh;
+
+    @media (max-width: 768px) {
+        width: 100%; // Adjust as needed
+        height: auto; // Adjust as needed
+    }
 
     &__header {
         background-color: white;
@@ -14,10 +16,15 @@
         padding-left: 1rem;
         padding-top: 2rem;
         padding-bottom: .7rem;
-        // width: 155.55%;
         border-top-right-radius: .5rem;
         border-top-left-radius: .5rem;
 
+        @media (max-width: 768px) {
+            font-size: 1.5rem; // Adjust as needed
+            padding-left: 0.5rem; // Adjust as needed
+            padding-top: 1rem; // Adjust as needed
+            padding-bottom: 0.5rem; // Adjust as needed
+        }
     }
 
     &__body{
@@ -28,5 +35,12 @@
         font-family: 'Inter', sans-serif;
         font-weight: 400;
         font-size: 1.2rem;
+
+        @media (max-width: 768px) {
+            font-size: 1rem; // Adjust as needed
+            padding: 0.5rem; // Adjust as needed
+            padding-top: 0; // Adjust as needed
+            padding-bottom: 0.5rem; // Adjust as needed
+        }
     }
 }

@@ -20,13 +20,21 @@
 
     }
 
+    &__row{
+        font-weight: bold;
+    }
+
     &__body{
-        background-color: white;
-        padding: 1rem;
+        margin-left: 1rem;
+        // padding: 1rem;
         padding-top: 0;
         padding-bottom: 1rem;
         font-family: 'Inter', sans-serif;
         font-weight: 400;
         font-size: 1rem;
+
+        @media (max-width: 768px) {
+            padding: 1rem;
+        }
     }
 }

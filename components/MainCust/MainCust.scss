@@ -76,13 +76,15 @@
             }
 
             &--image{
-                width: 130px;
+                width: 140px;
                 margin-right: 4vw;
                 margin-top: -4vh;
+                height: 140px;
 
                 @media (max-width: 768px) {
-                    width: 40%; // Make the image take up the full width on smaller screens
+                    width: 130px; // Make the image take up the full width on smaller screens
                     margin-right: 0; // Remove the right margin on smaller screens
+                    height: 130px;
                 }
             }
 
@@ -90,68 +92,6 @@
                 color: #F7E0C8;
                 font-size: 1.2rem;
                 width: 54%;
-                margin-top: 20px;
-
-                @media (max-width: 768px) {
-                    font-size: 0.8rem; // Adjust the font size for smaller screens
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-    &_customdes2 {
-        margin-top: 10vh;
-        align-items: center;
-        margin-left: 2vw;
-
-        @media (max-width: 768px) {
-            flex-direction: column; // Stack the items vertically on smaller screens
-            margin-left: 0; // Remove the left margin on smaller screens
-        }
-
-        &--heading {
-            color: #F98B76;
-            font-size: 2.5rem;
-            font-weight:bolder;
-
-            @media (max-width: 768px) {
-                font-size: 1.5rem; // Adjust the font size for smaller screens
-            }
-        }
-
-        &--content {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            &--text {
-                color: #F7E0C8;
-                font-size: 1.2rem;
-                width: 54%;
-                margin-top: 20px;
-
-                @media (max-width: 768px) {
-                    font-size: 0.8rem; // Adjust the font size for smaller screens
-                    width: 100%;
-                }
-            }
-
-            &--image{
-                width: 130px;
-                margin-left: 4.5vw;
-                margin-top: -4vh;
-
-                @media (max-width: 768px) {
-                    width: 100%; // Make the image take up the full width on smaller screens
-                    margin-left: 0; // Remove the left margin on smaller screens
-                }
-            }
-
-            &--text3 {
-                color: #F7E0C8;
-                font-size: 1.2rem;
-                width: 44%;
                 margin-top: 20px;
 
                 @media (max-width: 768px) {

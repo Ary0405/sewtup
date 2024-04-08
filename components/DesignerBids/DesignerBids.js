@@ -8,7 +8,7 @@ function DesignerBids({ userBids }) {
             <div className='DesignerBids__header'>
                 My Bids
             </div>
-            <div className="DesignerBids">
+            <div className="DesignerBids__row">
                 <DashHeader
                     style={{
                         padding: "14px 0 14px 20px",
