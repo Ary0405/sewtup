@@ -33,7 +33,6 @@ async function SignUp(req, res) {
 
         res.send({ status: 200, message: JSON.stringify(response) });
     } catch (error) {
-
         console.log(error.message);
         res.send({ status: 400, message: "Internal Server Error", error: error.message });
     }

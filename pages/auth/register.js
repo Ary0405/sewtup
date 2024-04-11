@@ -42,7 +42,7 @@ function register() {
                 router.push('/auth/login');
             } else {
                 console.log(response);
-                alert('Error signing up, Try again');
+                alert('Error signing up, Make sure you are connected to the internet or the mail is already in use, try logging in');
             }
         } catch (error) {
             console.log(error.message);
