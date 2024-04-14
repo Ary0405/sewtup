@@ -1,6 +1,4 @@
 import "./ProjectItem.scss"
-import DashHeader from "@/components/DashTable/DashHeader/DashHeader";
-import Image from "next/image";
 
 const ProjectItem = ({ projectData }) => {
     // Provide default values if projectData is not provided

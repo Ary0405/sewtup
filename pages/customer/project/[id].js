@@ -3,8 +3,7 @@ import '@/styles/routes/customer/project.scss';
 import CustomerNavbar from "@/components/CustomerNavbar/CustomerNavbar";
 import CustomerSidebar from "@/components/CustomerSidebar/CustomerSidebar";
 import { acceptBid } from "@/operations/bids.fetch";
-import DashHeader from "@/components/DashTable/DashHeader/DashHeader";
-import DashRow from "@/components/DashTable/DashRow/DashRow";
+import { Table, Th, Td, Tr, Thead, Tbody,Heading } from '@chakra-ui/react'
 
 export async function getServerSideProps(context) {
 
@@ -60,18 +59,10 @@ function project({ user, project }) {
             </div>
             <div className="div3">
                 <div className="project__data">
-                    <div className="project__data__title">
-                        <h1>{project.title}</h1>
-                    </div>
-                    <div className="project__data__description">
-                        <p>{project.description}</p>
-                    </div>
-                    <div className="project__data__date">
-                        <p>{project.date}</p>
-                    </div>
-                    <div className="project__data__status">
-                        <p>{project.status}</p>
-                    </div>
+                    <Heading as="h1" size="xl">{project.title}</Heading>
+                    <p>{project.description}</p>
+                    <p>{new Date(project.date).toDateString()}</p>
+                    <p>{project.status}</p>
                     <div className="project__data__image">
                         {
                             project.attachments.map((attachment, index) => (
@@ -81,79 +72,44 @@ function project({ user, project }) {
                     </div>
                 </div>
                 <div className="project__bids">
-                    {/* <table className="project__bids__table">
-                        <tr>
-                            <th>Proposal</th>
-                            <th>Price</th>
-                            <th>Delivery Time</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                        {
-                            project.Bid.map((bid, index) => (
-                                <tr key={index}>
-                                    <td>{bid.proposal}</td>
-                                    <td>{bid.amount}</td>
-                                    <td>{bid.days}</td>
-                                    <td>{bid.status}</td>
-                                    <td>
-                                        {
-                                            bid.status !== 'ACCEPTED' ?
+                    <Table variant="striped">
+                        <Thead>
+                            <Tr>
+                                <Th>Proposal</Th>
+                                <Th>Price</Th>
+                                <Th>Delivery Time</Th>
+                                <Th>Status</Th>
+                                <Th>Action</Th>
+                            </Tr>
+                        </Thead>
+                        <Tbody>
+                            {
+                                project.Bid.map((bid, index) => (
+                                    <Tr key={index}>
+                                        <Td>{bid.proposal}</Td>
+                                        <Td>{bid.amount}</Td>
+                                        <Td>{bid.days}</Td>
+                                        <Td>{bid.status}</Td>
+                                        <Td>
+                                            {bid.status !== 'ACCEPTED' ?
                                                 <button
                                                     onClick={() => accBid(bid.id)}
+                                                    style={{
+                                                        backgroundColor: "green",
+                                                        color: "white",
+                                                        padding: "10px 20px",
+                                                        border: "none",
+                                                        borderRadius: "5px",
+                                                        cursor: "pointer"
+                                                    }}
                                                 >Accept</button> : null
-                                        }
-                                    </td>
-                                </tr>
-                            ))
-                        }
-                    </table> */}
-                    <DashHeader
-                        style={{
-                            padding: "14px 0 14px 20px",
-                            gap: "20px",
-                            borderTop: "none",
-                        }}
-                        headerTitles={[
-                            "Proposal",
-                            "Price",
-                            "Delivery Time",
-                            "Status",
-                            "Action",
-                        ]}
-                    />
-                    <div className='project__bids__body'>
-                        {
-                            project.Bid.map((bid, index) => (
-                                <DashRow
-                                    key={index}
-                                    index={bid.id}
-                                    className="project__bids__body__row"
-                                    data={[
-                                        bid.proposal,
-                                        bid.amount,
-                                        bid.days,
-                                        bid.status,
-                                        bid.status !== 'ACCEPTED' ?
-                                            <button
-                                                onClick={() => accBid(bid.id)}
-                                                style={{
-                                                    backgroundColor: "green",
-                                                    color: "white",
-                                                    padding: "10px 20px",
-                                                    border: "none",
-                                                    borderRadius: "5px",
-                                                    cursor: "pointer"
-                                                }}
-                                            >Accept</button> : null
-                                    ]}
-                                    style={{
-                                        padding: "14px 0 14px 0",
-                                    }}
-                                />
-                            ))
-                        }
-                    </div>
+                                            }
+                                        </Td>
+                                    </Tr>
+                                ))
+                            }
+                        </Tbody>
+                    </Table>
                 </div>
             </div>
         </div>

@@ -3,7 +3,6 @@ import BrowseItem from "@/components/BrowseItem/BrowseItem";
 import Filter from "@/components/Filter/Filter";
 import Image from 'next/image';
 import { browseProjects } from '@/services/order.service';
-import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/MainFoot/MainFoot';
 
 

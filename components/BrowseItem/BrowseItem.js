@@ -1,7 +1,4 @@
-import React from "react";
 import "./BrowseItem.scss"
-import DashHeader from "@/components/DashTable/DashHeader/DashHeader";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 const BrowseItem = ({ projectData, order }) => {

@@ -1,6 +1,5 @@
 import { fetchAllPayments } from "@/services/payments.services";
 import { Image } from "@chakra-ui/react";
-import { useState } from "react";
 import {
   Button,
   Table,
