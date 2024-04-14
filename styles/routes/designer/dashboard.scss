@@ -3,6 +3,13 @@
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(12, 1fr);
     overflow: hidden !important;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll !important;
+    }
+
 }
 
 .div1 {
@@ -26,11 +33,10 @@
 .div3 {
     grid-area: 2 / 7 / 10 / 26;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
 
     @media (max-width: 768px) {
-        grid-area: 6 / 1 / 12 / 26; // Kept row start and end values as before
-        overflow: auto;
+        padding-top: 5rem;
     }
 }
