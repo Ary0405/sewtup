@@ -77,7 +77,8 @@
         }
 
         .mobile{
-            display: block;
+            display: inline-flex;
+            padding-left: 2rem;
         }
         
         &__links {

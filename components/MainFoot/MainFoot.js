@@ -50,11 +50,6 @@ function MainFoot() {
             >
                 ©2023 Sew't Up
             </div>
-            {/* <div className="MainFoot__sub5">
-            </div> */}
-            {/* <div className="MainFoot__sub6">
-                Design by WannabeEngineers
-            </div> */}
             <div className="MainFoot__sub7">
                 <div className="MainFoot__sub7--sub4">
                     <div className='MainFoot__sub7--sub4--sub1'>

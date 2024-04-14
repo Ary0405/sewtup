@@ -3,11 +3,12 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 30px;
-    font-family: 'Arges';
+    font-family: 'Arges-Thin';
     background-color: #292929;
     height: 95vh;
-
+    
     &--text {
+        font-weight: bolder;
         font-size: 12rem;
     }
 
@@ -168,5 +169,12 @@
         flex-direction: column;
         height: auto;
         padding: 0;
+        align-items: center;
+        justify-content: center;
+
+        &--text {
+            font-size: 6.5rem;
+        }
+
     }
 }
